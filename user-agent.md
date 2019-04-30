@@ -46,7 +46,9 @@ Include the `IF-Modified-Since` header HTTP header with the local XML's last mod
 
 An example for the client to inquire repo.tokenscript.org for the latest update:
 
-    curl -H "Accept: application/tokenscript+xml; charset=UTF-8" -H "IF-Modified-Since: Mon, 02 Jul 2019 13:23:00 GMT" https://repo.tokenscript.org/2019/05/0xd8e5f58de3933e1e35f9c65eb72cb188674624f3
+    $ curl -I -H "Accept: application/tokenscript+xml; charset=UTF-8" -H "IF-Modified-Since: Tue, 30 Apr 2019 13:23:00 GMT" https://repo.tokenscript.org/2019/05/0x63cCEF733a093E5Bd773b41C96D3eCE361464942
+    HTTP/2 304 
+    date: Tue, 30 Apr 2019 13:32:03 GMT
 
 If an update is needed, the new file is available in the body.
 
