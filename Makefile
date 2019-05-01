@@ -12,7 +12,7 @@ help:
 prepare:
 	# Finding tsml files
 	@test "" != "$(TSMLFILES)"
-	@echo AddType application/xhtml+xml .xhtml > htaccess.tmp
+	@echo AddType application/tokenscript+xml .tstml > htaccess.tmp
 	@echo Options +FollowSymLinks             >> htaccess.tmp
 	@echo RewriteEngine on                    >> htaccess.tmp
 
