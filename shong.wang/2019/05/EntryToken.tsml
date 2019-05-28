@@ -13,12 +13,13 @@
       <ts:string quantity="other">入場券</ts:string>
     </ts:plurals>
   </ts:name>
-  <!-- TODO: will make separate Tokenscript for ERC875 -->
+  <!-- TODO: will make separate TokenScript for ERC875 -->
   <ts:contract interface="erc875" name="EntryToken">
-    <ts:address network="1">0x63cCEF733a093E5Bd773b41C96D3eCE361464942</ts:address>
-    <ts:address network="3">0xFB82A5a2922A249f32222316b9D1F5cbD3838678</ts:address>
-    <ts:address network="4">0x7c81DF31BB2f54f03A56Ab25c952bF3Fa39bDF46</ts:address>
-    <ts:address network="42">0x2B58A9403396463404c2e397DBF37c5EcCAb43e5</ts:address>
+    <ts:address network="1">0xFd838c7A0c32D68533ec713Ed631B6B7C8720cED</ts:address>
+    <ts:address network="3">0x3c22BeB7427A57Ab7d532a974F4bBaD7969CAaD3</ts:address>
+    <ts:address network="4">0x4A60c0bf93b2b3a3D20720a773E5Da8C80C427ac</ts:address>
+    <ts:address network="5">0x0C18E83E7D07E2188496467c4102D6D79Dcf1BD1</ts:address>
+    <ts:address network="42">0x5bD04312e79392F042eC730961d107482D3EF19f</ts:address>
   </ts:contract>
   <ts:origins>
     <!-- Define the contract which holds the token that the user will use -->
@@ -153,7 +154,7 @@
         var symbolIdx
         if (time.charAt(length - 1 ) === 'Z'){
             return 0
-        } 
+        }
         if (time.indexOf('+') !== -1) {
             symbolIdx = time.indexOf('+')
         } else if (time.indexOf('-') !== -1) {
@@ -213,7 +214,7 @@ class Token {
         }
         return `&lt;div&gt;
             &lt;div&gt;
-                &lt;span class="ts-count"&gt;x${this.props.getLocality}&lt;/span&gt;  &lt;span class="ts-category"&gt;${this.props.name}&lt;/span&gt;
+                &lt;span class="ts-count"&gt;x${this.props._count}&lt;/span&gt;  &lt;span class="ts-category"&gt;${this.props.name}&lt;/span&gt;
             &lt;/div&gt;
             &lt;div&gt;
                 &lt;span class="ts-venue"&gt;${this.props.building}&lt;/span&gt;
@@ -226,18 +227,18 @@ class Token {
                 &lt;span class="ts-date"&gt;${date}&lt;/span&gt;
             &lt;/div&gt;
             &lt;div&gt;
-                &lt;span class="ts-time"&gt;${time}, ${this.props.getLocality}&lt;/span&gt;
+                &lt;span class="ts-time"&gt;${time}, ${this.props.locality}&lt;/span&gt;
             &lt;/div&gt;
             &lt;/div&gt;`;
     }
-
-    web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
-        const currentTokenInstance = web3.tokens.data.currentInstance
-        const domHtml = new Token(currentTokenInstance).render()
-        document.getElementById('root').innerHTML = domHtml
-    }
-
 }
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance
+    const domHtml = new Token(currentTokenInstance).render()
+    document.getElementById('root').innerHTML = domHtml
+}
+
 </script>
 <div id="root"/>
 
@@ -361,12 +362,12 @@ window.onConfirm = function onConfirm(signature) {
     </ts:action>
   </ts:cards>
   <ts:attribute-types>
-    <ts:attribute-type as="utf8" id="locality" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+    <ts:attribute-type id="locality" syntax="1.3.6.1.4.1.1466.115.121.1.15">
       <ts:origins>
-        <ts:ethereum contract="EntryToken" function="getLocality">
-            <ts:inputs>
-              <ts:uint256 ref="tokenID"/>
-            </ts:inputs>
+        <ts:ethereum as="utf8" contract="EntryToken" function="getLocality">
+            <ts:data>
+              <ts:uint256 ref="tokenId"/>
+            </ts:data>
         </ts:ethereum>
       </ts:origins>
 
@@ -382,45 +383,37 @@ window.onConfirm = function onConfirm(signature) {
     </ts:attribute-type>
     <ts:attribute-type id="expired" syntax="1.3.6.1.4.1.1466.115.121.1.7"> <!-- boolean -->
       <ts:origins>
-        <ts:ethereum contract="EntryToken" function="isExpired">
-          <ts:inputs>
-            <ts:uint256 ref="tokenID"/>
-          </ts:inputs>
-        </ts:ethereum>
-      </ts:origins>
-      <ts:mapping>
-        <ts:option key="0">
-          <ts:value>FALSE</ts:value>
-        </ts:option>
-        <ts:option key="1">
-          <ts:value>TRUE</ts:value>
-        </ts:option>
-      </ts:mapping>
-    </ts:attribute-type>
-    <ts:attribute-type as="utf8" id="street" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
-      <ts:origins>
-        <ts:ethereum contract="EntryToken" function="getStreet">
-          <ts:inputs>
-            <ts:uint256 ref="tokenID"/>
-          </ts:inputs>
+        <ts:ethereum as="bool" contract="EntryToken" function="isExpired">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
         </ts:ethereum>
       </ts:origins>
     </ts:attribute-type>
-    <ts:attribute-type as="utf8" id="building" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+    <ts:attribute-type id="street" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
       <ts:origins>
-        <ts:ethereum contract="EntryToken" function="getBuildingName">
-          <ts:inputs>
-            <ts:uint256 ref="tokenID"/>
-          </ts:inputs>
+        <ts:ethereum as="utf8" contract="EntryToken" function="getStreet">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
         </ts:ethereum>
       </ts:origins>
     </ts:attribute-type>
-    <ts:attribute-type as="utf8" id="state" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+    <ts:attribute-type id="building" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
       <ts:origins>
-        <ts:ethereum contract="EntryToken" function="getState">
-          <ts:inputs>
-            <ts:uint256 ref="tokenID"/>
-          </ts:inputs>
+        <ts:ethereum as="utf8" contract="EntryToken" function="getBuildingName">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+    <ts:attribute-type id="state" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="EntryToken" function="getState">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
         </ts:ethereum>
       </ts:origins>
     </ts:attribute-type>
@@ -435,15 +428,15 @@ window.onConfirm = function onConfirm(signature) {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>vormwZWW9dW5sdZSn2gPrQm3rES/E8U6qdrYcEcPhwc=</ds:DigestValue>
+<ds:DigestValue>rpOZo8ipjwLu4uyuIm+u62GYBb3qoNVTd5RdjNgtKVY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-i9QaoZO5kFOlxUU1RHHW5O2nravQTSleOJZmWlwq2kCSradQG7BSvlQRD+ucVKL9nVVt+/IJ3pX9
-7dLmoa70r9L8vikHqaltJM7wEjxYM1yVxS1Rg9kFMEznocgtZZ37Ia//o2t0ff3vDR7n9Lpyx4OV
-7r07KAEeLH5jq+Ty1HOzo2xmZOYfUgHqbYqZTF+LaDp5vp4kQQ3WF3Hyt6p9Tt3Cr5as57qttW1E
-Kxbm9/CldF79y8wHx/0jb8pRzM/Bvo2xJLDiRyMWeS06wYj6U1f9U20n5hs8hHHO/ar4Ylaxa6ko
-R/CgaqmlmI6mwt6Kr5t9Nhn5yEdQbDLDrsqVBw==
+mymoxQSal9oVcTZRKywC1RQ/ZLZO4ZMZWciIrO1MBqNibCCd/l4QcIHL5VCcm0SjksN0Kv24QyiH
+oj3B4d2EE2XAu4EQRVpJYQLBWxy03MW35t99EgbNttpyDz5fXzZV5AoGd77PyMiIR9lBnDlHJwU3
+tCoqCvXoctGivQG04UmNg+kTbHx0nwQ7rjHU+ThlkLl0GUpmjfLL7aaRbBNUogCUgmg7vEJg9aJj
+bXLJb3ibpwX6tz1eJEsD43s0FnC23V0m4+J0Ievf47af8zVpHTAcwTi9b3JovjabgvgUbBvyzNc/
+AK/TUZ/DbTuvUUAYm+sh11Pf39+LL8wbxtHtwQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
