@@ -24,4 +24,4 @@ prepare:
 	@test "" != $(findstring http://tokenscript.org,$(XMLNS))/
 	# $^: $(XMLNS)
 	@printf "setns ts=http://tokenscript.org/2019/05/tokenscript \ncat $(XPATH_ADDRESS)" | \
-	xmllint --shell $^ | grep 0x | sed 's|^\(.*\)$$|RewriteRule ^$(patsubst http://tokenscript.org/%/tokenscript,%,$(XMLNS))/\1$$ $^|' | tee -a htaccess.tmp
+	xmllint --shell $^ | grep 0x | sed 's|^\(.*\)$$|RewriteRule ^$(patsubst http://tokenscript.org/%/tokenscript,%,$(XMLNS))/\1$$ $^ [NC]|' | tee -a htaccess.tmp
