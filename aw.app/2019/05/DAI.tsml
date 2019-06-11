@@ -17,7 +17,7 @@
         </ts:token-card>
         <ts:action>
             <ts:name>
-                <ts:string xml:lang="en">Convert DAI to xDAI</ts:string>
+                <ts:string xml:lang="en">Convert to xDAI</ts:string>
             </ts:name>
             <ts:attribute-type id="amount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
                 <ts:name>
@@ -186,12 +186,12 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) => {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>EatbgQ9uyE6XguwFlQ/+TpIJVnRy/RsIBp9BDWglVGo=</ds:DigestValue>
+<ds:DigestValue>X0FONQ5A2nKYEK9Kh7nZhkXCOwKiUFc2CX7PzRTRZIg=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-8Mv+BEGN32mjcNEwq+t9QMuYpZ30Vx4w/Ftvj0ILDaqGYae6ohN4B1caKuaplst2me9Hs6K/AA1h
-MzAEk6ojZw==
+T3QNYxDZGUi3S3hLZQW5gd4xOdLK05lqIiFKS+G4BQXc19dtMKw2ZcUAzkpKk9rHlcwaDe71mXNP
+09+un7VGGg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:X509Data>
