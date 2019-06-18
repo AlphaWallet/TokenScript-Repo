@@ -32,6 +32,8 @@ The `If-Modified-Since` header should be included if the XML requested for is al
 
     "If-Modified-Since": "Wed, 21 Oct 2015 07:28:00 GMT"
 
+Do not specify a timestamp representing a point in the future.
+
 ## Caching TokenScript
 
 It's reasonable for user-agents to cache the signed and valid TokenScript locally.
