@@ -1,7 +1,21 @@
 <ul class="nav">
-	<li><a href="../smart-tokens/" class="red">The Trouble With Tokens</a></li>
-	<li><a href="../specs/" class="select-orange">TokenScript Specs</a></li>
-	<li><a href="../community/" class="blue">TokenScript Community</a></li>
-    <li><a href="https://github.com/AlphaWallet/TokenScript/releases" class="purple">Design Paper</a> <sup>&#x2197</sup></li>
-	<li><a href="http://www.alphawallet.com" class="green">Reference Implementation <sup>&#x2197</sup></a></li>
+    <li><a href="../smart-tokens/" class="red">The Trouble With Tokens</a></li>
+    <li><a href="../tech/" class="select-orange">TokenScript Technology</a></li>
+    <li><a href="../community/" class="blue">TokenScript Community</a></li>
+    <li><a href="https://github.com/AlphaWallet/TokenScript/releases" class="purple">Design Paper</a> <sup>&#x2197</sup>
+    </li>
+    <li><a href="http://www.alphawallet.com" class="green">Reference Implementation <sup>&#x2197</sup></a></li>
 </ul>
+
+<div class="pulldown styled-select" style="background-color: #fff491;">
+    <form method="get" action="../index">
+        <select name="primary" onchange="parent.location=(this.options[this.selectedIndex].value)"
+                style="color: #000; border: 1px dotted #000;">
+            <option value="../index">Select an Option</option>
+            <option value="../smart-tokens">The Trouble With Tokens</option>
+            <option value="../tech">TokenScript Technology</option>
+            <option value="../community">TokenScript Community</option>
+            <option value="../index">&#x1F183</option>
+        </select>
+    </form>
+</div>
