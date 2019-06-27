@@ -1,0 +1,224 @@
+@font-face {
+  font-family: OpenSans Regular;
+  src: url(fonts/opensans/OpenSans-Regular.ttf);
+  }
+
+  @font-face {
+  font-family: Monsterrat Regular;
+  src: url(fonts/montserrat/Montserrat-Regular.ttf);
+  }
+
+
+@media screen and (device-aspect-ratio: 2/3)  { 
+	body.short .header { height: 95px; }
+	body.short .header a.logo img { margin-left: 10px; margin-top: 0px; width: 435px; }
+	body.short .main-content .demonstration {  display: none; }
+	body.short .main-content .intro-text h1 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 78px; line-height: 85px;  color: #333; margin-bottom: 0px; padding-bottom: 10px; margin-top: 20px; padding-top: 5px; }	
+	.nav-noscroll { width: 100%; } 
+	.footer .footer-left {float: left; display: none; }	
+	.footer .footer-right {float: left; }	
+	@media screen and (orientation:landscape)  {
+	body.leaf .header { display: none; }
+	body.leaf .main-content .content { padding-left: 0px; margin-right: 40px; position: absolute; top: 25px; padding-bottom: 0px; }
+}	
+}
+
+
+@media screen and (device-aspect-ratio: 40/71)  { 
+	body.short .header { height: 140px; }
+	body.short .header a.logo img { margin-left: 10px; margin-top: 16px; width: 535px; }
+	body.short .main-content .demonstration {  display: none; }
+	body.short .main-content .intro-text h1 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 78px; line-height: 85px;  color: #333; margin-bottom: 0px; padding-bottom: 10px; margin-top: 20px; padding-top: 5px; }	
+	.nav-noscroll { width: 100%; } 
+	.footer .footer-left {float: left; display: none; }	
+	.footer .footer-right {float: left; }	
+	.footer .footer-right a.pale { font-size: 24px; line-height: 0px; }
+	body.short .main-content .intro-text ul.nav-noscroll { font-family: 'Monsterrat Regular', san serif; list-style: none; white-space: nowrap; float: left; margin-top: 36px; font-size: 40px; }
+	body.short .main-content .intro-text ul.nav-noscroll li a { padding: 10px 20px; }	
+	body.short .main-content .intro-text ul.nav-noscroll li { line-height: 80px; }
+	@media screen and (orientation:landscape)  {
+	body.short .header { height: 95px; }
+	body.short .header a.logo img { margin-left: 10px; margin-top: 0px; width: 435px; }
+	body.short .main-content { margin-top: -20px; }
+	body.short .main-content .intro-text ul.nav-noscroll { font-family: 'Monsterrat Regular', san serif; list-style: none; white-space: nowrap; float: left; margin-top: 36px; font-size: 20px; }
+	body.short .main-content .intro-text ul.nav-noscroll li a { padding: 4px 20px; }	
+	body.short .main-content .intro-text ul.nav-noscroll li { line-height: 37px; }
+	body.short .footer {border: none; }	
+}	
+}
+
+/*styles for 300 and up @ 16px!*/
+/* The max-width declaration below blocks this from ever working */
+@media only screen and (min-width: 18.75em) and (max-width: 31em) {
+	body.short { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin: 0px 0px 80px 0px; padding: 0px; background-image:none; background-color: white; }
+	.header img.logo { margin-left: 0px; width: 265px; }
+	.main-content .intro-text { padding-left: 10px; margin-right: 40px;}
+	body.short .main-content .demonstration { display: none; }
+	.main-content .intro-text h1.home { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 30px; line-height: 34px; color: #333; padding-top: 0px; }
+	.footer .footer-left {margin-left: 0px; margin-top: 10px; white-space: nowrap; }
+	.footer .footer-right {float: left; clear: both; margin-left: 33px; font-size: 12px; margin-top: 10px; }
+	ul.nav-noscroll { margin-left: -20px; }
+	p, blockquote, ol, ul, .content ul.text li, li { font-size: 10.5pt; line-height: 14pt; }
+	body.short .main-content .intro-text ul.nav-noscroll li { font-size: 16px;}
+	}
+
+
+/*styles for 480px - 620px @ 16px!*/
+@media screen and (min-width: 31em) and (max-width: 50em) {
+	body.short { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin: 0px 0px 80px 0px; padding: 0px; background-image:none; background-color: white; }
+	.main-content .intro-text { padding-left: 30px; margin-right: 40px; }
+	.main-content .demonstration { display: inline; width: 250px; margin: 20px 20px 0px 25px; float: left; padding-bottom: 20px; }
+	.main-content .intro-text h1.home { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 34px; line-height: 38px; color: #333; padding-top: 0px; }
+	.footer .footer-left {float: left; }
+	.footer .footer-right {float: right;  clear: none; margin-left: 0px; font-size: 16px; margin-top: 10px;  }
+}
+
+
+/*styles for 800px and up @ 16px!*/
+@media screen and (min-width: 50em) and (max-width: 68.75em) {
+	body.short { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin: 0px 0px 80px 0px; padding: 0px; background-image:none; background-color: white; }
+	.main-content .intro-text { padding-left: 30px; margin-right: 40px; }
+	.main-content .demonstration {  display: inline; width: 400px; margin: 20px 30px 0px 10px; float: left; padding-bottom: 20px; }
+	.main-content .intro-text h1.home { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 42px; line-height: 46px; color: #333; padding-top: 0px; }
+	.footer .footer-left {float: left; }
+	.footer .footer-right {float: right;  clear: none; margin-left: 0px; font-size: 16px; margin-top: 10px;  }
+}
+
+
+/*styles for 1100px and up @ 16px!*/
+@media screen and (min-width: 68.75em){
+	body.short { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin: 0px 0px 80px 0px; padding: 0px; background-image:none; background-color: white; }
+	.main-content .intro-text { padding-left: 30px; margin-right: 40px; }
+	.main-content .demonstration {  display: inline; width: 500px; margin: 0px 30px 0px 50px; float: left; padding-bottom: 20px; }
+	.main-content .intro-text h1.home {  font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 58px; line-height: 54px; color: #333; }
+	.footer .footer-left {float: left; }
+	.footer .footer-right {float: right;  clear: none; margin-left: 0px; font-size: 16px; margin-top: 10px;  }
+}
+
+
+body { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin: 0px 0px 80px 0px; padding: 0px; background-image:url(images/white.t.png); background-repeat:no-repeat; background-attachment:fixed; background-color: #fff; }
+body.short { }
+
+a { color: #999; padding: 2px 10px; text-decoration: none;  border-bottom: 1px dotted #666; }
+a:visited { color: #666;  text-decoration: none; border-bottom: 0px dotted #000; }
+a:hover { color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+
+.doc-content a { color: #999; padding: 0px; text-decoration: none; }
+.doc-content a:visited { color: #666;  text-decoration: none; border-bottom: 0px dotted #000; }
+.doc-content a:hover { color: #000; background-color: #eee; text-decoration: none; border-bottom: 0px dotted #000; }
+
+a.text { color: #999; padding: 0px; text-decoration: none; }
+a.text:visited { color: #666;  text-decoration: none; border-bottom: 0px dotted #000; }
+a.text:hover { color: #000; background-color: #eee; text-decoration: none; border-bottom: 0px dotted #000; }
+
+a.logo { color: #999; padding: 2px 10px; border-bottom: 0px dotted #000; }
+a.toc { color: #999; padding: 2px 0px; border-bottom: 0px dotted #000; }
+a.toc:visited { color: #666 }
+a.toc:hover { color: #000; text-decoration: none; border-bottom: 1px dotted #666;  }
+
+a.pale { border-bottom: 0px dotted #000; }
+
+a.green:hover { background-color: #6bbf56; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.orange:hover { background-color: #fca34c; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.red:hover { background-color: #f0043e; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.purple:hover { background-color: #8b3e93; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.blue:hover { background-color: #396caf; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.pale:hover { background-color: #fff491; color: #000; text-decoration: none; border-bottom: 0px dotted #000; }
+
+a.select-green { background-color: #6bbf56; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-orange { background-color: #fca34c; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-red { background-color: #f0043e; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-purple { background-color: #8b3e93; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-blue { background-color: #396caf; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-pale { background-color: #fff491; color: #000; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-pink { background-color: #f05687; color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+a.select-toc { background-color: #eee; color: #f05687; text-decoration: none; border-bottom: 0px dotted #000; }
+
+.header { font-size: 32px; line-height: 71px; background-color: #000; color: #fff; height: 80px; }
+.header-tall { font-size: 32px; line-height: 71px; background-color: #000; color: #fff; height: 130px; text-align: center; }
+.header img { width: 300px; padding-top: 16px; margin-left: 44px; border: none; }
+.header-tall img { width: 300px; padding-top: 16px; }
+
+.footer { border-top: 1px dotted #ccc; margin-right: 100px; margin-left: 40px; margin-top: 60px; margin-bottom: 30px; clear: both;  }
+.footer-left  { float: left; }
+.footer-right { float: right; }
+
+.main-content { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; padding-left: 20px; }
+.intro-text { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; padding-top: 30px; margin-right: 80px;}
+.content { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; padding-top: 10px; margin-right: 80px; margin-left: 300px; }
+.doc-content { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; padding-top: 10px; margin-right: 80px; margin-left: 300px; min-height: 460px; }
+
+.content-column-left { width: 45%; float: left; padding-bottom: 40px; padding-right: 30px; }
+.content-column-right { width: 45%; float: right; padding-bottom: 40px; padding-right: 30px; }
+
+ul { }
+ul.nav { font-family: 'Monsterrat Regular', san serif; list-style: none; white-space: nowrap; float: left; margin-top: 36px; position: fixed; }
+ul.nav-noscroll { font-family: 'Monsterrat Regular', san serif; list-style: none; white-space: nowrap; float: left; margin-top: 36px; }
+ul.subnav { font-family: 'Monsterrat Regular', san serif; list-style: none; white-space: nowrap; margin-top: 3px; margin-bottom: 6px; margin-left: -36px; }
+ul.subnav li { margin-left: 0px; padding-left: 0px; }
+ul.nav li { line-height: 32px; }
+ul.nav-noscroll li { line-height: 32px; }
+ul li { }
+ul.text { }
+ul.text li { line-height: 22px; padding-top: 9px; padding-bottom: 9px; }
+ol { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; margin-left: 0px; margin-top: 8px; margin-bottom: 8px; list-style: none; }
+ol li { padding-bottom: 3px; }
+
+dl { font-size: 18px; background-color: #eeeded; padding: 18px; 
+		-moz-border-radius: 24px;
+		-webkit-border-radius: 24px; border-radius: 24px; /* future proofing */
+		-khtml-border-radius: 24px; /* for old Konqueror browsers */
+		border: 1px solid #d1d0d0;
+	}
+dd { padding-bottom: 6px; }
+dt { font-family: 'Monsterrat Regular', san serif; padding-top: 6px; padding-bottom: 12px; }
+
+ol.toc-nav { font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; white-space: nowrap; font-size: 14px; margin-left: -30px; margin-top: 8px; margin-bottom: 8px; }
+ol.toc-nav li { line-height: 16px; margin-top: 4px; margin-bottom: 4px; }
+
+p.first { padding-top: 0px; margin-top: 0px; }
+.annotate { font-size: 12px; color: #f05687; font-style: italic; }
+
+h1.home { }
+h1 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 45px; color: #333; margin-bottom: 0px; padding-bottom: 10px; margin-top: 0px; padding-top: 20px; }
+h2 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 34px; color: #333; margin-bottom: 0px; padding-bottom: 0px; margin-top: 0px; padding-top: 20px;  }
+h3 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 26px; color: #333; margin-bottom: 0px; padding-bottom: 0px; }
+h3.knapsack { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 18px; color: #333; margin-bottom: 0px; padding-bottom: 9px; padding-left: 28px; }
+h4 { font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 20px; color: #666; margin-bottom: 0px; padding-bottom: 0px; text-transform: uppercase; }
+
+.montserrat { font-family: 'Monsterrat Regular', san serif;  }
+
+img.doc-image  { width: 100% } 
+
+pre { background-color: #d9f8c9; padding: 20px; border: 1px solid #90c077; white-space: pre-wrap; font-family: 'Monaco'; 'Lucida Console', 'Lucida Typewriter', monospace; }
+code { font-family: 'Monaco'; 'Lucida Console', 'Lucida Typewriter', monospace; }
+
+p {font-family: 'OpenSans Regular', 'Open Sans', 'Trebuchet MS', san serif; }
+
+form { margin-left: 20px; }
+
+select {
+    border:0;
+    background: transparent;
+    color: #fff;
+    height:32px;
+    width:350px;
+    -webkit-appearance: none;
+	font-family: 'Monsterrat Regular', san serif; font-weight: normal; font-size: 16px; 
+	padding: 5px 12px;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';	
+}
+
+
+.styled-select select {
+   width: 95%;
+   background: transparent;
+   height: 34px;
+   overflow: hidden;
+   background: url(images/select.svg) no-repeat right;
+   border: 1px dotted #fff;
+   }
+
+

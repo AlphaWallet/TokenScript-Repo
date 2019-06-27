@@ -1,0 +1,34 @@
+@media screen and (device-aspect-ratio: 40/71)  { 
+	body.short .header { height: 95px; }
+	body.short .header a.logo img { margin-left: 10px; margin-top: 0px; width: 435px; }
+	.nav-noscroll { width: 100%; } 
+	.footer .footer-left {float: left; display: none; }	
+	.footer .footer-right {float: left; }	
+	@media screen and (orientation:landscape)  {
+	body.short .header { display: none; }
+	body.short .main-content h2 { padding-left: 0px; margin-right: 40px; position: absolute; top: 0px; padding-bottom: 0px; }
+	body.short table.supported td.notes, body.short table.supported td.notes ul li { font-size: .5em; }
+}	
+}
+
+
+.supported th.things {background-color:#d9d9d9;font-weight:bold;text-transform:uppercase;font-style:normal;color:#000000;text-decoration:none;text-align:left;vertical-align:middle;direction:auto-ltr;white-space:normal;overflow:hidden;border-right:1px solid #fff; font-size: 12px; padding: 4px; letter-spacing: .2em }
+
+.supported th.things a { border-bottom: none; }
+
+.supported td.notes, .supported td.notes ul li  {background-color:#eee;font-style:normal;color:#000000;text-decoration:none;text-align:left;vertical-align:middle;direction:auto-ltr;white-space:normal;overflow:hidden;font-size: 13px; line-height: 12px; }
+
+.supported td {font-size: 13px; padding:4px 8px;overflow:hidden;white-space:normal;letter-spacing:0;word-spacing:0;background-color:#fff;z-index:1;border-top:0px none;border-left:0px none;border-bottom:1px solid #eee;}
+
+.supported td.notes ul {line-height: 16px; margin-top: 4px;}
+.supported td.notes ul li {line-height: 16px; padding: none; margin-bottom: 2px; margin-top: none;}
+
+.supported td.ready {background-color:#d9ead3;}
+.supported td.coding-queue {background-color:#fce5cd;}
+.supported td.fail {background-color:#e6b8af;}
+.supported td.wait {background-color:#c9daf8;}
+.supported td.hold {background-color:#ead1dc;}
+
+table td.s3 a { padding: 0px; border-bottom: 0px dotted #ccc; }
+table td a:hover { background-color: #eee; color: #000; }
+table td.s1 { text-transform: uppercase; line-height: 12px; padding: 4px 8px; margin: 0px; font-family: 'Monsterrat Regular', san serif; font-weight: normal; border-top: none; }
