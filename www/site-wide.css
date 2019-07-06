@@ -254,9 +254,8 @@ body.short { font-family: 'Monsterrat Regular', 'OpenSans Regular', 'Open Sans',
 
 .short { min-height: 250px; }
 
-a { color: #999; padding: 2px 10px; text-decoration: none;  border-bottom: 1px dotted #666; }
-a:visited { color: #666;  text-decoration: none; border-bottom: 0px dotted #000; }
-a:hover { color: #fff; text-decoration: none; border-bottom: 0px dotted #000; }
+:link { color: #999;  text-decoration: none;  border-bottom: 1px dotted #666; }
+:visited { color: #666;  text-decoration: none; border-bottom: 1px dotted #666; }
  
 .doc-content a { color: #999; padding: 0px; text-decoration: none; }
 .doc-content a:visited { color: #666;  text-decoration: none; border-bottom: 0px dotted #000; }
