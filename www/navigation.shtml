@@ -2,8 +2,7 @@
     <li><a href="../smart-token/" class="red">The Trouble With Tokens</a></li>
     <li><a href="../tech/" class="select-orange">TokenScript Technology</a></li>
     <li><a href="../community/" class="blue">TokenScript Community</a></li>
-    <li><a href="https://github.com/AlphaWallet/TokenScript/releases" class="purple">Design Paper</a> <sup>&#x2197</sup>
-    </li>
+    <li><a href="../paper/" class="purple">Design Paper</a></li>
     <li><a href="http://www.alphawallet.com" class="green">Reference Implementation <sup>&#x2197</sup></a></li>
 </ul>
 
