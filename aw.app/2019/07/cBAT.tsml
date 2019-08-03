@@ -35,7 +35,9 @@
         </ts:attribute-type>
         <ts:transaction>
             <ts:ethereum as="uint" contract="cBAT" function="mint">
-                <ts:value ref="mintAmount"/>
+                <ts:data>
+                    <ts:uint256 ref="mintAmount"/>
+                </ts:data>
             </ts:ethereum>
         </ts:transaction>
         <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
@@ -150,8 +152,8 @@ class Token {
         let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
         let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
         let interestRatePerBlock = this.props.supplyInterestRate;
-        //just an estimate, not possible to be perfectly accurate
-        let averageBlocksPerYear = 2102400;
+        //TODO be very careful with this number as it is subject to change
+        let averageBlocksPerYear = 2132224.72973;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
         return`
         &lt;div class="ui container"&gt;
@@ -312,8 +314,8 @@ class Token {
         let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
         let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
         let interestRatePerBlock = this.props.supplyInterestRate;
-        //just an estimate, not possible to be perfectly accurate
-        let averageBlocksPerYear = 2102400;
+        //TODO be very careful with this number as it is subject to change
+        let averageBlocksPerYear = 2132224.72973;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
         return`
         &lt;div class="ui container"&gt;
@@ -324,7 +326,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
-              &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name.replace("c", "")} from Compound&lt;/h3&gt;&lt;/bold&gt;
+              &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name} for ${this.props.name.replace("c", "")} from Compound&lt;/h3&gt;&lt;/bold&gt;
               &lt;span&gt;&lt;input id="redeemAmount" type="number"&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -407,15 +409,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>P7ZS2uOCWRbwg/dbe7chkxii4pEUsvevRz7Hbglr1kw=</ds:DigestValue>
+<ds:DigestValue>Jcdl6BKt+3WLBOnMEOV/iRktLBadiUuuVrE5TK/TrEw=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-iACCnCGhl+bLocn+8vLN+UlYJqS2LWuzov+k1RueqEiTZO3DsSiaK/WU6VYrbt1pZYKFVN7EE1F3
-wMCfzLyJPeXUwejr5jI8xoz3pTcdtgsMC3Vu/nS9vCaGXrw/EjUrNWZBhR24/eSIcntnt4ixG0MJ
-7z4RVq9a+oOwtSbf0+kba/AFfuiUxmF4qTdY8W/MsNg8ln/nYGRNAQh2SWz3qbxHwTTrryrOwAMV
-+P1jDmFk2hI/SLp4I7wgq7Y33nIMJ3QedmT2Vi559kVuqX8LUAE1mEPw9R+cHPOC3bxWbUpT17x5
-VJ7yj9oXrFPGLWKHikn5E0Thl0FUrrHU3liThw==
+AuFqpxcjW554XWOQLYuNvlxz9oSA2PTfHhwTl3VL/muKQIckDwZC7Xvf9kHwQLHkijVjG/kkXdxq
+vdEcOxjkxZJ+m+ZhpCyitpPyw88SCs1U+xgSO7PzSzXbeDnbpLjA6VkCHml1gJ2lqKwxD+kLO0Av
+71I/YjIhQK81EJoM7+o392wJqFdxrEG0qxdQEmPslwJ0lz2YrR5h+xHCi9lesdN5cntNYuSmHIDO
+KMB4f56KAJwc43X5IA44ZObW+1LuFUWlem299cXhK/F6S9G/+CeMOro85aCjowSAAtxLpFA7csTT
+myVTOowKOv2/gsSsXCyTPZ1OUryANxyZEgHmZA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
