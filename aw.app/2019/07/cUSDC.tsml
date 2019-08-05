@@ -152,8 +152,7 @@ class Token {
         let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
         let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
         let interestRatePerBlock = this.props.supplyInterestRate;
-        //TODO be very careful with this number as it is subject to change
-        let averageBlocksPerYear = 2132224.72973;
+        const averageBlocksPerYear = 2102400;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
         return`
         &lt;div class="ui container"&gt;
@@ -314,8 +313,7 @@ class Token {
         let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
         let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
         let interestRatePerBlock = this.props.supplyInterestRate;
-        //TODO be very careful with this number as it is subject to change
-        let averageBlocksPerYear = 2132224.72973;
+        const averageBlocksPerYear = 2102400;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
         return`
         &lt;div class="ui container"&gt;
@@ -409,15 +407,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>y1R18sdbgX/y81YpqPr8uDCwJF2ZNkjKqzkeZjf8sQY=</ds:DigestValue>
+<ds:DigestValue>N1kfN5KkCdIuJiE7r8Ud4Kbbu1GWXzdGdO+xLhj1qPo=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-E2w8TRnvGsaN/GtoALFnq8VZMzGCLgR8cKztLdkXA3evWYbGZs6QgNrDe8ZqfBg171h68MX706jQ
-tvdSO9C1U3aNEIpYAyfHCdvTzfZ/0uB7EYu6P/NDZCll+02gbeDt2Ek9QEcV3gEpvs8+WGobNEwP
-31836pGYTmpavmne1aesXtnIy06lQrmmbZWD8NZrmwEcQsPQcMo7VVz2d8TchOcNPBdgxM/MeNzh
-ONJdVb7ixX3EpBw6hwM9hzsCIVKCXQecshXRRc0WG3YfG9DkaUcVEavVaVJsrG30J3CG3Yjoi+lj
-yui75REExugVduVQS1JjhrVYAdhpeBh2Fs/YXA==
+oBTKnb3kvui/5XxoGtOmn/ESEylZZ91EEKLg4Xvxg+NlBpO08hwTBsZHdgyOlrxDMqzRa5PcrttW
+popMXk1zGFrwqHQ21vbF8MsAzZwTbvSBioFcZcONtihOQ//K+IVblR0yzn5c3+2bVE9MjcXCI4mW
+YVLPIUnYMB2zqGXqKyh/RbUMBuyuJIGzmKt9DChbrxjaZM38hvr2UDOWHg3l8VeC7eSH/vVxpG43
+HP7dIcTGI1JHtxEEkwqKquiYz1NzTAp0cDYr0O/4Muup/qaTiGXzrKTCTQkpXGWSdm/GT37hPPji
+SpugebFKN21OuU9cI3WL57mNFxfyWRE6O16fbA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
