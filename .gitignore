@@ -1,2 +1,4 @@
 htaccess.tmp
 .DS_Store
+.idea
+.htaccess
