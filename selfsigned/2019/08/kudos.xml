@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/05/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/05/tokenscript"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>1ZZw9F4NZ1v7tV2zizQcMksuaLXFBwG8ww6L6Az+dtQ=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+hzZrGtgtbmI0hyISEVVbPmXVjsISxykR3Be1LuPHx2SL3JCk14Gdug2JBg26D46TMso07alp6IJE
+ob8cvykNwAauZDPgUTf2GaTOabVVDsoQXLH1o/cCpFzwVeemdlIR19LCZ5JnfmjOf6AEjZqRVYBW
+P2PyHmXQuR+Jm1JbJ5yyF96miydaMambrSZ+4P9IMZTFAp+WWW0My/cZn16Je9OZuzt+CYwX4TUb
+E1541fV7ktP0PXtWKxruPlbdEG4i+qrnZC+/fZTNMCDOH5wZPA5sUllSnZcCGduCBs7G5xhoqlDv
+q0IRNiGgqJuAWlKEES5gOohyhlbGXC88/3ja9Q==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+uqS1DcnjaSkM423AEd9xyXRAlMLRjhDJOzNEnxxEXZhKqCZjRhmb+KtaTxjPUV4KVvrosTh8+m9R
+3Lm1gsGbOwGDVezL9Qgo2ZTVwPnI3cncG+iXFh22RrSzUFIXXcJdys+L9z4rCYGQ9/N+8I25k53Z
+7sJicEyVpFcx/hZVdn0Hm9ktZenO+uaSHAA+lZPFTPDqYewz+1y5bR3HpmiJdYvbr1dIOEwYmGmK
+zmodCdraqwySBfMJr1echTMu8K8CKUMvO+viM8YdlrOjWA+Q5Pad2eTFdZLSEvxa9IvRNOeJUTaS
+Syho3YQblq6ltttDSkP4bJGjsi3HtGsOxc7gfQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDTTCCAjWgAwIBAgIJAP7siO3goC0BMA0GCSqGSIb3DQEBCwUAMD0xCzAJBgNVBAYTAlVTMQsw
+CQYDVQQIDAJQQTEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMB4XDTE5MDgyNzA1
+MjQzNFoXDTI5MDgyNDA1MjQzNFowPTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAlBBMSEwHwYDVQQK
+DBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQC6pLUNyeNpKQzjbcAR33HJdECUwtGOEMk7M0SfHERdmEqoJmNGGZv4q1pPGM9RXgpW+uixOHz6
+b1HcubWCwZs7AYNV7Mv1CCjZlNXA+cjdydwb6JcWHbZGtLNQUhddwl3Kz4v3PisJgZD3837wjbmT
+ndnuwmJwTJWkVzH+FlV2fQeb2S1l6c765pIcAD6Vk8VM8Oph7DP7XLltHcemaIl1i9uvV0g4TBiY
+aYrOah0J2tqrDJIF8wmvV5yFMy7wrwIpQy876+Izxh2Ws6NYD5Dk9p3Z5MV1ktIS/Fr0i9E054lR
+NpJLKGjdhBuWrqW220NKQ/hskaOyLce0aw7FzuB9AgMBAAGjUDBOMB0GA1UdDgQWBBQ8JHDojoji
+cIbD2lCCxCGPYb8y1TAfBgNVHSMEGDAWgBQ8JHDojojicIbD2lCCxCGPYb8y1TAMBgNVHRMEBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAJwUPlyXlccQUsa7NfyA9mM7uvHaLPXzqHAVVryOLGM8j4
+aqtpVyzxLwTOIAoPc0mq0xZjlCJTD433gyTHTFpxPNGFuZS4eBPg77fu5KbePcxhCSvIVC/OBuf0
+3tvkE4015Az6hQS9OrMyF6Zq0kRo41TTTPyIcKxQBRvJuv0kuA83ulG1NmOnglwbOYDA7rwtCJ1v
+Zg7AMnj0WkRodyO9Z6gHhYDfiDlF7xGmsyc193kQIiK9fbTvc6IXyGmZeAJfAiSswOt8XyEb2cJ/
+UUMwtdgbFFswtUY6Lx/NEf5z4arGi4ELPn+5tyi08B3BbwIeVkgkEnHjk1nThWkUwKzC
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+  <ts:name>
+    <ts:plurals xml:lang="en">
+      <ts:string quantity="one">Kudo</ts:string>
+      <ts:string quantity="other">Kudos</ts:string>
+    </ts:plurals>
+  </ts:name>
+  <ts:contract interface="erc721" name="Kudos">
+    <ts:address network="1">0x2aea4add166ebf38b63d09a75de1a7b94aa24163</ts:address>
+  </ts:contract>
+  <ts:origins>
+    <!-- Define the contract which holds the token that the user will use -->
+    <ts:ethereum contract="Kudos">
+    </ts:ethereum>
+  </ts:origins>
+  <ts:selections>
+    <ts:selection id="expired">
+      <ts:name>
+        <ts:plurals xml:lang="en">
+          <ts:string quantity="one">Expired Ticket</ts:string>
+          <ts:string quantity="other">Expired Tickets</ts:string>
+        </ts:plurals>
+      </ts:name>
+      <ts:filter>expired</ts:filter>
+    </ts:selection>
+  </ts:selections>
+  <ts:cards>
+    <ts:action>
+      <!-- this action is of the model confirm-back.
+      It should be <ts:action model="confirm-back"> but Weiwu
+      shied away from specifying that due to the likely change of design causing an upgrade path issue.
+      window.onConfirm is called if user hit "confirm";
+      window.close() causes the back button to be pressed.
+      -->
+      <ts:name>
+        <ts:string xml:lang="en">Stats</ts:string>
+      </ts:name>
+      <ts:exclude selection="expired"/>
+      <style type="text/css"/>
+      <ts:view xml:lang="en">
+        <script type="text/javascript" xml:base="/stats.en.shtml"><![CDATA[
+class Token {
+    constructor(tokenInstance) {
+        this.props = tokenInstance
+        document.getElementById("contractAddress").value = this.props.Kudos;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens) => {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+};
+]]>
+</script>
+<script type="text/javascript" xml:base="/stats.en.shtml">
+    document.addEventListener("DOMContentLoaded", function() {
+        window.onload = function startup() {
+            const instance = web3.tokens.data.currentInstance;
+            document.getElementById('msg').innerHTML = `
+                Kudos ID: ${instance.tokenId} <br/>
+                Owned: ${instance._count} <br/>
+                Contract Address: ${instance.contractAddress} <br/>
+                Message Contained: ${instance.description}
+            `;
+        }
+    })
+</script>
+<h3 xml:base="/stats.en.shtml">Kudos by Gitcoin</h3>
+<div id="msg" xml:base="/stats.en.shtml"/>
+<div id="contractAddress" xml:base="/stats.en.shtml"/>
+<div id="status" xml:base="/stats.en.shtml"/>
+
+      </ts:view>
+    </ts:action>
+  </ts:cards>
+  <ts:attribute-types>
+    <ts:attribute-type id="time" syntax="1.3.6.1.4.1.1466.115.121.1.24">
+      <ts:name>
+        <ts:string xml:lang="en">Time</ts:string>
+      </ts:name>
+      <ts:origins>
+        <ts:token-id as="utf8" bitmask="0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000"/>
+      </ts:origins>
+    </ts:attribute-type>
+    <ts:attribute-type id="byId" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Kudos" function="getKudosById">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+    <ts:attribute-type id="clones" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Kudos" function="getNumClonesInWild">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+</ts:attribute-types>
+</ts:token>
