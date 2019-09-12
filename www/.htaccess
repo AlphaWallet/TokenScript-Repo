@@ -1,3 +1,8 @@
 Options +MultiViews +Includes
 DirectoryIndex index
+AddLanguage en .en
+AddLanguage sp .sp
+AddLanguage zh .zh
+LanguagePriority en sp zh
+ForceLanguagePriority Fallback
 XBitHack on
