@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/05/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/05/tokenscript">
+  <ts:name>
+    <ts:plurals xml:lang="en"> <!-- other languages "es"=Spanish "zh"=Chinese ... -->
+      <ts:string quantity="one">Token</ts:string>
+      <ts:string quantity="other">Tokens</ts:string>
+    </ts:plurals>
+    <!--ts:plurals xml:lang="fr">
+      <ts:string quantity="one">###</ts:string>
+      <ts:string quantity="other">###</ts:string>
+    </ts:plurals-->
+  </ts:name>
+  <ts:contract interface="erc20" name="FRECNX">
+    <ts:address network="1">0xd8B8E1Eca89dA014E67fDbc2014eaA8E171079bF</ts:address>     <!--mainnet-->
+    <!--ts:address network="3">0x###</ts:address-->     <!--test networks if desired etc-->
+  </ts:contract>
+
+  <ts:origins>
+    <!-- Define the contract which holds the token that the user will use -->
+    <ts:ethereum contract="FRECNX">
+    </ts:ethereum>
+  </ts:origins>
+  <ts:cards>
+  </ts:cards>
+  <ts:attribute-types>
+    <!-- placeholder for future functions -->
+    <ts:attribute-type id="symbol" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+      <ts:origins>
+        <ts:ethereum as="utf8" function="symbol">
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+  </ts:attribute-types>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>ClO4pseikNyLHD/aCTKOieg2ZFSkcXoGZGcTEVnWa6w=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+R76SUZ/0sp7i2KH0c0SiDaaGtPQBPG5scaNEzCc4v1S380cLfXpJfUjGiEOot4cadAXzrMd/pbLP
+g7GuME08ChqgKZbksfLbYfFdbRGovI03CnjujDam8PkLZ8u+NjmJJ10L/97ppNFnHAgYEbhOritW
+Z7FVOGP8wKPHneL9GJor4Sy6R/frEuO3TnOHGxlC5M+gSRS/WEwalmgGDb7gvOvaDGaLe93tI3KN
+9bVgyJYLsGoc2wKr7rhhIS/GL77XxF2bxBfDxYYAcP7AkTwgCeVU4G9QdgiSc8n/NC8I5OSNLyW1
+9YGNnBdRVCUGkUC/8LJIlZWzOCX3eZI/Gi0dBQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyName>FRECNX</ds:KeyName>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+pZ4ZjZ+P50V28/d9vEQ2kVmU5gbVUDWi0nDowiKd85bhupES6ii/v/rOW9cMRX5CjQsh0MiG5ZGb
+01OuK/U1XXtaPvjdnQO7KpoVl9pPOkreKmqBgQOEGQCVTeO65Czc6dj6mhPVgi+f6kIkQzUoGYxM
+AX9vu0N4iWTPI6lb12lJ5Qs7xWj4PI0z/A/hDbO+nEzIIWeyGpA9mpVtIlzkydbLBzIFh7btVN7Q
+lVFuaxkjkwVWFxr6yKMlBYNA20ZAVyJcH+eK/bByOJU+PdlBqFPGV0KHP1goStM1LC14/+gFHeUZ
+XSRUY/qcTz3kDuwbTAS3D93iVRsNbPQphG/wIw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIGEzCCA/ugAwIBAgIQfVtRJrR2uhHbdBYLvFMNpzANBgkqhkiG9w0BAQwFADCB
+iDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0pl
+cnNleSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNV
+BAMTJVVTRVJUcnVzdCBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTgx
+MTAyMDAwMDAwWhcNMzAxMjMxMjM1OTU5WjCBjzELMAkGA1UEBhMCR0IxGzAZBgNV
+BAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEYMBYGA1UE
+ChMPU2VjdGlnbyBMaW1pdGVkMTcwNQYDVQQDEy5TZWN0aWdvIFJTQSBEb21haW4g
+VmFsaWRhdGlvbiBTZWN1cmUgU2VydmVyIENBMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA1nMz1tc8INAA0hdFuNY+B6I/x0HuMjDJsGz99J/LEpgPLT+N
+TQEMgg8Xf2Iu6bhIefsWg06t1zIlk7cHv7lQP6lMw0Aq6Tn/2YHKHxYyQdqAJrkj
+eocgHuP/IJo8lURvh3UGkEC0MpMWCRAIIz7S3YcPb11RFGoKacVPAXJpz9OTTG0E
+oKMbgn6xmrntxZ7FN3ifmgg0+1YuWMQJDgZkW7w33PGfKGioVrCSo1yfu4iYCBsk
+Haswha6vsC6eep3BwEIc4gLw6uBK0u+QDrTBQBbwb4VCSmT3pDCg/r8uoydajotY
+uK3DGReEY+1vVv2Dy2A0xHS+5p3b4eTlygxfFQIDAQABo4IBbjCCAWowHwYDVR0j
+BBgwFoAUU3m/WqorSs9UgOHYm8Cd8rIDZsswHQYDVR0OBBYEFI2MXsRUrYrhd+mb
++ZsF4bgBjWHhMA4GA1UdDwEB/wQEAwIBhjASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+A1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAbBgNVHSAEFDASMAYGBFUdIAAw
+CAYGZ4EMAQIBMFAGA1UdHwRJMEcwRaBDoEGGP2h0dHA6Ly9jcmwudXNlcnRydXN0
+LmNvbS9VU0VSVHJ1c3RSU0FDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5LmNybDB2Bggr
+BgEFBQcBAQRqMGgwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jcnQudXNlcnRydXN0LmNv
+bS9VU0VSVHJ1c3RSU0FBZGRUcnVzdENBLmNydDAlBggrBgEFBQcwAYYZaHR0cDov
+L29jc3AudXNlcnRydXN0LmNvbTANBgkqhkiG9w0BAQwFAAOCAgEAMr9hvQ5Iw0/H
+ukdN+Jx4GQHcEx2Ab/zDcLRSmjEzmldS+zGea6TvVKqJjUAXaPgREHzSyrHxVYbH
+7rM2kYb2OVG/Rr8PoLq0935JxCo2F57kaDl6r5ROVm+yezu/Coa9zcV3HAO4OLGi
+H19+24rcRki2aArPsrW04jTkZ6k4Zgle0rj8nSg6F0AnwnJOKf0hPHzPE/uWLMUx
+RP0T7dWbqWlod3zu4f+k+TY4CFM5ooQ0nBnzvg6s1SQ36yOoeNDT5++SR2RiOSLv
+xvcRviKFxmZEJCaOEDKNyJOuB56DPi/Z+fVGjmO+wea03KbNIaiGCpXZLoUmGv38
+sbZXQm2V0TP2ORQGgkE49Y9Y3IBbpNV9lXj9p5v//cWoaasm56ekBYdbqbe4oyAL
+l6lFhd2zi+WJN44pDfwGF/Y4QA5C5BIG+3vzxhFoYt/jmPQT2BVPi7Fp2RBgvGQq
+6jG35LWjOhSbJuMLe/0CjraZwTiXWTb2qHSihrZe68Zk6s+go/lunrotEbaGmAhY
+LcmsJWTyXnW0OMGuf1pGg+pRyrbxmRE1a6Vqe8YAsOf4vmSyrcjC8azjUeqkk+B5
+yOGBQMkKW+ESPMFgKuOXwIlCypTPRpgSabuY0MLTDXJLR27lk8QyKGOHQ+SwMj4K
+00u/I5sUKUErmgQfky3xxzlIPK1aEn8=
+</ds:X509Certificate>
+<ds:X509Certificate>
+MIIGETCCBPmgAwIBAgIRAO1b3mncK8yotxMYBWs4V4wwDQYJKoZIhvcNAQELBQAwgY8xCzAJBgNV
+BAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAW
+BgNVBAoTD1NlY3RpZ28gTGltaXRlZDE3MDUGA1UEAxMuU2VjdGlnbyBSU0EgRG9tYWluIFZhbGlk
+YXRpb24gU2VjdXJlIFNlcnZlciBDQTAeFw0xOTA2MTEwMDAwMDBaFw0yMDA2MjYyMzU5NTlaMFsx
+ITAfBgNVBAsTGERvbWFpbiBDb250cm9sIFZhbGlkYXRlZDEVMBMGA1UECxMMRXNzZW50aWFsU1NM
+MR8wHQYDVQQDExZiYWNrZW5kLmljby5mcmVsZG8uY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEApZ4ZjZ+P50V28/d9vEQ2kVmU5gbVUDWi0nDowiKd85bhupES6ii/v/rOW9cMRX5C
+jQsh0MiG5ZGb01OuK/U1XXtaPvjdnQO7KpoVl9pPOkreKmqBgQOEGQCVTeO65Czc6dj6mhPVgi+f
+6kIkQzUoGYxMAX9vu0N4iWTPI6lb12lJ5Qs7xWj4PI0z/A/hDbO+nEzIIWeyGpA9mpVtIlzkydbL
+BzIFh7btVN7QlVFuaxkjkwVWFxr6yKMlBYNA20ZAVyJcH+eK/bByOJU+PdlBqFPGV0KHP1goStM1
+LC14/+gFHeUZXSRUY/qcTz3kDuwbTAS3D93iVRsNbPQphG/wIwIDAQABo4ICmTCCApUwHwYDVR0j
+BBgwFoAUjYxexFStiuF36Zv5mwXhuAGNYeEwHQYDVR0OBBYEFMdrkk0Ip0pba5nLU1A/9+TcSebY
+MA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF
+BQcDAjBJBgNVHSAEQjBAMDQGCysGAQQBsjEBAgIHMCUwIwYIKwYBBQUHAgEWF2h0dHBzOi8vc2Vj
+dGlnby5jb20vQ1BTMAgGBmeBDAECATCBhAYIKwYBBQUHAQEEeDB2ME8GCCsGAQUFBzAChkNodHRw
+Oi8vY3J0LnNlY3RpZ28uY29tL1NlY3RpZ29SU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVy
+Q0EuY3J0MCMGCCsGAQUFBzABhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTA9BgNVHREENjA0ghZi
+YWNrZW5kLmljby5mcmVsZG8uY29tghp3d3cuYmFja2VuZC5pY28uZnJlbGRvLmNvbTCCAQMGCisG
+AQQB1nkCBAIEgfQEgfEA7wB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABa0bo
+9WwAAAQDAEcwRQIhAJUXZkKh1ZPMd9bt2YhZaLWOOLV6xEZw7ERTMquHj6dVAiA1E7vaQs80Pud/
+ZW1juvnTPI/DB0XeE071Np3PoNBXnwB1AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVY
+AAABa0bo9icAAAQDAEYwRAIgRhaFT1bc0vQBz4KuhaRovNl0IoiL7muGZud5T5LN/LECIFxGUOQL
+pCsGCRgo5mp2Q5ne5532wJGutuxoZIdgQ2v2MA0GCSqGSIb3DQEBCwUAA4IBAQAkLxqdXjfHsV2s
+3Tj6suLuR9ThQuKZV3MB5ORvRJZQeNzbm2qDwDkdq3xFi5iAOa+Sa7/gMyIWtVGuq89zmqKv9MnP
+MGyWoiVmEcDBpXxQAntYP7GXfj0+/pTV4A3FGlpM/dEbGHEs4GRMgJVprQykHwNBlfFjqcujx9EG
+umGdVif0cJmSTS9BzW+zOsXIsnhC8N+Nj2IFL27Gr3/9Xe96WdXSuBwL8aNqMyRBq1MTntrfpII4
+OXyWKv4j/abeWa7besej807wL+EEe+G0j8dRo89qoWdS9RebI5jcxOy6BnQr437uxPahaA4ykALO
+DSKWcwf9VZ8gG58vx1xyQDWg
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></ts:token>
+
