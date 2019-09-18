@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/05/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/05/tokenscript">
+  <ts:name>
+    <ts:string xml:lang="en">CELR</ts:string>
+  </ts:name>
+  <ts:contract interface="erc20" name="CelerToken">
+    <ts:address network="1">0x4F9254C83EB525f9FCf346490bbb3ed28a81C667</ts:address>     <!--mainnet-->
+  </ts:contract>
+
+  <ts:origins>
+    <!-- Define the contract which holds the token that the user will use -->
+    <ts:ethereum contract="CelerToken">
+    </ts:ethereum>
+  </ts:origins>
+  <ts:cards>
+  </ts:cards>
+  <ts:attribute-types>
+    <!-- placeholder for future functions -->
+    <ts:attribute-type id="symbol" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+      <ts:origins>
+        <ts:ethereum as="utf8" function="symbol">
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+  </ts:attribute-types>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>aNFCvZh+xwTC9Ihl2kPuTH+Us9N6k1Kq9wlV1v1oypA=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+HJdgzvwiqtXAC7UgDDVN7f5U2Tu6r2fgUcGX/8+D73gPpiJkJNkpW9Hc7DcahMQ6WgRRBL+625Rt
+ZX3ORegs1jYIjBvb6eARlOoxsgunvyPviCfGE+7lPqf59HL7bz1z3+Kfn0xV5EoOupaNFsxJRoBp
+//YPm/ElZWvLCOx2XDd7gdeDVNbvFT9TxNNDFZn6Zyv9p8vHYli9+sqoAPsriX9oHuolxYViXxGS
+F7SSDlHIPqnqq0qrdL41XJQ7dH1lmAmDcqH1sTmjKWUy6qZ9pFr4xVWdmgqglUj2Aontni3BizQj
+y60rbH6pfKFJQqz3Qb/vvpnoAMsQx8g3tRbPjQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyName>CELER</ds:KeyName>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+x9OVjmQT9hr9BwSluTdtoFr9mgF3NyADcYuaHucL/k/RdwG4QLtMUVok3MCV2yfYLLQI+uqI4p4i
+5+sUpgQEBvHwdj2E22g8EQOxS3+6uvYkE6w757aZVOO3B7J8UZ4zNGKlDXmQD6eZHWe6j3pXH3QS
+D2Nqa9ZzgFo295v7xpac+MzeqxYItR/qDi54bpzAK5gyDkyQJ3tx1rhlNK06z7QXLccif+083KLd
+4SaWIyXQNzC6heXuimEokewQ+LnHWdg4XYH0lJ9Wze2JgfYHAc68J0f0bHqGFNchcpy3JLnSyhIw
+eSG9A721N46sDd7t3RvTI1kX+WGfpQDdPJJcjw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFVDCCBDygAwIBAgISA8D0J2GlJ5CO7fjH8yFySSwXMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
+BAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1
+dGhvcml0eSBYMzAeFw0xOTA5MTcxNzIyMTBaFw0xOTEyMTYxNzIyMTBaMBgxFjAUBgNVBAMTDWNl
+bGVyLm5ldHdvcmswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDH05WOZBP2Gv0HBKW5
+N22gWv2aAXc3IANxi5oe5wv+T9F3AbhAu0xRWiTcwJXbJ9gstAj66ojiniLn6xSmBAQG8fB2PYTb
+aDwRA7FLf7q69iQTrDvntplU47cHsnxRnjM0YqUNeZAPp5kdZ7qPelcfdBIPY2pr1nOAWjb3m/vG
+lpz4zN6rFgi1H+oOLnhunMArmDIOTJAne3HWuGU0rTrPtBctxyJ/7Tzcot3hJpYjJdA3MLqF5e6K
+YSiR7BD4ucdZ2DhdgfSUn1bN7YmB9gcBzrwnR/RseoYU1yFynLckudLKEjB5Ib0DvbU3jqwN3u3d
+G9MjWRf5YZ+lAN08klyPAgMBAAGjggJkMIICYDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYI
+KwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFKGKJ/SXMAj/iX3sJGwQ
+t5G1jemEMB8GA1UdIwQYMBaAFKhKamMEfd265tE5t6ZFZe/zqOyhMG8GCCsGAQUFBwEBBGMwYTAu
+BggrBgEFBQcwAYYiaHR0cDovL29jc3AuaW50LXgzLmxldHNlbmNyeXB0Lm9yZzAvBggrBgEFBQcw
+AoYjaHR0cDovL2NlcnQuaW50LXgzLmxldHNlbmNyeXB0Lm9yZy8wGAYDVR0RBBEwD4INY2VsZXIu
+bmV0d29yazBMBgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIB
+FhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQYGCisGAQQB1nkCBAIEgfcEgfQA8gB3AOJp
+S64m6OlACeiGG7Y7g9Q+5/50iPukjyiTAZ3d8dv+AAABbUB14W0AAAQDAEgwRgIhANKzaLnc4Zb+
+4P0M8PgaNUcnYdms5NhqCtsPl4NDUQrWAiEA2Z+31OOEPNbMOC9uWO+J6EZdL1563XnYMLGoRxMC
+c8wAdwApPFGWVMg5ZbqqUPxYB9S3b79Yeily3KTDDPTlRUf0eAAAAW1AdeN9AAAEAwBIMEYCIQC0
+tyKsE6j00y8y8y2nD+0YgNrG/A25kjMKXAgQAxlBTwIhAP7GTERGs09eAFtN9+GPBs6Z4rr7uhlp
+vfE/td/VaptkMA0GCSqGSIb3DQEBCwUAA4IBAQAv2xcCn1lDdDSnCzxPlTKxV8PRjg53RX2VZ2L+
+7UhsBC+Et+i5iOqv/NlZAce5f7qNJ095urAT7GrYP2ip+XvwjbsuA22zMg0zHVQ3fp+/iNi9VDAM
+hU6KYdkiAc8kPLf9ZL5zNif3UEakQPyIn2GF7ZvLDC9VAEG++vaDxnSkp6ZS+0vQxMXC1ufi0Hw5
+E+Vr9PlAfrA8WMkJM7slMq/C3sNmLjnNUapoJTfxY7LOBf2clWiYecLFG6SyUQAH5BsA+tRwUld9
+IecOTOEOA78nkQ3NVkgLK2scCTbJbbIpaozKzNIGQ+TsyZpmw/9YFyCEhLXKDW6b88j4f7hSbGkb
+</ds:X509Certificate>
+<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQK
+ExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4X
+DTE2MDMxNzE2NDA0NloXDTIxMDMxNzE2NDA0NlowSjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxl
+dCdzIEVuY3J5cHQxIzAhBgNVBAMTGkxldCdzIEVuY3J5cHQgQXV0aG9yaXR5IFgzMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNMM8FrlLke3cl03g7NoYzDq1zUmGSXhvb418XCSL7e4
+S0EFq6meNQhY7LEqxGiHC6PjdeTm86dicbp5gWAf15Gan/PQeGdxyGkOlZHP/uaZ6WA8SMx+yk13
+EiSdRxta67nsHjcAHJyse6cF6s5K671B5TaYucv9bTyWaN8jKkKQDIZ0Z8h/pZq4UmEUEz9l6YKH
+y9v6Dlb2honzhT+Xhq+w3Brvaw2VFn3EK6BlspkENnWAa6xK8xuQSXgvopZPKiAlKQTGdMDQMc2P
+MTiVFrqoM7hD8bEfwzB/onkxEz0tNvjj/PIzark5McWvxI0NHWQWM6r6hCm21AvA2H3DkwIDAQAB
+o4IBfTCCAXkwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAYYwfwYIKwYBBQUHAQEE
+czBxMDIGCCsGAQUFBzABhiZodHRwOi8vaXNyZy50cnVzdGlkLm9jc3AuaWRlbnRydXN0LmNvbTA7
+BggrBgEFBQcwAoYvaHR0cDovL2FwcHMuaWRlbnRydXN0LmNvbS9yb290cy9kc3Ryb290Y2F4My5w
+N2MwHwYDVR0jBBgwFoAUxKexpHsscfrb4UuQdf/EFWCFiRAwVAYDVR0gBE0wSzAIBgZngQwBAgEw
+PwYLKwYBBAGC3xMBAQEwMDAuBggrBgEFBQcCARYiaHR0cDovL2Nwcy5yb290LXgxLmxldHNlbmNy
+eXB0Lm9yZzA8BgNVHR8ENTAzMDGgL6AthitodHRwOi8vY3JsLmlkZW50cnVzdC5jb20vRFNUUk9P
+VENBWDNDUkwuY3JsMB0GA1UdDgQWBBSoSmpjBH3duubRObemRWXv86jsoTANBgkqhkiG9w0BAQsF
+AAOCAQEA3TPXEfNjWDjdGBX7CVW+dla5cEilaUcne8IkCJLxWh9KEik3JHRRHGJouM2VcGfl96S8
+TihRzZvoroed6ti6WqEBmtzw3Wodatg+VyOeph4EYpr/1wXKtx8/wApIvJSwtmVi4MFU5aMqrSDE
+6ea73Mj2tcMyo5jMd6jmeWUHK8so/joWUoHOUgwuX4Po1QYz+3dszkDqMp4fklxBwXRsW10KXzPM
+TZ+sOPAveyxindmjkW8lGy+QsRlGPfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M
++X+Q7UNKEkROb3N6KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></ts:token>
