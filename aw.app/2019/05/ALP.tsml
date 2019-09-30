@@ -155,7 +155,7 @@ class Token {
             if(this.props.claimed) {
                 window.close();
             } else {
-                web3.personal.sign({ data: "To receive free tokens, you must reveal your public address to us. Is that ok?" }, (err, val) =&gt; {
+                web3.personal.sign({ data: "To receive free tokens, you must reveal your public address to a smart contract. Is that ok?" }, (err, val) =&gt; {
                     if(err) {
                         throw err;
                     }
@@ -216,15 +216,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>KPDO7PfF0DAeSbVDA+i+aBNoDWOv3j0fsAhVrJGx4mM=</ds:DigestValue>
+<ds:DigestValue>dy6gETc7YAnDilPjhsON472E2mPw38+Ed/TxbCCItvY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-c7k9WCIxfKIY7MIJqhkLcFWIFJLDVxP7GfIo4Uqtod0RRQ4W33RKfrp0EL+B2SRHs82HifZMHorN
-1Bt2wCzqq9T8sjj6tr+/hEu3dRba7tqC7I697gJxKOnO4F8zX2dNVjpmpyFTbZ3jpiA2hPemekRb
-GjhIyg/MzazUTJ58f1P6TxWYNEkIVaXPMMW5vhFBQ30ArFBGWus7dT/WzlWnPXWFm/ANf37eZB2i
-fozIKHphpWFEPLazybW7z6aw0AdsqdL59tqxOOsuuaZEuoJKA92qc3BZGmCO12LxALxgWMoE+h02
-RJp/xC25mqM7mAcym9XxM3kfxNyzxsE1rAxyNw==
+iNIvoSF7cUrO8mwatN5t4Vm1awJZgzJF7B0HyeKegeI4J74JLkgb+bZvl8MtTdBuf0glrgBYuZ2f
+s9SMXamK4cvZ8tDCrCW9MCTJ15Ql4Ht4YhW4AIBNF4X+TJ+zQI5t2bI3fNhOqLa1VnaRd2jkJgM/
+9heFzFZj3yDAEHNbkA1BWQU6uj1YVf8zuIUaB3bxF5ITbXTuVcfZ7jmDuMPfphQQv5qOCY6OG16W
+3Vy7ZBu6zb0v3PgVN4P84BGtboIzDFvhqwGy7gbecZKJlkI/8sOqqh3kRIZVXn9p37Qm+RSXTznw
+u+q+tnpsz5KhorSkPO5Eh6MhwZg5y5yduDsjAg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
