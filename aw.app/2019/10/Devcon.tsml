@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
+  <ts:name>
+    <ts:plurals xml:lang="en">
+      <ts:string quantity="one">Devcon5 Ticket</ts:string>
+      <ts:string quantity="other">Devcon5 Tickets</ts:string>
+    </ts:plurals>
+    <ts:plurals xml:lang="es">
+      <ts:string quantity="one">Boleto de admisión</ts:string>
+      <ts:string quantity="other">Boleto de admisiónes</ts:string>
+    </ts:plurals>
+    <ts:plurals xml:lang="zh">
+      <ts:string quantity="one">入場券</ts:string>
+      <ts:string quantity="other">入場券</ts:string>
+    </ts:plurals>
+  </ts:name>
+  <ts:contract interface="erc875" name="Devcon5">
+    <ts:address network="1">0x48401d879E7736Ab80D3D18E24cEbcAc5345170A</ts:address>
+  </ts:contract>
+  <ts:origins>
+    <!-- Define the contract which holds the token that the user will use -->
+    <ts:ethereum contract="Devcon5">
+    </ts:ethereum>
+  </ts:origins>
+  <ts:selections>
+    <ts:selection id="expired">
+      <ts:name>
+        <ts:plurals xml:lang="en">
+          <ts:string quantity="one">Expired Ticket</ts:string>
+          <ts:string quantity="other">Expired Tickets</ts:string>
+        </ts:plurals>
+        <ts:string xml:lang="zh">已经过期的票</ts:string>
+      </ts:name>
+      <ts:filter>expired</ts:filter>
+    </ts:selection>
+  </ts:selections>
+  <ts:cards>
+  </ts:cards>
+
+  <ts:attribute-types>
+    <ts:attribute-type id="category" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+    <ts:name>
+      <ts:string xml:lang="en">Cat</ts:string>
+      <ts:string xml:lang="zh">等级</ts:string>
+      <ts:string xml:lang="es">Cat</ts:string>
+    </ts:name>
+    <ts:origins>
+      <ts:token-id as="uint" bitmask="000000000000000000000000000000000000000000FF00000000000000000000">
+        <ts:mapping>
+          <ts:option key="0">
+            <ts:value>Devcon5 Tickets </ts:value>
+          </ts:option>
+        </ts:mapping>
+      </ts:token-id>
+    </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="section" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+      <ts:origins>
+        <ts:token-id as="utf8" bitmask="0000000000000000000000000000000000000000000000FFFFFFFFFF00000000">
+        </ts:token-id>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="locality" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Devcon5" function="getLocality">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="time" syntax="1.3.6.1.4.1.1466.115.121.1.24">
+      <ts:name>
+        <ts:string xml:lang="en">Time</ts:string>
+        <ts:string xml:lang="zh">时间</ts:string>
+        <ts:string xml:lang="es">Tiempo</ts:string>
+        <ts:string xml:lang="ru">время</ts:string>
+      </ts:name>
+      <ts:origins>
+        <ts:token-id as="utf8" bitmask="0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000">
+        </ts:token-id>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="expired" syntax="1.3.6.1.4.1.1466.115.121.1.7"> <!-- boolean -->
+      <ts:origins>
+        <ts:ethereum as="bool" contract="Devcon5" function="isExpired">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="street" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Devcon5" function="getStreet">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="building" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Devcon5" function="getBuildingName">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="state" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+      <ts:origins>
+        <ts:ethereum as="utf8" contract="Devcon5" function="getState">
+          <ts:data>
+            <ts:uint256 ref="tokenId"/>
+          </ts:data>
+        </ts:ethereum>
+      </ts:origins>
+    </ts:attribute-type>
+
+    <ts:attribute-type id="numero" syntax="1.3.6.1.4.1.1466.115.121.1.27">
+      <ts:origins>
+        <ts:token-id as="uint" bitmask="000000000000000000000000000000000000000000FFFF000000000000000000"/>
+      </ts:origins>
+    </ts:attribute-type>
+
+</ts:attribute-types>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>QaFyu3AU6XYuP/CMeVN9gNixTZdkDuqtD98fus9B8dg=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+Zte3KrN1c9TwPz5G0O9tVzHeSlpT9MYPAhRELDtxNEaSVRmpqqiLocJasNLcap3NDzEvVRIfHIW3
+iCTpaESnuKMbCv51tvOjdM2a1ueibP+uwZq61erIlKy837MjL6X3z/FrMZAkjbQZisKDEhB7trNy
+HBIMfzMO12z43vNk7bgJbFRfQCyfNUL+x4RWYSnD1sQHb8T+kPJZZL8IyhAslFsB5FlfSQ+7G5Yb
+pR7yrgoiNWJzzCsIMhoIHXiHI3Dhh5urjlYSne1uLM/A2pN55bG2joRRREVOuXQjTSENZNr/tceO
+8hb6NTnpelKkC5PTDikZIXq36iLtKwcxmem9zQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyName>Shong Wang</ds:KeyName>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+peSpIYeayLQ28M7+PYPGD2b7sg95umoiYanY5c/NPjFWTgij8wgjT769HFeO22x1zf8ZeLQ4W9T5
+JVpIHaF8LFnJsNDnVIhrT8Y/hSj3YRoVJGHdKpAD9T3xxRsgPqcRozctUXQMDKkInxRwmycK3RZ7
+kDs36trrx4+MK8zy2Z1ZSOiIlLrt2q0PvaA+HsdLoAR51RntqL/KOjJxpLMe90gcBFzRPfZX5jxG
+QnWXzlVh7SGfDaIV+KNk36ZdL9Teh5PZjY9wxl5nzmUhG0vk0wxpPsttLpomVFIxAyLl15+6iS2H
+cpWl6XcMLkA45VaW1bAnYFGaofO9m6GSJucDMw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFuDCCBKCgAwIBAgISA392mIEG1NiO0K8D7zDAR9CkMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
+BAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1
+dGhvcml0eSBYMzAeFw0xOTA3MTMwMjUxMjJaFw0xOTEwMTEwMjUxMjJaMBExDzANBgNVBAMTBmF3
+LmFwcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKXkqSGHmsi0NvDO/j2Dxg9m+7IP
+ebpqImGp2OXPzT4xVk4Io/MII0++vRxXjttsdc3/GXi0OFvU+SVaSB2hfCxZybDQ51SIa0/GP4Uo
+92EaFSRh3SqQA/U98cUbID6nEaM3LVF0DAypCJ8UcJsnCt0We5A7N+ra68ePjCvM8tmdWUjoiJS6
+7dqtD72gPh7HS6AEedUZ7ai/yjoycaSzHvdIHARc0T32V+Y8RkJ1l85VYe0hnw2iFfijZN+mXS/U
+3oeT2Y2PcMZeZ85lIRtL5NMMaT7LbS6aJlRSMQMi5defuokth3KVpel3DC5AOOVWltWwJ2BRmqHz
+vZuhkibnAzMCAwEAAaOCAs8wggLLMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
+AQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUa3aCJ+oy5AuqTKSEX6CJRgvBcPww
+HwYDVR0jBBgwFoAUqEpqYwR93brm0Tm3pkVl7/Oo7KEwbwYIKwYBBQUHAQEEYzBhMC4GCCsGAQUF
+BzABhiJodHRwOi8vb2NzcC5pbnQteDMubGV0c2VuY3J5cHQub3JnMC8GCCsGAQUFBzAChiNodHRw
+Oi8vY2VydC5pbnQteDMubGV0c2VuY3J5cHQub3JnLzCBhAYDVR0RBH0we4IGYXcuYXBwgg5jbGFz
+c2ljLmF3LmFwcIINZ29lcmxpLmF3LmFwcIIMa292YW4uYXcuYXBwggpwb2EuYXcuYXBwggtyZXBv
+LmF3LmFwcIIOcmlua2VieS5hdy5hcHCCDnJvcHN0ZW4uYXcuYXBwggt4ZGFpLmF3LmFwcDBMBgNV
+HSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3Bz
+LmxldHNlbmNyeXB0Lm9yZzCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB3AOJpS64m6OlACeiGG7Y7
+g9Q+5/50iPukjyiTAZ3d8dv+AAABa+l07b8AAAQDAEgwRgIhAPN9sHZMi7pMqBfzbrUjCV73yGUE
+6EKGgEHIUTp/krvzAiEAyuqug1VXzCsssbquy5qfj3ISZBwC3YOtXn+KpGpdhocAdQBj8tvN6DvM
+LM8LcoQnV2szpI1hd4+9daY4scdoVEvYjQAAAWvpdO3gAAAEAwBGMEQCIG6NH2n3hkXjUx3t/YfO
+CBSjQCgg0xHMy+DxC6KSGv7lAiA3pqlidBSlIszm+3GpmH5q84pDWs4N0k330ZqSsaUZXDANBgkq
+hkiG9w0BAQsFAAOCAQEAmbsbviQEI3Ko1wDmy0sRu5cM6ILcCyJVQotDFWUplEnCpkdWWv2ru23T
+xV2MYrWH5z+rZT319KZPmvtbAO+WBN3SvAEANnA/+tWtpTp7vlqa+S7qIIbL5aiOu4VIeIkaQYpF
+3OMT+AoOsYQ1Btc3DU9XymCFgHL93ftIeveAdiA7hLWm2+U/X+VOHbrDXL7/I9hvJAVY080dc+kJ
+nUfqTj6zm3i2WCAMV3yi5ssLiNcylo4c9AsrwYiGKa8QpmTP292ncdoVw35X+Nooe0VNZXyyYWA0
+yrRvHDIHI27yv6fXa4JZRGGOEFf4uArxhOZ5ZyjWEypAtqBhsEFBz1y2LQ==
+</ds:X509Certificate>
+<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQK
+ExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4X
+DTE2MDMxNzE2NDA0NloXDTIxMDMxNzE2NDA0NlowSjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxl
+dCdzIEVuY3J5cHQxIzAhBgNVBAMTGkxldCdzIEVuY3J5cHQgQXV0aG9yaXR5IFgzMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNMM8FrlLke3cl03g7NoYzDq1zUmGSXhvb418XCSL7e4
+S0EFq6meNQhY7LEqxGiHC6PjdeTm86dicbp5gWAf15Gan/PQeGdxyGkOlZHP/uaZ6WA8SMx+yk13
+EiSdRxta67nsHjcAHJyse6cF6s5K671B5TaYucv9bTyWaN8jKkKQDIZ0Z8h/pZq4UmEUEz9l6YKH
+y9v6Dlb2honzhT+Xhq+w3Brvaw2VFn3EK6BlspkENnWAa6xK8xuQSXgvopZPKiAlKQTGdMDQMc2P
+MTiVFrqoM7hD8bEfwzB/onkxEz0tNvjj/PIzark5McWvxI0NHWQWM6r6hCm21AvA2H3DkwIDAQAB
+o4IBfTCCAXkwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAYYwfwYIKwYBBQUHAQEE
+czBxMDIGCCsGAQUFBzABhiZodHRwOi8vaXNyZy50cnVzdGlkLm9jc3AuaWRlbnRydXN0LmNvbTA7
+BggrBgEFBQcwAoYvaHR0cDovL2FwcHMuaWRlbnRydXN0LmNvbS9yb290cy9kc3Ryb290Y2F4My5w
+N2MwHwYDVR0jBBgwFoAUxKexpHsscfrb4UuQdf/EFWCFiRAwVAYDVR0gBE0wSzAIBgZngQwBAgEw
+PwYLKwYBBAGC3xMBAQEwMDAuBggrBgEFBQcCARYiaHR0cDovL2Nwcy5yb290LXgxLmxldHNlbmNy
+eXB0Lm9yZzA8BgNVHR8ENTAzMDGgL6AthitodHRwOi8vY3JsLmlkZW50cnVzdC5jb20vRFNUUk9P
+VENBWDNDUkwuY3JsMB0GA1UdDgQWBBSoSmpjBH3duubRObemRWXv86jsoTANBgkqhkiG9w0BAQsF
+AAOCAQEA3TPXEfNjWDjdGBX7CVW+dla5cEilaUcne8IkCJLxWh9KEik3JHRRHGJouM2VcGfl96S8
+TihRzZvoroed6ti6WqEBmtzw3Wodatg+VyOeph4EYpr/1wXKtx8/wApIvJSwtmVi4MFU5aMqrSDE
+6ea73Mj2tcMyo5jMd6jmeWUHK8so/joWUoHOUgwuX4Po1QYz+3dszkDqMp4fklxBwXRsW10KXzPM
+TZ+sOPAveyxindmjkW8lGy+QsRlGPfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M
++X+Q7UNKEkROb3N6KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></ts:token>
