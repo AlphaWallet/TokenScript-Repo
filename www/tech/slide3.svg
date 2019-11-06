@@ -121,7 +121,7 @@
      <g class="Page">
       <g class="Graphic">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="21497" y="2189" width="7419" height="3557"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="21497" y="2189" width="7433" height="3557"/>
         <defs>
          <clipPath id="clip_path_1" clipPathUnits="userSpaceOnUse">
           <path d="M 23578,2189 L 26872,2189 26872,4825 23578,4825 23578,2189 Z"/>
@@ -139,7 +139,7 @@
          <path fill="rgb(255,215,179)" stroke="none" d="M 26686,3496 C 26691,3499 26695,3504 26697,3511 26699,3519 26699,3527 26697,3537 26695,3547 26691,3556 26686,3566 26680,3575 26674,3583 26666,3590 26659,3597 26652,3601 26644,3603 26636,3605 26630,3604 26625,3601 26619,3598 26616,3593 26614,3585 26612,3577 26612,3569 26614,3559 26616,3549 26619,3540 26625,3531 26630,3521 26636,3514 26644,3507 26652,3500 26659,3496 26666,3494 26674,3492 26680,3492 26686,3496 L 26686,3496 Z"/>
          <path fill="rgb(112,221,240)" stroke="none" d="M 26574,3557 C 26579,3560 26583,3565 26585,3573 26587,3580 26587,3588 26585,3598 26583,3608 26579,3617 26574,3627 26568,3637 26562,3644 26554,3651 26547,3658 26540,3662 26532,3664 26525,3666 26519,3665 26513,3662 26507,3659 26504,3654 26502,3646 26500,3638 26500,3630 26502,3620 26504,3610 26507,3601 26513,3592 26519,3582 26525,3575 26532,3568 26540,3561 26547,3557 26554,3555 26562,3553 26568,3554 26574,3557 L 26574,3557 Z"/>
         </g>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Ubuntu" font-size="634px" font-weight="400"><tspan class="TextPosition" x="21480" y="5706"><tspan fill="rgb(0,0,0)" stroke="none">Website’s Ethereum Node</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Ubuntu" font-size="635px" font-weight="400"><tspan class="TextPosition" x="21480" y="5706"><tspan fill="rgb(0,0,0)" stroke="none">Website’s Ethereum Node</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="Graphic">
@@ -205,14 +205,14 @@
       <g class="com.sun.star.drawing.LineShape">
        <g id="id8">
         <rect class="BoundingBox" stroke="none" fill="none" x="10478" y="2213" width="10424" height="1324"/>
-        <path fill="none" stroke="rgb(2,63,98)" d="M 10864,2825 L 20900,2825"/>
-        <path fill="rgb(2,63,98)" stroke="none" d="M 10853,2726 L 10498,2805 10491,2807 10484,2811 10479,2818 10478,2825 10479,2832 10484,2839 10491,2843 10498,2845 10853,2924 10855,2924 10857,2925 10864,2923 10871,2919 10875,2912 10877,2905 10877,2745 10875,2738 10871,2731 10864,2726 10857,2725 10855,2725 10853,2726 Z"/>
+        <path fill="none" stroke="rgb(2,63,98)" d="M 11056,2825 L 20900,2825"/>
+        <path fill="rgb(2,63,98)" stroke="none" d="M 11040,2676 L 10508,2795 10497,2798 10487,2804 10480,2814 10478,2824 10480,2836 10487,2846 10497,2852 10508,2855 11040,2974 11044,2974 11046,2975 11057,2973 11067,2966 11074,2956 11076,2945 11076,2705 11074,2694 11067,2684 11057,2677 11046,2675 11044,2675 11040,2676 Z"/>
         <text class="TextShape"><tspan class="TextParagraph" font-family="Ubuntu" font-size="635px" font-weight="400"><tspan class="TextPosition" x="10491" y="2707"><tspan fill="rgb(0,0,0)" stroke="none">Okay, send a transaction to get your</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Ubuntu" font-size="635px" font-weight="400"><tspan class="TextPosition" x="10920" y="3419"><tspan fill="rgb(0,0,0)" stroke="none">car listed. Take this {TokenScript}</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="Graphic">
        <g id="id9">
-        <rect class="BoundingBox" stroke="none" fill="none" x="519" y="11943" width="5053" height="3559"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="519" y="11943" width="5062" height="3559"/>
         <defs>
          <clipPath id="clip_path_2" clipPathUnits="userSpaceOnUse">
           <path d="M 1381,11943 L 4678,11943 4678,14581 1381,14581 1381,11943 Z"/>
@@ -230,7 +230,7 @@
          <path fill="rgb(255,215,179)" stroke="none" d="M 4491,13251 C 4497,13254 4500,13259 4503,13266 4505,13274 4505,13282 4503,13292 4501,13302 4497,13311 4491,13321 4486,13331 4480,13338 4472,13345 4465,13352 4458,13356 4450,13358 4442,13360 4436,13359 4431,13356 4425,13353 4422,13348 4419,13340 4417,13332 4417,13324 4419,13314 4422,13304 4425,13295 4431,13286 4436,13276 4442,13269 4450,13262 4458,13255 4464,13251 4472,13249 4480,13247 4486,13247 4491,13251 L 4491,13251 Z"/>
          <path fill="rgb(112,221,240)" stroke="none" d="M 4379,13312 C 4385,13315 4389,13320 4391,13328 4393,13335 4393,13343 4391,13353 4389,13363 4385,13372 4379,13382 4374,13392 4368,13399 4360,13406 4353,13413 4346,13417 4338,13419 4330,13421 4324,13420 4319,13417 4313,13414 4310,13409 4308,13401 4305,13394 4305,13386 4308,13376 4310,13366 4313,13357 4319,13347 4324,13337 4330,13330 4338,13323 4346,13316 4353,13312 4360,13310 4368,13308 4374,13309 4379,13312 L 4379,13312 Z"/>
         </g>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Ubuntu Condensed" font-size="634px" font-weight="400"><tspan class="TextPosition" x="470" y="15462"><tspan fill="rgb(0,0,0)" stroke="none">User’s Ethereum node</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Ubuntu Condensed" font-size="635px" font-weight="400"><tspan class="TextPosition" x="470" y="15462"><tspan fill="rgb(0,0,0)" stroke="none">User’s Ethereum node</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="Graphic">
@@ -869,9 +869,9 @@
       </g>
       <g class="com.sun.star.drawing.LineShape">
        <g id="id14">
-        <rect class="BoundingBox" stroke="none" fill="none" x="2798" y="5232" width="7451" height="4038"/>
-        <path fill="none" stroke="rgb(2,63,98)" d="M 3146,9089 L 10247,5617"/>
-        <path fill="rgb(2,63,98)" stroke="none" d="M 3093,9004 L 2809,9231 2803,9236 2799,9243 2798,9251 2800,9258 2804,9264 2811,9268 2819,9269 2827,9267 3180,9183 3182,9182 3184,9181 3190,9177 3194,9170 3195,9162 3193,9154 3123,9011 3119,9005 3112,9001 3104,9000 3096,9002 3095,9002 3093,9004 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="2797" y="5232" width="7452" height="4044"/>
+        <path fill="none" stroke="rgb(2,63,98)" d="M 3320,9004 L 10247,5617"/>
+        <path fill="rgb(2,63,98)" stroke="none" d="M 3240,8877 L 2814,9218 2805,9225 2799,9235 2797,9247 2800,9257 2807,9267 2817,9273 2829,9274 2840,9272 3371,9145 3374,9143 3376,9143 3385,9136 3391,9126 3393,9114 3390,9103 3285,8888 3278,8879 3268,8872 3255,8871 3245,8874 3242,8875 3240,8877 Z"/>
         <text class="TextShape" transform="rotate(-26 3039 9009)"><tspan class="TextParagraph" font-family="Ubuntu" font-size="635px" font-weight="400"><tspan class="TextPosition" x="3039" y="9009"><tspan fill="rgb(0,0,0)" stroke="none">Is this tokenscript trusted?</tspan></tspan></tspan></text>
        </g>
       </g>
