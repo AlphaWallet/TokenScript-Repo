@@ -174,9 +174,12 @@ class Token {
             time = this.formatGeneralizedTimeToTime(this.props.time.generalizedTime)
             date = this.props.time == null ? "": this.formatGeneralizedTimeToDate(this.props.time.generalizedTime)
         }
-        let redeemedMessage = "(Not redeemed)"
-        if(this.props.redeemed) {
+        let redeemedMessage = "";
+        //might not have loaded so only set if actually loaded
+        if(this.props.redeemed === "1") {
             redeemedMessage = "(Redeemed)"
+        } else if(this.props.redeemed === "0") {
+            redeemedMessage = "(Not redeemed)"
         }
         return `&lt;div&gt;
           &lt;div&gt;
@@ -207,8 +210,7 @@ class Token {
 
 web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
     const currentTokenInstance = web3.tokens.data.currentInstance;
-    const domHtml = new Token(currentTokenInstance).render();
-    document.getElementById('root').innerHTML = domHtml
+    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
 };
 </script>
 <div id="root"/>
@@ -324,9 +326,12 @@ class Token {
             time = this.formatGeneralizedTimeToTime(this.props.time.generalizedTime)
             date = this.props.time == null ? "": this.formatGeneralizedTimeToDate(this.props.time.generalizedTime)
         }
-        let redeemedMessage = "(Not redeemed)"
-        if(this.props.redeemed) {
+        let redeemedMessage = "";
+        //might not have loaded so only set if actually loaded
+        if(this.props.redeemed === "1") {
             redeemedMessage = "(Redeemed)"
+        } else if(this.props.redeemed === "0") {
+            redeemedMessage = "(Not redeemed)"
         }
         return `&lt;div&gt;
           &lt;div&gt;
@@ -357,8 +362,7 @@ class Token {
 
 web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
     const currentTokenInstance = web3.tokens.data.currentInstance;
-    const domHtml = new Token(currentTokenInstance).render();
-    document.getElementById('root').innerHTML = domHtml
+    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
 };
 </script>
 <div id="root"/>
@@ -565,15 +569,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>rwhrUnEOHYHE3KHBO2XlNJ89mxgnBUUdpon7rct216E=</ds:DigestValue>
+<ds:DigestValue>2MgMMoFpAsxRRtXkGl6vgI7aCR2GY2JpfHECqD+nzjQ=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-qGlWWsbqeKb0YxOC71ZldHlUb9b5jJsLWDngUKJclJGmxm3J2v81x28dDgkisx9Ar82YKeHHR0fp
-u2ast9ZbNkYBwISdGIyhemNrDLbH21D9f++MPKXxendPBjRkYqEknHBTkM7f9TKYUN4I8guEC0Im
-nmBN1LR5d+AhMgRpoRWdfqemq5Dlg4NU0BLvCtlHyk7/qgYDKJ1VjUl918+KXOeTYR2NBJu4AM+2
-0QO1owy67SRjnziCFkcUMb7WYLwsNtN9KA9VKweFYwJuinHXKOq4H8jEotrwQ3Uzk7l13zJysemr
-f6djJxAzY0mHThhX75/5P9nFiKI+pRH0yIGr5Q==
+S3n3zK6aY+hBg5za7n5YTvFOEgGabLp+RAzQjivIA6ZEaY3dqUmA0d36IEuvAZFKXDt7ETPwaTR6
+UGTapRvlOL+6XbaQUsAkUbrmm3EZcNjeEgpQTOs6hSSnIeeKDYYQeZxobz2kkVdiO08T8OLsqgg1
+e0evMNtWngywcLZ7OTrf5G+xCC2GiglfmJ9ZXaMwwLxKzYWAUnPqnJ0YxCohqa+W46206KpNhnNc
+65joI8C4K+WihBenGv14O4hmTpvnpepTOGhpcxfvwa6R/WT/DuywgZfKUlZdkM9h2xwO1iy8YNP5
+aO1leWyyGqDSmI4IkLKk5tmXBdSLBVK0KTPNlA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
