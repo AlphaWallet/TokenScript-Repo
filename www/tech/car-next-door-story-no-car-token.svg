@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1449" height="906" viewBox="0 0 1449 906">
+  <defs>
+    <filter id="Rectangle_1" x="389" y="-6" width="1084" height="924" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_13" x="476" y="265" width="113" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_14" x="598" y="264" width="121" height="71" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_15" x="727" y="264" width="112" height="71" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_20" x="497" y="407" width="193" height="95" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 132 88">
+      <image width="132" height="88" xlink:href="data:image/jpeg;base64,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"/>
+    </pattern>
+    <filter id="Rectangle_21" x="476" y="537" width="391" height="154" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_22" x="477" y="724" width="316" height="102" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_23" x="850" y="264" width="113" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_24" x="975" y="264" width="113" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_25" x="1105" y="263" width="112" height="71" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_26" x="1222" y="263" width="112" height="71" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-11"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Exploded_Security_Enclave">
+      <rect width="1449" height="906"/>
+    </clipPath>
+  </defs>
+  <g id="Exploded_Security_Enclave" data-name="Exploded Security Enclave" clip-path="url(#clip-Exploded_Security_Enclave)">
+    <rect width="1449" height="906" fill="#b5b5b5"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(53)">
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_1)">
+        <rect id="Rectangle_1-2" data-name="Rectangle 1" width="1066" height="906" rx="20" transform="translate(398)" fill="#f7f7f7"/>
+      </g>
+      <rect id="Rectangle_11" data-name="Rectangle 11" width="858" height="10" rx="5" transform="translate(432 195)"/>
+      <text id="Lending_a_Car" data-name="Lending a Car" transform="translate(433 94)" font-size="40" font-family="Avenir-Black, Avenir" font-weight="800"><tspan x="0" y="0">Lending a Car</tspan></text>
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="690" height="10" rx="5" transform="translate(432 195)" fill="#ffd800"/>
+      <text id="_80_" data-name="80%" transform="translate(1260 176)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">80%</tspan></text>
+      <text id="Application_Progress" data-name="Application Progress" transform="translate(432 160)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Application Progress</tspan></text>
+      <text id="Days_to_lend_the_car" data-name="Days to lend the car" transform="translate(432 256)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Days to lend the car</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_13)">
+        <rect id="Rectangle_13-2" data-name="Rectangle 13" width="95" height="52" rx="20" transform="translate(485 271)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_14)">
+        <rect id="Rectangle_14-2" data-name="Rectangle 14" width="103" height="53" rx="20" transform="translate(607 270)" fill="#ffd800"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_15)">
+        <rect id="Rectangle_15-2" data-name="Rectangle 15" width="94" height="53" rx="20" transform="translate(736 270)" fill="#ffd800"/>
+      </g>
+      <text id="Sun" transform="translate(459 305)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Sun</tspan></text>
+      <text id="Mon" transform="translate(585 305)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Mon</tspan></text>
+      <text id="Tues" transform="translate(708 305)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Tues</tspan></text>
+      <text id="Cost_to_lend_the_car" data-name="Cost to lend the car" transform="translate(432 377)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Cost to lend the car</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_20)">
+        <g id="Rectangle_20-2" data-name="Rectangle 20" transform="translate(506 413)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="175" height="77" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="174" height="76" rx="9.5" fill="none"/>
+        </g>
+      </g>
+      <text id="_60.00" data-name="60.00" transform="translate(482 468)" font-size="40" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">60.00</tspan></text>
+      <text id="_" data-name="$" transform="translate(422 468)" font-size="40" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">$</tspan></text>
+      <text id="per_hour" data-name="per hour" transform="translate(646 468)" font-size="40" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">per hour</tspan></text>
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="30" cy="30" r="30" transform="translate(0 53)" fill="url(#pattern)"/>
+      <text id="Car_features" data-name="Car features" transform="translate(434 529)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Car features</tspan></text>
+      <text id="_-_Sports_car_-_Luxury_-_Air_Con_-_" data-name="- Sports car
+- Luxury 
+- Air Con
+- " transform="translate(512 563)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">- Sports car</tspan><tspan x="0" y="24">- Luxury </tspan><tspan x="0" y="48">- Air Con</tspan><tspan x="0" y="72">- </tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_21)">
+        <g id="Rectangle_21-2" data-name="Rectangle 21" transform="translate(485 543)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="373" height="136" rx="10" stroke="none"/>
+          <rect x="0.5" y="0.5" width="372" height="135" rx="9.5" fill="none"/>
+        </g>
+      </g>
+      <text id="_-_Sports_car_-_Luxury_-_Air_Con_-_Automatic" data-name="- Sports car
+- Luxury 
+- Air Con
+- Automatic" transform="translate(458 584)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">- Sports car</tspan><tspan x="0" y="24">- Luxury </tspan><tspan x="0" y="48">- Air Con</tspan><tspan x="0" y="72">- Automatic</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_22)">
+        <rect id="Rectangle_22-2" data-name="Rectangle 22" width="298" height="84" rx="20" transform="translate(486 730)" fill="#ffd800"/>
+      </g>
+      <text id="Publish_Rental" data-name="Publish Rental" transform="translate(484 782)" stroke="#000" stroke-width="1" font-size="30" font-family="Avenir-Book, Avenir"><tspan x="0" y="0">Publish Rental</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_23)">
+        <rect id="Rectangle_23-2" data-name="Rectangle 23" width="95" height="52" rx="20" transform="translate(859 270)" fill="#fff"/>
+      </g>
+      <text id="Wed" transform="translate(832 304)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Wed</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_24)">
+        <rect id="Rectangle_24-2" data-name="Rectangle 24" width="95" height="52" rx="20" transform="translate(984 270)" fill="#fff"/>
+      </g>
+      <text id="Thurs" transform="translate(953 304)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Thurs</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_25)">
+        <rect id="Rectangle_25-2" data-name="Rectangle 25" width="94" height="53" rx="20" transform="translate(1114 269)" fill="#ffd800"/>
+      </g>
+      <text id="Fri" transform="translate(1097 305)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Fri</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -53, 0)" filter="url(#Rectangle_26)">
+        <rect id="Rectangle_26-2" data-name="Rectangle 26" width="94" height="53" rx="20" transform="translate(1231 269)" fill="#ffd800"/>
+      </g>
+      <text id="Sat" transform="translate(1210 304)" font-size="20" font-family="Lato-Black, Lato Black" font-weight="800"><tspan x="0" y="0">Sat</tspan></text>
+    </g>
+  </g>
+</svg>
