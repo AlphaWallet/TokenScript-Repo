@@ -7,7 +7,9 @@
     </ts:name>
 
     <ts:contract interface="erc721" name="UEFA">
+        <ts:address network="100">0x0f43923667843bccafd12a5c001a7838fa5fc8ab</ts:address>
         <ts:address network="3">0xc2f901070AdcfA07Bc5c46cc2390063248eb9E81</ts:address>
+        <ts:address network="4">0xC1c14278Cc455d9dFA0b0257aF40862bD8677EFC</ts:address>
     </ts:contract>
 
     <ts:origins>
@@ -569,15 +571,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>2MgMMoFpAsxRRtXkGl6vgI7aCR2GY2JpfHECqD+nzjQ=</ds:DigestValue>
+<ds:DigestValue>AvQooJXOweUg+Qy48rk4ilDo3guL+n3m+EwatqQKAXQ=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-S3n3zK6aY+hBg5za7n5YTvFOEgGabLp+RAzQjivIA6ZEaY3dqUmA0d36IEuvAZFKXDt7ETPwaTR6
-UGTapRvlOL+6XbaQUsAkUbrmm3EZcNjeEgpQTOs6hSSnIeeKDYYQeZxobz2kkVdiO08T8OLsqgg1
-e0evMNtWngywcLZ7OTrf5G+xCC2GiglfmJ9ZXaMwwLxKzYWAUnPqnJ0YxCohqa+W46206KpNhnNc
-65joI8C4K+WihBenGv14O4hmTpvnpepTOGhpcxfvwa6R/WT/DuywgZfKUlZdkM9h2xwO1iy8YNP5
-aO1leWyyGqDSmI4IkLKk5tmXBdSLBVK0KTPNlA==
+laGHCgC2wsLgzBtELwxN03DRfnVkrQyjetbLSTeOI8R1nd+9Cud5lrcKXJRcwR9Su/UO3oCAqywf
+019M2yfdunPOo/e/psPWADYsSADtb33z9cETp5f4EZbbhXBSpUlBjEjMsQKfzDTjoU5xd+TQxvR5
+uDCDoGi3BiWpIrOrM5jcIiMz6iilY5L+VpKQL2riTjr3qrRr//tawJPsv23/eZ4J8XuPLIFoyja1
+2Ht1me9vf5RCSW8Jk5uAea0ZP6KR3BXxwizYJn/vbR5XN+Yov/gkJz9CWcGhntpNwCICCvMlF/3r
+jC2Hm0+bGIDpijhBpmzuNPqIWhOzmx1QIvA9mQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
