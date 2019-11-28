@@ -27,7 +27,7 @@
 <h1>TokenScript Technology - Token enclave</h1>
 
     <h2>The problem</h2>
-    <p>Today, Dapps based on Ethereum lack <strong>Trust, Interoperability, Privacy and Security</strong>, or TIPS for short.</p>
+    <p>Today, Dapps based on Ethereum has not achieved <strong>Trust, Interoperability, Privacy and Security</strong>, or TIPS for short.</p>
     <p>We will start with this minimalist dapp idea and explain the problems by an example.</p>
     <p>This is a dapp called <em>Hello Kitty</em>. It displays a user's crypto kitten in a matching background. That's all what it does. For example, this kitty look like it belongs to a garden, so we match it with a patch of green:</p>
     <img src="kitty-1129952.svg" alt="A crypto-kitty sitting in a garden" width="100%"/>
@@ -42,49 +42,12 @@
         <dt>Security</dt>
         <dd>The user is at risk of losing her kitty, if the website offers to do a transaction with the kitty. For one thing, a user wouldn't be able to match the ID of the kitty in transaction data with the one drawn on the screen. This issue is so serious that MetaMask and a few DApp browsers resorted to hardcode the rendering of cryptokitties.</dd>
     </dl>
-    <p>The lack of TIPS is a problem, but blockchain is not there to be blamed. The underlying blockchain likely already facilitiate trust and security, and may have certain level of privacy and interoperability provided by smart contracts. But these are lost as Dapps are individual websites which, upon visiting, can arbitrarily dictate what the user sees or could do, or what code the user has to run.</p>
+    <p>The lack of TIPS is a problem, but blockchain is not there to be blamed. The underlying blockchain likely already facilitate trust and security, and may have certain level of privacy and interoperability provided by smart contracts. But these are lost as Dapps are individual websites which, upon visiting, can arbitrarily dictate what the user sees or could do, or what code the user has to run.</p>
     <h2>The Solution</h2>
     <p>Our answer is a <strong>Token Enclave</strong> where token logic is separated from the application logic and safely executed. </p>
     <ol><li>First, the token issuer can write the code for token. In the cryptokitty case, how a kitty look like. How to safely transfer a kitty to a friend etc etc.</li>
         <li>Then, the Dapp browser can use that verified code to render the kitty in an enclave. The enclave access the blockchain directly.</li></ol>
-    <p>In the following example,
-    <img src="kitty-token-slide2.svg" />
-    </p>
-    <a href="https://github.com/AlphaWallet/TokenScript"
-       style="font-size: xx-large; font-weight: bold; display: block; ">
-    <img src="github.svg" alt="Github"/>
-        TokenScript Repo <sup>&#x2197</sup>
-    </a>
-    </dl>
-
-    <p>Good, you did it. Assuming you already know <a href="../smart-token">what problem tokenscript solves</a>,
-        the reward is sweeter if you</p>
-
-    <ul>
-        <li>First have a quick look at the
-            <a href="https://github.com/AlphaWallet/TokenScript/tree/master/examples">examples</a>
-            in the repo to get a taste of it. </li>
-        <li>Follow <a href="https://github.com/AlphaWallet/TokenScript/tree/master/tutorial">the tutorial</a> to get a sense of it.</li>
-        <li>As you follow the tutorial, you will need to run a TokenScript implementation (currently only AlphaWallet).</li>
-        <li>By now you probably will have some questions. Please do use
-            <a href="https://community.tokenscript.org">TokenScript forum</a> to get help.</li>
-    </ul>
-
-    <h1>Enclave need your help!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><img src="car-token-slide1.svg" style="width: 100%;"/></p>
-    <p>Integer nec rhoncus felis. Aliquam condimentum sit amet velit sed tincidunt. Proin diam urna, pretium sed congue vel, elementum vel turpis. Aenean eget consequat lorem. Curabitur non facilisis ex, vitae fermentum odio. Morbi sit amet lorem euismod, ultricies metus in, dapibus tortor. Nam eget ligula non tellus sodales hendrerit in eget orci. Vestibulum posuere mollis fermentum. Suspendisse gravida rutrum sem, ac scelerisque tellus faucibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ac porta odio. </p>
-    <p><img src="car-token-slide2.svg" style="width: 100%;"/></p>
-    <p>Ut eget convallis lectus. Quisque mattis elit consequat tincidunt pretium. Etiam dapibus tortor sapien, nec blandit eros dictum eget. Pellentesque molestie est libero, non varius sem commodo vel. Cras sed convallis diam. Proin elit nulla, ornare eget lacinia sed, tempus vel velit. Proin ut iaculis lorem, sed sagittis est.</p>
-    <p><img src="car-token-slide3.svg" style="width: 100%;"/></p>
-    <p>Nam vitae maximus sapien. Sed aliquet at ligula eget volutpat. Pellentesque finibus sapien ut enim placerat, id ultricies massa facilisis. Nunc eget enim orci. Nullam molestie tincidunt neque sed dignissim. Mauris neque sem, fermentum quis ex non, tempus scelerisque eros. Nulla sed libero quis tortor convallis consequat et sed quam. Cras tincidunt neque nec mi posuere suscipit. Duis dolor lectus, bibendum a erat at, hendrerit pretium odio. Nam laoreet augue eget lacus gravida, quis luctus purus gravida. Donec accumsan viverra elit, vitae lacinia quam. Nullam ac lectus sed velit hendrerit pretium nec at nunc. Donec quis consequat felis. Nulla elementum porta ligula nec egestas. Quisque sem ipsum, finibus sed lacus sed, sodales fringilla lectus. Nullam in tortor lobortis, ultricies mauris in, dignissim nibh.</p>
-    <p>TokenScript is opensource. The site is built by a group of stewards and curators.
-        If you contribute to it, you might be among the first to build the future of web3.
-    </p>
-    <p>More importantly, TokenScript is an evolving standard.
-        If you have your use case or you envision how web3 should work,
-        this is the opportunity to shape the growth of future standards and not to let it derail from solving real world problems.
-    </p>
+    <p>In the following example. </p>
 
 </body>
 </html>
