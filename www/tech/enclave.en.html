@@ -26,11 +26,24 @@
 
 <h1>TokenScript Technology - Token enclave</h1>
 
-    <h2>The problem</h2>
-    <p>Today, Dapps based on Ethereum has not achieved <strong>Trust, Interoperability, Privacy and Security</strong>, or TIPS for short.</p>
+    <p>Today, Dapps based on Ethereum has immature <strong>Trust, Interoperability, Privacy and Security</strong>, or TIPS for short.</p>
     <p>We will start with this minimalist dapp idea and explain the problems by an example.</p>
+    <h2>Let's look at an example</h2>
     <p>This is a dapp called <em>Hello Kitty</em>. It displays a user's crypto kitten in a matching background. That's all what it does. For example, this kitty look like it belongs to a garden, so we match it with a patch of green:</p>
     <img src="kitty-1129952.svg" alt="A crypto-kitty sitting in a garden" width="100%"/>
+    </p>
+    <p>Underneath the skin, the communication process look like this:</p>
+    <p>
+        <img src="hello-kitty-frontend.svg" alt="Hello kitty's web page" style="float: left; width: 30%;"/>
+        <img src="hello-kitty-backend-proper.svg" alt="Hello Kitty website's communication with blockchain" style="width: 70%"/>
+    </p>
+    <p>The Web Server which serves the hello-kitty website doesn't need to access a blockchain node since it can delivery the JavaScript to get the token data in the user's dapp browser.
+    </p>
+    <p>But this perfunctory set-up would perform equally well:
+    </p>
+    <p>
+        <img src="hello-kitty-frontend.svg" alt="Hello kitty's web page" style="float: left; width: 30%;"/>
+        <img src="hello-kitty-backend-perfunctory.svg" alt="Hello Kitty website's communication with blockchain" style="width: 70%"/>
     </p>
     <p>With this example in mind, let's look at TIPS:</p>
     <dl><dt>Trust</dt>
