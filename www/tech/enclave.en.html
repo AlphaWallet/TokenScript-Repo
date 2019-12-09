@@ -1,53 +1,119 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 
-	<title>&#x1F183 TokenScript - Specs</title>
+    <title>&#x1F183 TokenScript - Specs</title>
 
-	<link rel="stylesheet" href="../print.css" type="text/css" media="print" />
-	<link rel="stylesheet" href="../site-wide.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../knapsack.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="../site-wide.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../knapsack.css" type="text/css" media="screen"/>
 
-<!--#include virtual="../end-of-head.shtml" -->
+    <!--#include virtual="../end-of-head.shtml" -->
 </head>
 
 <body class="leaf">
 <!--#include virtual="../start-of-body.shtml" -->
 
 <div class="header">
-	<a href="../index" class="logo">&#x1F183okenScript</a>
+    <a href="../index" class="logo">&#x1F183okenScript</a>
 </div>
 
 <div class="main-content">
-<!--#include virtual="../navigation.shtml" -->
+    <!--#include virtual="../navigation.shtml" -->
 
-<div class="content" style="max-width: 100ex;">
+    <div class="content" style="max-width: 100ex;">
 
-<h1>TokenScript Technology - Token enclave</h1>
+        <h1>TokenScript Technology - Token enclave</h1>
 
-    <h2>The problem</h2>
-    <p>Today, Dapps based on Ethereum has not achieved <strong>Trust, Interoperability, Privacy and Security</strong>, or TIPS for short.</p>
-    <p>We will start with this minimalist dapp idea and explain the problems by an example.</p>
-    <p>This is a dapp called <em>Hello Kitty</em>. It displays a user's crypto kitten in a matching background. That's all what it does. For example, this kitty look like it belongs to a garden, so we match it with a patch of green:</p>
-    <img src="kitty-1129952.svg" alt="A crypto-kitty sitting in a garden" width="100%"/>
-    </p>
-    <p>With this example in mind, let's look at TIPS:</p>
-    <dl><dt>Trust</dt>
-        <dd>Even if the website is secured with SSL, the user can hardly be sure that the kitty being drawn there is his token. An honest website usually offer the picture by linking it from cryptokitty.com or use cryptokitty.com's JavaScript library to draw it, but a normal user wouldn't be able to tell. In fact, the website could have been made entirely in in a static picture. This lack of trust on token data is why DApp users often to go to etherscan.org to verify what he sees.</dd>
-        <dt>Interoperability</dt>
-        <dd>If cryptoktty token's issuer start to issue new tokens, like this kitty with flies around his head, they have no way to ensure the token is rendered correctly. Kitty In The Garden website could be using an outdated JavaScript library. </dd>
-        <dt>Privacy</dt>
-        <dd>If the user has more than one kitty, he couldn't have chosen one to be rendered in the garden without the website learning about all his litter.</dd>
-        <dt>Security</dt>
-        <dd>The user is at risk of losing her kitty, if the website offers to do a transaction with the kitty. For one thing, a user wouldn't be able to match the ID of the kitty in transaction data with the one drawn on the screen. This issue is so serious that MetaMask and a few DApp browsers resorted to hardcode the rendering of cryptokitties.</dd>
-    </dl>
-    <p>The lack of TIPS is a problem, but blockchain is not there to be blamed. The underlying blockchain likely already facilitate trust and security, and may have certain level of privacy and interoperability provided by smart contracts. But these are lost as Dapps are individual websites which, upon visiting, can arbitrarily dictate what the user sees or could do, or what code the user has to run.</p>
-    <h2>The Solution</h2>
-    <p>Our answer is a <strong>Token Enclave</strong> where token logic is separated from the application logic and safely executed. </p>
-    <ol><li>First, the token issuer can write the code for token. In the cryptokitty case, how a kitty look like. How to safely transfer a kitty to a friend etc etc.</li>
-        <li>Then, the Dapp browser can use that verified code to render the kitty in an enclave. The enclave access the blockchain directly.</li></ol>
-    <p>In the following example. </p>
+        <p>Today, Dapps based on Ethereum has immature <strong>Trust, Interoperability, Privacy and Security</strong>,
+            or TIPS for short.</p>
+        <p>We will start with this minimalist dapp idea and explain the problems by an example.</p>
+        <h2>Let's look at an example</h2>
+        <p>Let's start with a Hello World example of a Dapp. Since everything in Dapps are tokenised, it takes a twist
+            in the form of <em>Hello Kitty</em>. It displays a user's crypto kitten in a matching background. That's all
+            what it does. For example, this kitty look like it belongs to a garden: <br/>
+            <img src="kitty-1129952.svg" alt="A crypto-kitty" width="20%"/>
+        </p>
+        <p>so we match it with a patch of green: <br/>
+            <img src="hello-kitty-background-garden.svg" width="50%"/>
+        </p>
+        <p>Voila, the end result looks like this: <br/>
+            <img src="hello-kitty-in-garden.svg" style="width:100%;"/>
+            <!-- When Chrome supports svg better, replace it with this
+                <svg id="kitty-in-garden"              xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 4066.2407 3484.861"  xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="hello-kitty-in-garden.svg#svg5281"/>
+                    <use xlink:href="hello-kitty-background-garden.svg#svg5281"/>
+                    <g transform="translate(100 300)">
+                        <use xlink:href="kitty-1129952.svg#kitty"/>
+                    </g>
+                </svg>
+            Then, delete kitty-in-the-garden.svg and replace all its references to this node.
+            -->
+        </p>
+        <p>Underneath the skin, the communication process look like this:</p>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 1000 500">
+                <use xlink:href="hello-kitty-frontend.svg#Layer_1"/>
+                <use xlink:href="hello-kitty-backend-proper.svg#Layer_1"/>
+                -->
+            </svg>
+        </p>
+        <p>The Web Server which serves the hello-kitty website doesn't need to access a blockchain node since it can
+            delivery the JavaScript to get the token data in the user's dapp browser.
+        </p>
+        <p>But this perfunctory set-up would perform equally well:
+        </p>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 1000 500">
+                <use xlink:href="hello-kitty-frontend.svg#Layer_1"/>
+                <use xlink:href="hello-kitty-backend-perfunctory.svg#Layer_1"/>
+            </svg>
+        </p>
+        <p>With this example in mind, let's look at TIPS:</p>
+        <dl>
+            <dt>Trust</dt>
+            <dd>Even if the website is secured with SSL, the user can hardly be sure that the kitty being drawn there is
+                his token. An honest website usually offer the picture by linking it from cryptokitty.com or use
+                cryptokitty.com's JavaScript library to draw it, but a normal user wouldn't be able to tell. In fact,
+                the website could have been made entirely in in a static picture. This lack of trust on token data is
+                why DApp users often to go to etherscan.org to verify what he sees.
+            </dd>
+            <dt>Interoperability</dt>
+            <dd>If cryptoktty token's issuer start to issue new tokens, like this kitty with flies around his head, they
+                have no way to ensure the token is rendered correctly. Kitty In The Garden website could be using an
+                outdated JavaScript library.
+            </dd>
+            <dt>Privacy</dt>
+            <dd>If the user has more than one kitty, he couldn't have chosen one to be rendered in the garden without
+                the website learning about all his litter.
+            </dd>
+            <dt>Security</dt>
+            <dd>The user is at risk of losing her kitty, if the website offers to do a transaction with the kitty. For
+                one thing, a user wouldn't be able to match the ID of the kitty in transaction data with the one drawn
+                on the screen. This issue is so serious that MetaMask and a few DApp browsers resorted to hardcode the
+                rendering of cryptokitties.
+            </dd>
+        </dl>
+        <p>The lack of TIPS is a problem, but blockchain is not there to be blamed. The underlying blockchain likely
+            already facilitate trust and security, and may have certain level of privacy and interoperability provided
+            by smart contracts. But these are lost as Dapps are individual websites which, upon visiting, can
+            arbitrarily dictate what the user sees or could do, or what code the user has to run.</p>
+        <h2>The Solution</h2>
+        <p>Our answer is a <strong>Token Enclave</strong> where token logic is separated from the application logic and
+            safely executed. </p>
+        <ol>
+            <li>First, the token issuer can write the code for token. In the cryptokitty case, how a kitty look like.
+                How to safely transfer a kitty to a friend etc etc.
+            </li>
+            <li>Then, the Dapp browser can use that verified code to render the kitty in an enclave. The enclave access
+                the blockchain directly.
+            </li>
+        </ol>
+        <p>In the following example. </p>
 
 </body>
 </html>
