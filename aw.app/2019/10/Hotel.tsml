@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript.xsd">
+    <ts:name>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Hotel Reservation</ts:string>
+            <ts:string quantity="other">Hotel Reservations</ts:string>
+        </ts:plurals>
+    </ts:name>
+
+    <ts:contract interface="erc721" name="Hotel">
+        <ts:address network="100">0x1391f80f4b7c5e88ae8354b9c1094236f89c8274</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <!-- Define the contract which holds the token that the user will use -->
+        <ts:ethereum contract="Hotel">
+        </ts:ethereum>
+    </ts:origins>
+
+    <ts:cards>
+        <ts:token-card>
+            <style type="text/css">html {
+    min-height: 10px;
+}
+body {
+    min-height: 10px;
+}
+.time {
+    font-family: "SourceSansPro";
+    font-weight: lighter;
+    font-size: 15px;
+    vertical-align: middle;
+    color: white;
+}
+.time-icon {
+    height: 17px;
+    vertical-align: middle;
+    color: white;
+    margin-right: 2px;
+}
+.ticket {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzQ0cHgiIGhlaWdodD0iMTg0cHgiIHZpZXdCb3g9IjAgMCAzNDQgMTg0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MSAoODk1ODEpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPkNvbWJpbmVkIFNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iR3JhZGllbnQiIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoNDUpIj4KCSAgICAgIDxzdG9wIG9mZnNldD0iNSUiICBzdG9wLWNvbG9yPSIjNUEyRkM3IiAvPgoJICAgICAgPHN0b3Agb2Zmc2V0PSI5NSUiIHN0b3AtY29sb3I9IiM5NjU3RTQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQ2FyZHMvQ29udGVudC9QaWNrdXAiIGZpbGw9InVybCgjR3JhZGllbnQpIj4KICAgICAgICAgICAgPHBhdGggZD0iTS00LjI2MzI1NjQxZS0xNCwxNiBDLTQuMzcxNDczMDFlLTE0LDcuMTYzNDQ0IDcuMTYzNDQ0LDEuNjIzMjQ5ZS0xNSAxNiwwIEwzMjgsMCBDMzM2LjgzNjU1NiwtMS42MjMyNDllLTE1IDM0NCw3LjE2MzQ0NCAzNDQsMTYgTDM0NCw3NyBDMzM1LjcxNTcyOSw3NyAzMjksODMuNzE1NzI4OCAzMjksOTIgQzMyOSwxMDAuMjg0MjcxIDMzNS43MTU3MjksMTA3IDM0NCwxMDcgTDM0NCwxMDcgTDM0NCwxNjggQzM0NCwxNzYuODM2NTU2IDMzNi44MzY1NTYsMTg0IDMyOCwxODQgTDE2LDE4NCBDNy4xNjM0NDQsMTg0IC00LjE1NTAzOTgxZS0xNCwxNzYuODM2NTU2IC00LjI2MzI1NjQxZS0xNCwxNjggTC00LjI2MzI1NjQxZS0xNCwxMDcgTDAuMzEzODI4MTUzLDEwNi45OTY3ODIgQzguNDUzMjEzNjMsMTA2LjgyOTczIDE1LDEwMC4xNzk0MDcgMTUsOTIgQzE1LDgzLjcxNTcyODggOC4yODQyNzEyNSw3NyAtNC4yNjMyNTY0MWUtMTQsNzcgTC00LjI2MzI1NjQxZS0xNCw3NyBMLTQuMjYzMjU2NDFlLTE0LDE2IFoiIGlkPSJDb21iaW5lZC1TaGFwZSI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+    border-radius: 15px;
+    flex-direction: column;
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 52.7vw;
+}
+.ticketname {
+    font-family: "SourceSansPro";
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    display: block;
+    margin-left: 5%;
+}
+  
+.bottom-section {
+    display: block;
+    padding-left: 12%;
+    padding-top: 7%;
+    align-items: center;
+    flex: 50%;
+    width: auto;
+}
+.left-column{
+    flex: 10%;
+    align-items: center;
+    display: block;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+.right-column{
+    flex: 90%;
+    display: block;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+.plane-icon {
+    height: 40px;
+    padding-top: 10%;
+    display: block;
+    margin: auto;
+}
+.date {
+    font-family: "SourceSansPro";
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    display: block;
+    padding-top: 3%;
+    margin-left: 5%;
+
+}
+.top-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: auto;
+}
+.circle {
+    height: 55px;
+    width: 55px;
+    background-color:rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: inline-block;
+}
+.flight {
+    font-family: "SourceSansPro";
+    font-weight: 800;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    display: block;
+    padding-top: 3%;
+}
+
+.airport {
+    font-family: "SourceSansPro";
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    display: block;
+    padding-top: 3%;
+}
+
+.pickup-location {
+    font-family: "SourceSansPro";
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    display: block;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* flex row */
+.content {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+}
+
+.left-content {
+    width: 75%;
+}
+
+.right-content {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMnB4IiBoZWlnaHQ9IjE4NHB4IiB2aWV3Qm94PSIwIDAgMiAxODQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+U2VwYXJhdG9ycy9Eb3R0ZWRfU21hbGw8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkNhcmRzL0NvbnRlbnQvUGlja3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjcxLjAwMDAwMCwgMC4wMDAwMDApIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgPGcgaWQ9IlNlcGFyYXRvcnMvRG90dGVkX1NtYWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzEuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIj4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI4LjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTIiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTUuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxOSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIyMi41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjI2IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjI5LjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMzMiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMzYuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI0MCIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI0NyIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI0My41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjUwIiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjUzLjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iNTciIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iNjAuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI2NCIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI2Ny41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjcxIiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9Ijc0LjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iNzgiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iODEuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI4NSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI5MiIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI4OC41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjE0MSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxNDQuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxNDgiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTUxLjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTU1IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjE1OC41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjE2MiIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxNjUuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxNjkiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTcyLjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTc2IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjE4MyIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxNzkuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI5NiIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSI5OS41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjEwMyIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxMDYuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxMTAiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTEzLjUiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTE3IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjEyMC41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjEyNCIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxMjcuNSIgcj0iMSI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjEiIGN5PSIxMzEiIHI9IjEiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIGN4PSIxIiBjeT0iMTM4IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBjeD0iMSIgY3k9IjEzNC41IiByPSIxIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+    background-repeat: repeat-y;
+    margin-left: 3%;
+    height: 100%;
+    width: 20%;
+}
+
+.redeemed-stamp {
+    height: 56%;
+    margin-top: 45%;
+    margin-left: 15%;
+}</style>
+            <ts:view-iconified xml:lang="en">
+                <script type="text/javascript">
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance
+    }
+
+    redeemed() {
+        if(this.props.redeemed === "1") {
+            return ""
+        } else {
+            return "visibility: hidden"
+        }
+    }
+
+    render() {
+        return `&lt;div class="ticket"&gt;
+                    &lt;div class="content"&gt;
+                            &lt;div class="left-content"&gt;
+                                    &lt;div class="top-section"&gt;
+                                            &lt;div class="left-column"&gt;
+                                                &lt;span class="circle"&gt;
+                                                        &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgNDAgNDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+Q2F0ZWdvcmllcy9Ib3RlbF93aGl0ZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJDYXRlZ29yaWVzL0hvdGVsX3doaXRlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAtMjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMDAwMDAwLCA4LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMjEiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTMwLDE4LjM0MjggTDMwLDEwLjYwMDggQzMwLDUuMjc4OCAyNS42NDYsMC45MjM4IDIwLjMyMiwwLjkyMzggTDkuNjc4LDAuOTIzOCBDNC4zNTQsMC45MjM4IDAsNS4yNzg4IDAsMTAuNjAwOCBMMCwxNi40MDY4IiBpZD0iU3Ryb2tlLTMiIHN0cm9rZT0iI0ZFRkVGRSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMCwxNi44OTE2IEwzMCwyNi41Njg2IEMzMCwyNi44Mzk2IDI5Ljc4NywyNy4wNTI2IDI5LjUxNywyNy4wNTI2IEwyNS42NDYsMjcuMDUyNiBDMjUuMzc0LDI3LjA1MjYgMjUuMTYxLDI2LjgzOTYgMjUuMTYxLDI2LjU2ODYgTDI1LjE2MSwyMC43NjE2IEMyNS4xNjEsMjAuNDkxNiAyNC45NDgsMjAuMjc4NiAyNC42NzgsMjAuMjc4NiBMNS4zMjIsMjAuMjc4NiBDNS4wNTIsMjAuMjc4NiA0LjgzOSwyMC40OTE2IDQuODM5LDIwLjc2MTYgTDQuODM5LDI2LjU2ODYgQzQuODM5LDI2LjgzOTYgNC42MjYsMjcuMDUyNiA0LjM1NCwyNy4wNTI2IEwwLjQ4MywyNy4wNTI2IEMwLjIyMywyNy4wNTI2IDAsMjYuODM5NiAwLDI2LjU2ODYgTDAsMTYuODkxNiBDMCwxNS42MDQ2IDEuMjg3LDE0LjQyMzYgMy40MjYsMTMuNTAzNiBDNi4xNzQsMTIuMzIzNiAxMC4zMzYsMTEuNTY4NiAxNSwxMS41Njg2IEMxOS42NjQsMTEuNTY4NiAyMy44MjYsMTIuMzIzNiAyNi41NzQsMTMuNTAzNiBDMjguNzEzLDE0LjQyMzYgMzAsMTUuNjA0NiAzMCwxNi44OTE2IFoiIGlkPSJTdHJva2UtNSIgc3Ryb2tlPSIjRkVGRUZFIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxsaW5lIHgxPSI0LjgzODkiIHkxPSIyNy4wNTI3IiB4Mj0iNC44Mzg5IiB5Mj0iMjYuNTY4NyIgaWQ9IlN0cm9rZS03IiBzdHJva2U9IiNGRUZFRkUiIHN0cm9rZS13aWR0aD0iMiI+PC9saW5lPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTUuODA2Niw5LjYzMjggTDUuODA2Niw2LjE0OTggQzUuODA2Niw1Ljg3NzggNS44ODM2LDUuNjY0OCA1Ljk5MDYsNS42NjQ4IEwxMy4zNjQ2LDUuNjY0OCBDMTMuNDcwNiw1LjY2NDggMTMuNTQ4Niw1Ljg3NzggMTMuNTQ4Niw2LjE0OTggTDEzLjU0ODYsOC41OTc4IiBpZD0iU3Ryb2tlLTkiIHN0cm9rZT0iI0ZFRkVGRSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNi40NTEyLDguNTk3NyBMMTYuNDUxMiw2LjE0OTcgQzE2LjQ1MTIsNS44Nzc3IDE2LjUyOTIsNS42NjQ3IDE2LjYzNjIsNS42NjQ3IEwyNC4wMTAyLDUuNjY0NyBDMjQuMTE2Miw1LjY2NDcgMjQuMTkzMiw1Ljg3NzcgMjQuMTkzMiw2LjE0OTcgTDI0LjE5MzIsOS42MzI3IiBpZD0iU3Ryb2tlLTExIiBzdHJva2U9IiNGRUZFRkUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmlsbC0xMyIgZmlsbD0iI0ZFRkVGRSIgcG9pbnRzPSI2LjkwMDQgMTQuNjE5MSA3LjQ4NzQgMTUuODA5MSA4Ljc5OTQgMTYuMDAwMSA3Ljg0OTQgMTYuOTI2MSA4LjA3NDQgMTguMjMzMSA2LjkwMDQgMTcuNjE2MSA1LjcyNTQgMTguMjMzMSA1Ljk1MDQgMTYuOTI2MSA1LjAwMDQgMTYuMDAwMSA2LjMxMjQgMTUuODA5MSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IkZpbGwtMTUiIGZpbGw9IiNGRUZFRkUiIHBvaW50cz0iMTEuOTY2OCAxNC42MTkxIDEyLjU1MzggMTUuODA5MSAxMy44NjU4IDE2LjAwMDEgMTIuOTE2OCAxNi45MjYxIDEzLjE0MDggMTguMjMzMSAxMS45NjY4IDE3LjYxNjEgMTAuNzkxOCAxOC4yMzMxIDExLjAxNjggMTYuOTI2MSAxMC4wNjY4IDE2LjAwMDEgMTEuMzc5OCAxNS44MDkxIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmlsbC0xNyIgZmlsbD0iI0ZFRkVGRSIgcG9pbnRzPSIxNy4wMzMyIDE0LjYxOTEgMTcuNjIwMiAxNS44MDkxIDE4LjkzMzIgMTYuMDAwMSAxNy45ODMyIDE2LjkyNjEgMTguMjA4MiAxOC4yMzMxIDE3LjAzMzIgMTcuNjE2MSAxNS44NTkyIDE4LjIzMzEgMTYuMDgzMiAxNi45MjYxIDE1LjEzNDIgMTYuMDAwMSAxNi40NDYyIDE1LjgwOTEiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJGaWxsLTE5IiBmaWxsPSIjRkVGRUZFIiBwb2ludHM9IjIyLjA5OTYgMTQuNjE5MSAyMi42ODc2IDE1LjgwOTEgMjMuOTk5NiAxNi4wMDAxIDIzLjA0OTYgMTYuOTI2MSAyMy4yNzQ2IDE4LjIzMzEgMjIuMDk5NiAxNy42MTYxIDIwLjkyNTYgMTguMjMzMSAyMS4xNTA2IDE2LjkyNjEgMjAuMjAwNiAxNi4wMDAxIDIxLjUxMjYgMTUuODA5MSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" class="plane-icon"/&gt;
+                                                &lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="right-column"&gt;
+                                                &lt;span class="ticketname"&gt;
+                                                    Hotel Room
+                                                &lt;/span&gt;
+                                                &lt;span class="date"&gt;
+                                                    &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTQgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+aWNfc2NoZWR1bGVfYmxhY2tfMjRweDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQW5kcm9pZC9DYXJkcy9UaWNrZXRzXzUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMi4wMDAwMDAsIC0xNTcuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4LjAwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJpY19zY2hlZHVsZV9ibGFja18yNHB4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMy4wMDAwMDAsIDE1Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNy45OTMzMzMzMywxLjMzMzMzMzMzIEM0LjMxMzMzMzMzLDEuMzMzMzMzMzMgMS4zMzMzMzMzMyw0LjMyIDEuMzMzMzMzMzMsOCBDMS4zMzMzMzMzMywxMS42OCA0LjMxMzMzMzMzLDE0LjY2NjY2NjcgNy45OTMzMzMzMywxNC42NjY2NjY3IEMxMS42OCwxNC42NjY2NjY3IDE0LjY2NjY2NjcsMTEuNjggMTQuNjY2NjY2Nyw4IEMxNC42NjY2NjY3LDQuMzIgMTEuNjgsMS4zMzMzMzMzMyA3Ljk5MzMzMzMzLDEuMzMzMzMzMzMgWiBNOCwxMy4zMzMzMzMzIEM1LjA1MzMzMzMzLDEzLjMzMzMzMzMgMi42NjY2NjY2NywxMC45NDY2NjY3IDIuNjY2NjY2NjcsOCBDMi42NjY2NjY2Nyw1LjA1MzMzMzMzIDUuMDUzMzMzMzMsMi42NjY2NjY2NyA4LDIuNjY2NjY2NjcgQzEwLjk0NjY2NjcsMi42NjY2NjY2NyAxMy4zMzMzMzMzLDUuMDUzMzMzMzMgMTMuMzMzMzMzMyw4IEMxMy4zMzMzMzMzLDEwLjk0NjY2NjcgMTAuOTQ2NjY2NywxMy4zMzMzMzMzIDgsMTMuMzMzMzMzMyBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMCAwIDE2IDAgMTYgMTYgMCAxNiI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSI4LjMzMzMzMzMzIDQuNjY2NjY2NjcgNy4zMzMzMzMzMyA0LjY2NjY2NjY3IDcuMzMzMzMzMzMgOC42NjY2NjY2NyAxMC44MzMzMzMzIDEwLjc2NjY2NjcgMTEuMzMzMzMzMyA5Ljk0NjY2NjY3IDguMzMzMzMzMzMgOC4xNjY2NjY2NyI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" class="time-icon"/&gt;
+                                                        9 July
+                                                &lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="bottom-section"&gt;
+                                            &lt;span class="flight"&gt;
+                                                    Mandarin Oriental Hyde Park
+                                            &lt;/span&gt;
+                                            &lt;span class="airport"&gt;
+                                                    66 Knightsbridge London SW1X 7LA, UK
+                                            &lt;/span&gt;
+                                            &lt;span class="pickup-location"&gt;
+                                                    Tel: +44 20 7235 2000
+                                            &lt;/span&gt;
+                                        &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="right-content"&gt;
+                                &lt;div style=${this.redeemed()}&gt;
+                                     &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDRweCIgaGVpZ2h0PSI5N3B4IiB2aWV3Qm94PSIwIDAgNDQgOTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3RhbXBzL2NoaW5lc2U8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkNhcmRzL0NvbnRlbnQvUGlja3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjgyLjAwMDAwMCwgLTQ1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0ic3RhbXBzL2NoaW5lc2UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI4Mi4wMDAwMDAsIDMxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjYwOTM3NSwgNjIuMTIyMDcwKSByb3RhdGUoLTM1My4wMDAwMDApIHRyYW5zbGF0ZSgtMjEuNjA5Mzc1LCAtNjIuMTIyMDcwKSB0cmFuc2xhdGUoNi4xMDkzNzUsIDE2LjYyMjA3MCkiPgogICAgICAgICAgICAgICAgICAgIDx0ZXh0IGlkPSLlt7LlhZHmjaIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjQ1NjQyMiwgNDUuNTAxOTAzKSByb3RhdGUoLTkwLjAwMDAwMCkgdHJhbnNsYXRlKC0xNS40NTY0MjIsIC00NS41MDE5MDMpICIgZm9udC1mYW1pbHk9IlBpbmdGYW5nU0MtU2VtaWJvbGQsIFBpbmdGYW5nIFNDIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9Ii0xMS41NDM1Nzc5IiB5PSI1Mi4wMDE5MDI3Ij7lt7LlhZHmjaI8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgIDwvdGV4dD4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjRkZGRkZGIiBjeD0iMTYiIGN5PSIxMCIgcj0iMiI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgZmlsbD0iI0ZGRkZGRiIgY3g9IjE1LjUiIGN5PSI4MSIgcj0iMiI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHg9IjAuNSIgeT0iLTEuMDQ1OTE4OTFlLTExIiB3aWR0aD0iMzAiIGhlaWdodD0iOTEiPjwvcmVjdD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" class="redeemed-stamp"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+};
+</script>
+<div id="root"/>
+
+            </ts:view-iconified>
+            <ts:view xml:lang="en">
+                <script type="text/javascript">
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance
+    }
+
+    redeemed() {
+        if(this.props.redeemed === "1") {
+            return ""
+        } else {
+            return "visibility: hidden"
+        }
+    }
+
+    render() {
+        return `&lt;div class="ticket"&gt;
+                    &lt;div class="content"&gt;
+                            &lt;div class="left-content"&gt;
+                                    &lt;div class="top-section"&gt;
+                                            &lt;div class="left-column"&gt;
+                                                &lt;span class="circle"&gt;
+                                                        &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgNDAgNDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+Q2F0ZWdvcmllcy9Ib3RlbF93aGl0ZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJDYXRlZ29yaWVzL0hvdGVsX3doaXRlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAtMjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMDAwMDAwLCA4LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMjEiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTMwLDE4LjM0MjggTDMwLDEwLjYwMDggQzMwLDUuMjc4OCAyNS42NDYsMC45MjM4IDIwLjMyMiwwLjkyMzggTDkuNjc4LDAuOTIzOCBDNC4zNTQsMC45MjM4IDAsNS4yNzg4IDAsMTAuNjAwOCBMMCwxNi40MDY4IiBpZD0iU3Ryb2tlLTMiIHN0cm9rZT0iI0ZFRkVGRSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMCwxNi44OTE2IEwzMCwyNi41Njg2IEMzMCwyNi44Mzk2IDI5Ljc4NywyNy4wNTI2IDI5LjUxNywyNy4wNTI2IEwyNS42NDYsMjcuMDUyNiBDMjUuMzc0LDI3LjA1MjYgMjUuMTYxLDI2LjgzOTYgMjUuMTYxLDI2LjU2ODYgTDI1LjE2MSwyMC43NjE2IEMyNS4xNjEsMjAuNDkxNiAyNC45NDgsMjAuMjc4NiAyNC42NzgsMjAuMjc4NiBMNS4zMjIsMjAuMjc4NiBDNS4wNTIsMjAuMjc4NiA0LjgzOSwyMC40OTE2IDQuODM5LDIwLjc2MTYgTDQuODM5LDI2LjU2ODYgQzQuODM5LDI2LjgzOTYgNC42MjYsMjcuMDUyNiA0LjM1NCwyNy4wNTI2IEwwLjQ4MywyNy4wNTI2IEMwLjIyMywyNy4wNTI2IDAsMjYuODM5NiAwLDI2LjU2ODYgTDAsMTYuODkxNiBDMCwxNS42MDQ2IDEuMjg3LDE0LjQyMzYgMy40MjYsMTMuNTAzNiBDNi4xNzQsMTIuMzIzNiAxMC4zMzYsMTEuNTY4NiAxNSwxMS41Njg2IEMxOS42NjQsMTEuNTY4NiAyMy44MjYsMTIuMzIzNiAyNi41NzQsMTMuNTAzNiBDMjguNzEzLDE0LjQyMzYgMzAsMTUuNjA0NiAzMCwxNi44OTE2IFoiIGlkPSJTdHJva2UtNSIgc3Ryb2tlPSIjRkVGRUZFIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxsaW5lIHgxPSI0LjgzODkiIHkxPSIyNy4wNTI3IiB4Mj0iNC44Mzg5IiB5Mj0iMjYuNTY4NyIgaWQ9IlN0cm9rZS03IiBzdHJva2U9IiNGRUZFRkUiIHN0cm9rZS13aWR0aD0iMiI+PC9saW5lPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTUuODA2Niw5LjYzMjggTDUuODA2Niw2LjE0OTggQzUuODA2Niw1Ljg3NzggNS44ODM2LDUuNjY0OCA1Ljk5MDYsNS42NjQ4IEwxMy4zNjQ2LDUuNjY0OCBDMTMuNDcwNiw1LjY2NDggMTMuNTQ4Niw1Ljg3NzggMTMuNTQ4Niw2LjE0OTggTDEzLjU0ODYsOC41OTc4IiBpZD0iU3Ryb2tlLTkiIHN0cm9rZT0iI0ZFRkVGRSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNi40NTEyLDguNTk3NyBMMTYuNDUxMiw2LjE0OTcgQzE2LjQ1MTIsNS44Nzc3IDE2LjUyOTIsNS42NjQ3IDE2LjYzNjIsNS42NjQ3IEwyNC4wMTAyLDUuNjY0NyBDMjQuMTE2Miw1LjY2NDcgMjQuMTkzMiw1Ljg3NzcgMjQuMTkzMiw2LjE0OTcgTDI0LjE5MzIsOS42MzI3IiBpZD0iU3Ryb2tlLTExIiBzdHJva2U9IiNGRUZFRkUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmlsbC0xMyIgZmlsbD0iI0ZFRkVGRSIgcG9pbnRzPSI2LjkwMDQgMTQuNjE5MSA3LjQ4NzQgMTUuODA5MSA4Ljc5OTQgMTYuMDAwMSA3Ljg0OTQgMTYuOTI2MSA4LjA3NDQgMTguMjMzMSA2LjkwMDQgMTcuNjE2MSA1LjcyNTQgMTguMjMzMSA1Ljk1MDQgMTYuOTI2MSA1LjAwMDQgMTYuMDAwMSA2LjMxMjQgMTUuODA5MSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IkZpbGwtMTUiIGZpbGw9IiNGRUZFRkUiIHBvaW50cz0iMTEuOTY2OCAxNC42MTkxIDEyLjU1MzggMTUuODA5MSAxMy44NjU4IDE2LjAwMDEgMTIuOTE2OCAxNi45MjYxIDEzLjE0MDggMTguMjMzMSAxMS45NjY4IDE3LjYxNjEgMTAuNzkxOCAxOC4yMzMxIDExLjAxNjggMTYuOTI2MSAxMC4wNjY4IDE2LjAwMDEgMTEuMzc5OCAxNS44MDkxIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iRmlsbC0xNyIgZmlsbD0iI0ZFRkVGRSIgcG9pbnRzPSIxNy4wMzMyIDE0LjYxOTEgMTcuNjIwMiAxNS44MDkxIDE4LjkzMzIgMTYuMDAwMSAxNy45ODMyIDE2LjkyNjEgMTguMjA4MiAxOC4yMzMxIDE3LjAzMzIgMTcuNjE2MSAxNS44NTkyIDE4LjIzMzEgMTYuMDgzMiAxNi45MjYxIDE1LjEzNDIgMTYuMDAwMSAxNi40NDYyIDE1LjgwOTEiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJGaWxsLTE5IiBmaWxsPSIjRkVGRUZFIiBwb2ludHM9IjIyLjA5OTYgMTQuNjE5MSAyMi42ODc2IDE1LjgwOTEgMjMuOTk5NiAxNi4wMDAxIDIzLjA0OTYgMTYuOTI2MSAyMy4yNzQ2IDE4LjIzMzEgMjIuMDk5NiAxNy42MTYxIDIwLjkyNTYgMTguMjMzMSAyMS4xNTA2IDE2LjkyNjEgMjAuMjAwNiAxNi4wMDAxIDIxLjUxMjYgMTUuODA5MSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" class="plane-icon"/&gt;
+                                                &lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="right-column"&gt;
+                                                &lt;span class="ticketname"&gt;
+                                                    Hotel Room
+                                                &lt;/span&gt;
+                                                &lt;span class="date"&gt;
+                                                    &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTQgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYwICg4ODEwMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+aWNfc2NoZWR1bGVfYmxhY2tfMjRweDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQW5kcm9pZC9DYXJkcy9UaWNrZXRzXzUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMi4wMDAwMDAsIC0xNTcuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4LjAwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJpY19zY2hlZHVsZV9ibGFja18yNHB4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMy4wMDAwMDAsIDE1Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNy45OTMzMzMzMywxLjMzMzMzMzMzIEM0LjMxMzMzMzMzLDEuMzMzMzMzMzMgMS4zMzMzMzMzMyw0LjMyIDEuMzMzMzMzMzMsOCBDMS4zMzMzMzMzMywxMS42OCA0LjMxMzMzMzMzLDE0LjY2NjY2NjcgNy45OTMzMzMzMywxNC42NjY2NjY3IEMxMS42OCwxNC42NjY2NjY3IDE0LjY2NjY2NjcsMTEuNjggMTQuNjY2NjY2Nyw4IEMxNC42NjY2NjY3LDQuMzIgMTEuNjgsMS4zMzMzMzMzMyA3Ljk5MzMzMzMzLDEuMzMzMzMzMzMgWiBNOCwxMy4zMzMzMzMzIEM1LjA1MzMzMzMzLDEzLjMzMzMzMzMgMi42NjY2NjY2NywxMC45NDY2NjY3IDIuNjY2NjY2NjcsOCBDMi42NjY2NjY2Nyw1LjA1MzMzMzMzIDUuMDUzMzMzMzMsMi42NjY2NjY2NyA4LDIuNjY2NjY2NjcgQzEwLjk0NjY2NjcsMi42NjY2NjY2NyAxMy4zMzMzMzMzLDUuMDUzMzMzMzMgMTMuMzMzMzMzMyw4IEMxMy4zMzMzMzMzLDEwLjk0NjY2NjcgMTAuOTQ2NjY2NywxMy4zMzMzMzMzIDgsMTMuMzMzMzMzMyBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMCAwIDE2IDAgMTYgMTYgMCAxNiI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgcG9pbnRzPSI4LjMzMzMzMzMzIDQuNjY2NjY2NjcgNy4zMzMzMzMzMyA0LjY2NjY2NjY3IDcuMzMzMzMzMzMgOC42NjY2NjY2NyAxMC44MzMzMzMzIDEwLjc2NjY2NjcgMTEuMzMzMzMzMyA5Ljk0NjY2NjY3IDguMzMzMzMzMzMgOC4xNjY2NjY2NyI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" class="time-icon"/&gt;
+                                                        9 July
+                                                &lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="bottom-section"&gt;
+                                            &lt;span class="flight"&gt;
+                                                    Mandarin Oriental Hyde Park
+                                            &lt;/span&gt;
+                                            &lt;span class="airport"&gt;
+                                                    66 Knightsbridge London SW1X 7LA, UK
+                                            &lt;/span&gt;
+                                            &lt;span class="pickup-location"&gt;
+                                                    Tel: +44 20 7235 2000
+                                            &lt;/span&gt;
+                                        &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="right-content"&gt;
+                                &lt;div style=${this.redeemed()}&gt;
+                                     &lt;img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDRweCIgaGVpZ2h0PSI5N3B4IiB2aWV3Qm94PSIwIDAgNDQgOTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxICg4OTU4MSkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+c3RhbXBzL2NoaW5lc2U8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkNhcmRzL0NvbnRlbnQvUGlja3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjgyLjAwMDAwMCwgLTQ1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0ic3RhbXBzL2NoaW5lc2UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI4Mi4wMDAwMDAsIDMxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjYwOTM3NSwgNjIuMTIyMDcwKSByb3RhdGUoLTM1My4wMDAwMDApIHRyYW5zbGF0ZSgtMjEuNjA5Mzc1LCAtNjIuMTIyMDcwKSB0cmFuc2xhdGUoNi4xMDkzNzUsIDE2LjYyMjA3MCkiPgogICAgICAgICAgICAgICAgICAgIDx0ZXh0IGlkPSLlt7LlhZHmjaIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjQ1NjQyMiwgNDUuNTAxOTAzKSByb3RhdGUoLTkwLjAwMDAwMCkgdHJhbnNsYXRlKC0xNS40NTY0MjIsIC00NS41MDE5MDMpICIgZm9udC1mYW1pbHk9IlBpbmdGYW5nU0MtU2VtaWJvbGQsIFBpbmdGYW5nIFNDIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjRkZGRkZGIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9Ii0xMS41NDM1Nzc5IiB5PSI1Mi4wMDE5MDI3Ij7lt7LlhZHmjaI8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgIDwvdGV4dD4KICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjRkZGRkZGIiBjeD0iMTYiIGN5PSIxMCIgcj0iMiI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgZmlsbD0iI0ZGRkZGRiIgY3g9IjE1LjUiIGN5PSI4MSIgcj0iMiI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHg9IjAuNSIgeT0iLTEuMDQ1OTE4OTFlLTExIiB3aWR0aD0iMzAiIGhlaWdodD0iOTEiPjwvcmVjdD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" class="redeemed-stamp"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+};
+</script>
+<div id="root"/>
+
+            </ts:view>
+        </ts:token-card>
+    </ts:cards>
+
+    <ts:attribute-types>
+
+        <ts:attribute-type id="time" syntax="1.3.6.1.4.1.1466.115.121.1.24">
+            <ts:name>
+                <ts:string xml:lang="en">Time</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:token-id as="utf8" bitmask="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000">
+                </ts:token-id>
+            </ts:origins>
+        </ts:attribute-type>
+
+        <ts:attribute-type id="locality" oid="2.5.4.7" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+            <ts:name>
+                <ts:string xml:lang="en">City</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:token-id as="uint" bitmask="000000000000000000000000000000000000FF00000000000000000000000000">
+                    <ts:mapping>
+                        <ts:option key="1">
+                            <ts:value xml:lang="en">Shanghai</ts:value>
+                        </ts:option>
+                        <ts:option key="2">
+                            <ts:value xml:lang="en">London</ts:value>
+                        </ts:option>
+                    </ts:mapping>
+                </ts:token-id>
+            </ts:origins>
+        </ts:attribute-type>
+
+        <ts:attribute-type id="venue" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+            <ts:name>
+                <ts:string xml:lang="en">Venue</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:token-id as="uint" bitmask="00000000000000000000000000000000000000FF000000000000000000000000">
+                    <ts:mapping>
+                        <ts:option key="1">
+                            <ts:value xml:lang="en">Hilton Resorts</ts:value>
+                        </ts:option>
+                        <ts:option key="2">
+                            <ts:value xml:lang="en">Trump Tower</ts:value>
+                        </ts:option>
+                    </ts:mapping>
+                </ts:token-id>
+            </ts:origins>
+        </ts:attribute-type>
+
+        <ts:attribute-type id="category" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+            <ts:name>
+                <ts:string xml:lang="en">Cat</ts:string>
+                <ts:string xml:lang="zh">等级</ts:string>
+                <ts:string xml:lang="es">Cat</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:token-id as="uint" bitmask="000000000000000000000000000000000000000000000000000000FF00000000">
+                    <ts:mapping>
+                        <ts:option key="1">
+                            <ts:value xml:lang="en">Executive Suite</ts:value>
+                        </ts:option>
+                        <ts:option key="2">
+                            <ts:value xml:lang="en">Deluxe Suite</ts:value>
+                        </ts:option>
+                    </ts:mapping>
+                </ts:token-id>
+            </ts:origins>
+        </ts:attribute-type>
+
+        <ts:attribute-type id="numero" syntax="1.3.6.1.4.1.1466.115.121.1.27">
+            <ts:name>
+                <ts:string>№</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:token-id as="uint" bitmask="00000000000000000000000000000000000000000000000000000000FFFF00"/>
+            </ts:origins>
+        </ts:attribute-type>
+
+        <ts:attribute-type id="redeemed" syntax="1.3.6.1.4.1.1466.115.121.1.27">
+            <ts:name>
+                <ts:string>Redeemed</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ts:ethereum as="bool" contract="Hotel" function="redeemed">
+                    <ts:data>
+                        <ts:uint256 ref="tokenId"/>
+                    </ts:data>
+                </ts:ethereum>
+            </ts:origins>
+        </ts:attribute-type>
+
+    </ts:attribute-types>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>+1HQ67QXny7NmJO4xzZ+Bc70sAPKIaazlf7+vtOhzWI=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+BEHM5QdPt+xRC8dYNPvxgys5v86eSJ8rC2AdNB9tCIeolJ1BZN49/F1mgkxOJ1f/7ySpeBkon5OR
+ErNEPDgFQe4U1YpRF0lLuY26dBTs38dFagfWZ5uUsihiHx1hRKcyCZZYJCoMUCuaGUnekGkxnb9q
+13wPvvtoCgxJ30N6xnIk51Avf4NuEuBFTerQXMntw9LPMk6xf7MUPY3TlRLvDoTr+QCeVCzf8wUa
+BBeLsZr16KIDS8ZhBZZdqNHzOkuvGQ4ELPCJjdie9cEalOu870KkCnT5qXhu1pcznOHg7kQbSb7B
+nqVkcXLhJgT1gOD5MMmdt5ySqPiLbu7H2c8LwA==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyName>AliPay</ds:KeyName>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+tDHBH8jKLPEjpXsy/V9/XsXBYmc64SXx6IWG9CdJzm+iSrk3Od2ZZTS3DsR5+hp9hk6UwRyb1XKG
++TMrBODfxIIWricmnhxYMqiyvwDhecm4RU4YFteekBFAsuhEGCJBtmJSrle5G3iE/9FwvTfw/cxo
+yAydv85OWc4UkxkfjzaXVqGGKCzSFhRm48HwG51/1nmC1mmPh070EMY4Km4N/ieJZ8egLjDAIZEI
+EY5Cj7ig9PPnGf2pF21/z7vm3zQViXi6XJIBn1E5CTXzDW1y1BYe0QI+dxxY0o+97mwisZu7fVfB
+/rJJm3g7Ye4/lITkZeRMP+OLYyG1pathItlrVQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFUDCCBDigAwIBAgISAy095xt55U0Cc0++zYon7TT0MA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
+BAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1
+dGhvcml0eSBYMzAeFw0xOTA5MjQxMTA1MTdaFw0xOTEyMjMxMTA1MTdaMBMxETAPBgNVBAMMCCou
+YXcuYXBwMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtDHBH8jKLPEjpXsy/V9/XsXB
+Ymc64SXx6IWG9CdJzm+iSrk3Od2ZZTS3DsR5+hp9hk6UwRyb1XKG+TMrBODfxIIWricmnhxYMqiy
+vwDhecm4RU4YFteekBFAsuhEGCJBtmJSrle5G3iE/9FwvTfw/cxoyAydv85OWc4UkxkfjzaXVqGG
+KCzSFhRm48HwG51/1nmC1mmPh070EMY4Km4N/ieJZ8egLjDAIZEIEY5Cj7ig9PPnGf2pF21/z7vm
+3zQViXi6XJIBn1E5CTXzDW1y1BYe0QI+dxxY0o+97mwisZu7fVfB/rJJm3g7Ye4/lITkZeRMP+OL
+YyG1pathItlrVQIDAQABo4ICZTCCAmEwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUF
+BwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRaKDKFkPztPgQee3418kofZddy
+MTAfBgNVHSMEGDAWgBSoSmpjBH3duubRObemRWXv86jsoTBvBggrBgEFBQcBAQRjMGEwLgYIKwYB
+BQUHMAGGImh0dHA6Ly9vY3NwLmludC14My5sZXRzZW5jcnlwdC5vcmcwLwYIKwYBBQUHMAKGI2h0
+dHA6Ly9jZXJ0LmludC14My5sZXRzZW5jcnlwdC5vcmcvMBsGA1UdEQQUMBKCCCouYXcuYXBwggZh
+dy5hcHAwTAYDVR0gBEUwQzAIBgZngQwBAgEwNwYLKwYBBAGC3xMBAQEwKDAmBggrBgEFBQcCARYa
+aHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcwggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdwB0ftqD
+Ma0zEJEhnM4lT0Jwwr/9XkIgCMY3NXnmEHvMVgAAAW1jKVxwAAAEAwBIMEYCIQCHuWOuAiqXC7Bn
+nYLS4BDrOrVeObYC7zcQvru7Aqx5DAIhAP9ukUp9nnQBWgAgTdfK+GdhHxboIaxJz7456ws6myft
+AHUAY/Lbzeg7zCzPC3KEJ1drM6SNYXePvXWmOLHHaFRL2I0AAAFtYyladwAABAMARjBEAiBaxydV
+JMY5/hQyrjaMMonJgQBhEKBHvv4FbthX+lZfpAIga4sB0hDaoT4knZfVhVP/u/Uv47t6z1+TEWnL
+/TresTwwDQYJKoZIhvcNAQELBQADggEBAGSPK0ivDprmvO72TVLZsuk/JDhCmXQcYe6cRGPiX7WL
+c0B6wfLaxb0rrQdmGpTiTEHS6wEa6tOMEsfxutPWeOxlqFPU97QHhLrdBlf4IDfk8i1Em3rpPPQu
+3M2u5nfeRXvsIxyB5vLQvuR/NwCQqA2bwkCrlLz7dr1iGem35DGI0ikIkdODTPI+RpwHK8b2iApA
+w6XaVGA99eCJS2dHqeyHPAc1Yf+Klv+z0FyM38ZUfazRRIQ17LtolM1U/9Ynld20SXtCrIFbcmbo
+w3piXuHLlDRcRxWqdL33yPoTEbPuLtS6vqDXefYP0RiYpQHHwJz4E6q5VCbK6LgILnIyX+M=
+</ds:X509Certificate>
+<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQK
+ExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4X
+DTE2MDMxNzE2NDA0NloXDTIxMDMxNzE2NDA0NlowSjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxl
+dCdzIEVuY3J5cHQxIzAhBgNVBAMTGkxldCdzIEVuY3J5cHQgQXV0aG9yaXR5IFgzMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNMM8FrlLke3cl03g7NoYzDq1zUmGSXhvb418XCSL7e4
+S0EFq6meNQhY7LEqxGiHC6PjdeTm86dicbp5gWAf15Gan/PQeGdxyGkOlZHP/uaZ6WA8SMx+yk13
+EiSdRxta67nsHjcAHJyse6cF6s5K671B5TaYucv9bTyWaN8jKkKQDIZ0Z8h/pZq4UmEUEz9l6YKH
+y9v6Dlb2honzhT+Xhq+w3Brvaw2VFn3EK6BlspkENnWAa6xK8xuQSXgvopZPKiAlKQTGdMDQMc2P
+MTiVFrqoM7hD8bEfwzB/onkxEz0tNvjj/PIzark5McWvxI0NHWQWM6r6hCm21AvA2H3DkwIDAQAB
+o4IBfTCCAXkwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAYYwfwYIKwYBBQUHAQEE
+czBxMDIGCCsGAQUFBzABhiZodHRwOi8vaXNyZy50cnVzdGlkLm9jc3AuaWRlbnRydXN0LmNvbTA7
+BggrBgEFBQcwAoYvaHR0cDovL2FwcHMuaWRlbnRydXN0LmNvbS9yb290cy9kc3Ryb290Y2F4My5w
+N2MwHwYDVR0jBBgwFoAUxKexpHsscfrb4UuQdf/EFWCFiRAwVAYDVR0gBE0wSzAIBgZngQwBAgEw
+PwYLKwYBBAGC3xMBAQEwMDAuBggrBgEFBQcCARYiaHR0cDovL2Nwcy5yb290LXgxLmxldHNlbmNy
+eXB0Lm9yZzA8BgNVHR8ENTAzMDGgL6AthitodHRwOi8vY3JsLmlkZW50cnVzdC5jb20vRFNUUk9P
+VENBWDNDUkwuY3JsMB0GA1UdDgQWBBSoSmpjBH3duubRObemRWXv86jsoTANBgkqhkiG9w0BAQsF
+AAOCAQEA3TPXEfNjWDjdGBX7CVW+dla5cEilaUcne8IkCJLxWh9KEik3JHRRHGJouM2VcGfl96S8
+TihRzZvoroed6ti6WqEBmtzw3Wodatg+VyOeph4EYpr/1wXKtx8/wApIvJSwtmVi4MFU5aMqrSDE
+6ea73Mj2tcMyo5jMd6jmeWUHK8so/joWUoHOUgwuX4Po1QYz+3dszkDqMp4fklxBwXRsW10KXzPM
+TZ+sOPAveyxindmjkW8lGy+QsRlGPfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M
++X+Q7UNKEkROb3N6KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></ts:token>
