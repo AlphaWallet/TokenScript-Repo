@@ -2,11 +2,11 @@
     <ts:name>
         <ts:string xml:lang="en">DAI</ts:string>
     </ts:name>
-    <ts:contract interface="erc20" name="dai">
-        <ts:address network="1">0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359</ts:address>
+    <ts:contract interface="erc20" name="DAI">
+        <ts:address network="1">0x6b175474e89094c44da98b954eedeac495271d0f</ts:address>
     </ts:contract>
     <ts:origins>
-        <ts:ethereum contract="dai">
+        <ts:ethereum contract="DAI">
         </ts:ethereum>
     </ts:origins>
     <ts:cards>
@@ -31,7 +31,7 @@
                 </ts:origins>
             </ts:attribute-type>
             <ts:transaction>
-                <ts:ethereum contract="dai" function="transfer">
+                <ts:ethereum contract="DAI" function="transfer">
                     <ts:data>
                         <!-- to convert erc20 DAI to native xDAI, transfer to this address -->
                         <ts:address>0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016</ts:address>
@@ -175,7 +175,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                 <ts:string xml:lang="en">DAI-Balance</ts:string>
             </ts:name>
             <ts:origins>
-                <ts:ethereum as="uint" contract="dai" function="balanceOf">
+                <ts:ethereum as="uint" contract="DAI" function="balanceOf">
                     <ts:data>
                         <ts:address ref="ownerAddress"/>
                     </ts:data>
@@ -193,15 +193,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>qTT2h9D32E7glMJ7tDaymmg5zjYtgGXvKSCnf/s5j4A=</ds:DigestValue>
+<ds:DigestValue>s5X7FUQzRZi+Oblt3wRq/57ws5bhG34S3g+6V5dn+q4=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-azbE18+HkcQBZm2jx6z7CQNeFutoL45a2q1y86gc+qS8iUAemyICqmI2J86kCnSeLoy74HRAgfWk
-Ug0hW+Vf+7aKYIOBAVyAuYeLrFfaXasZuQqtAiQLFuQI+A4nscdut61cUPO4FLK34r1+Kr6fvfcU
-1vw0uqroRi8g9YngkLp0a94J/VIHe01w80rCxABqOpVPNcnxCm0uBTc/OB+KdxfU00n/jst6M68x
-BZK/bYtc3x7+2BSiFuihzRXzs051BIx5dhdvIBxWMqRFOA2xttlAvD7MsEb21v3CnrXSREG0j6Le
-DW86etWYt3e2hfbJU6rS/G03VKuvYE0q9FrKMA==
+Uu34gJdCaixEjz3BvglFqd94ZVF6ejNRx3sFixV2aGihVdF24pAU+embIKH3QMHJ5hMKqNlCQnIn
+R1tCWlmNmOkYzNzlTzNu8g47fw4NHhhHKBjwHc4ekx/K54/zTMKdT0SMr4e5jf4tWESoXLy73xI3
+P4l6wUZYQYqvjAS1juevn/HPaCs7H/DytbetWy4Lz7P8eni5UQ8uxZfDpeDQRr3MiU/xwCEw9tk4
+S1uOrn8eodsgCBo7ZHd02m4glNvIFpfKSPyRRmi2N7N/P7qNq2HUouHZFGpBDASDmJqgjhZQ2LGx
+ulwEXoH8z5DilEqlQwVaygc5Xt2nT0azD2Z/pg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
