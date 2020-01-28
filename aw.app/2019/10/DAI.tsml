@@ -314,7 +314,7 @@ class Token {
             }
         });
         let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " +
-            parseFloat(monthlyReturnLend) + " " + this.props.name + " per month (with your current balance)";
+            parseFloat(monthlyReturnLend) + "$USD " + " per month (with your current balance)";
         let borrowMessage = "Borrow at " + parseFloat(rateBorrow).toFixed(2) + "%";
         document.getElementById("lendMessage").innerHTML = earnMessage;
         document.getElementById("borrowMessage").innerHTML = borrowMessage;
@@ -373,15 +373,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>bTlcW+CxMuq0dovffT2m73ZNE2b1lVD2eFoNuHQJLDo=</ds:DigestValue>
+<ds:DigestValue>1NNNfJB+C46bubi+hPjPqKKimdO3UVC6tlcv8OFBGqo=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-kqxLxMnH6w741dpQTcGfpzz7Lr2sjdQRjBPil8MnwJjAbGiyee19qKzOqVeQ/Y+hS/bpdVSHuwLK
-RKWtvFf8tNriutvFUe4nT8E45BDlkV12dP7WxSieUDA8izd0d2u8koNn95tu4kJYOTCf+WC1Bqwd
-O1jmxtrYO5V6n4WYIQjwf0ERDBzBtlBF/SxWl/5Vs3aTsQOI8NK5WHoR/4nM6OHxAu+GfZ9Xx/0O
-qKyofHnK4ZHxHMaOF6H007Qo5RE6lPI1AVrty/S1tK71nz3eF+hY6kXg7qbDSsQIJww7AF62YAyV
-BsSdqgUbXKz8bnuZ6jTzerxp66JIbCKMoiEgWQ==
+en4hihN6HqhaBWAJXXVwY6GvOg7zMJfKub+6zZxl29PWtKt6TmXk7peDjM29sGi2pTE95+VguBra
+5g7VqOCBofWGPww+Ku4aUbcBP4pJ0CVOE1o8eSzPFuBbWTcWIe9dxACN/6R0UjDe32TVyCLaOcBD
+eG1xVPUvfv/WSaI/ShiurkENe73m2tJ90ZjORk6SOu0MnoV4Nw5T/fXMRAcncbt+ZI4lFsG5wzzo
+KZLeYhJ/YsBZqjRDgrAnQGllQH1L3zfSebikqbMIgRzTUniSKF1HmVzD6L22VqD+nLMwpVzDdSO1
+B08LTwqIjWX85c5z7WR+g6EHF3dQLQJeMf0pxA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

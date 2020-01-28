@@ -612,7 +612,7 @@ class Token {
             }
         });
         let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " +
-            parseFloat(monthlyReturnLend) + " " + this.props.name + " per month (with your current balance)";
+            parseFloat(monthlyReturnLend) + "$USD " + " per month (with your current balance)";
         let borrowMessage = "Borrow at " + parseFloat(rateBorrow).toFixed(2) + "%";
         document.getElementById("lendMessage").innerHTML = earnMessage;
         document.getElementById("borrowMessage").innerHTML = borrowMessage;
@@ -682,15 +682,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>8s1ELZlhUbWlvG7GuftIAzja2g5MShdfdd2rPSc1TIE=</ds:DigestValue>
+<ds:DigestValue>zFrM0RMicjE1Ku5eAEEOZv6XSg0KhwTSCbVw6wgdczw=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-EwbQhASn3PmgxdlkU07dnKu/lK9psMPkB3w/j2YPWsOXnv4mKj2uG3n9kD7NTDi2Jtn7uVVuPEhb
-4GR0fKdN87l0w2yziX+Pr2pM4A8xMjjnS+bA0gplJiDW7dKT1wXpNICEJL3D/H3O9btLrFisv94l
-mZp+AeGaExQuCMvATRbwRnFl4+QzwHXbr6Q+hZ9MwEMJiZEAKrfG+RbltEW/sJ2/xp9Mq+4Br3Zz
-1Y2dWW+WbsGvjBU6VPwztAzetqi2i/qhj7aQaKIC0wDe0rZMCvtPByOdofFh5TsrzDdXOKIZ67kz
-KppBJsPbWSfYwH590hCQpRO8ch+hqv2FUDd78Q==
+lzU9MRCo67iREJIktG9UjANVobLXsoVMIG4v05aLjeHoo74atcVf9/ko5kFazbtoRTzQ5NzKX5xp
+2eEcSFWlzllH0Y5xYCxp5XRq3X4sYS0ERwHalhA06+9ExxvP9vTjdu2tziCcxM4iR/ncoaetBO0X
+sbD5LkFy4P38SPbQkB3k4Ffu8tgr/VC/vIy2yU3Zr5wafD1J+D65/n9uj03W0ZyXbUpMgRQd0m5W
+/6KsCOQkRKM0M5QG2imU1lgExDU0p/dKbmTphBn8RPilentPgbmRy40PzZ2JS64Q5Kgz3dUOKH6r
+ED24dBwk/ErEG1vw4+/ZrwtkxxJP2YnvWqpuTg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
