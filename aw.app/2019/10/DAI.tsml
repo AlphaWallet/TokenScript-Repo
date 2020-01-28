@@ -313,8 +313,8 @@ class Token {
                 monthlyRateBorrow = json.rates[key].borrow.monthlyAmount;
             }
         });
-        let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " +
-            parseFloat(monthlyReturnLend) + "$USD " + " per month (with your current balance)";
+        let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " + "$USD " +
+            parseFloat(monthlyReturnLend) + " per month (with your current balance)";
         let borrowMessage = "Borrow at " + parseFloat(rateBorrow).toFixed(2) + "%";
         document.getElementById("lendMessage").innerHTML = earnMessage;
         document.getElementById("borrowMessage").innerHTML = borrowMessage;
@@ -373,15 +373,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>1NNNfJB+C46bubi+hPjPqKKimdO3UVC6tlcv8OFBGqo=</ds:DigestValue>
+<ds:DigestValue>J/QjnRgtyjx1sVRd7yFWmHplJJ8TadtEf0fb9iQd7EM=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-en4hihN6HqhaBWAJXXVwY6GvOg7zMJfKub+6zZxl29PWtKt6TmXk7peDjM29sGi2pTE95+VguBra
-5g7VqOCBofWGPww+Ku4aUbcBP4pJ0CVOE1o8eSzPFuBbWTcWIe9dxACN/6R0UjDe32TVyCLaOcBD
-eG1xVPUvfv/WSaI/ShiurkENe73m2tJ90ZjORk6SOu0MnoV4Nw5T/fXMRAcncbt+ZI4lFsG5wzzo
-KZLeYhJ/YsBZqjRDgrAnQGllQH1L3zfSebikqbMIgRzTUniSKF1HmVzD6L22VqD+nLMwpVzDdSO1
-B08LTwqIjWX85c5z7WR+g6EHF3dQLQJeMf0pxA==
+BJ5zvACcUoyhWjF++aEGggjNTdcxC3bjet4MVTNH9Pb83LWelXxA0gNSDHXxJXL3Kf2vkdeisB8O
+0cY3zHB5knGrRiQfL2szlJoW3w5TTU7h5Y3MlXzQDKITio0EOvJwgJaIwD5KBXQJvr5MLPzFoUHL
+Jh3uMX5CZXUsOor2cRa5bAVM11/Zf5Zu/+mDa8xlqR2vbWhItVdhJ912qCWZww2QxAaWprHhBdnA
+HmY2JVFg7qYfLKVDjZPNzx3llBu5rSaK0bA+XONqwGKYH2WRfiDIa/zr9qXaeArtQFOMP87n1FLM
+s6zh5ammR7vqAxabXscIBuVzASqfZhDAmzw+Bg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

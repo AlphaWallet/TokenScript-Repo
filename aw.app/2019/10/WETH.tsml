@@ -457,8 +457,8 @@ class Token {
                 monthlyRateBorrow = json.rates[key].borrow.monthlyAmount;
             }
         });
-        let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " +
-            parseFloat(monthlyReturnLend) + "$USD " + " per month (with your current balance)";
+        let earnMessage = "Earn at " + parseFloat(highestRateLend).toFixed(2) + "% or " + "$USD " +
+            parseFloat(monthlyReturnLend) + " per month (with your current balance)";
         let borrowMessage = "Borrow at " + parseFloat(rateBorrow).toFixed(2) + "%";
         document.getElementById("lendMessage").innerHTML = earnMessage;
         document.getElementById("borrowMessage").innerHTML = borrowMessage;
@@ -517,15 +517,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>YHOOqLEdI7yw/G/RxQAYpDe5VGLokGufvALMVpTd5qo=</ds:DigestValue>
+<ds:DigestValue>gBuHPOg0s8/e+XG1tSY1W+rD6+qvOhHk87Mt0/dZhBs=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-n5LCIPLNpZYwEAvcXp+q6IT5phMurZRCq+2llocCeXB8uTZTMXBr/Qzy/Scb4cnpB3FKH7QiXWn3
-PCDa0YpVeG3D5ln/0YVjrgD3Ng2JNptJx184TNNk63be09fhcWjlRyaoGWoEAjaTZDwvzDGHP0Ww
-U99bR2f3CHb1z2CKxOSpxFA0IReBni/N0juQz2dVeW2eLbaOKNPWeCl+YPi8zROcm8nB0N7uyrFq
-VVmE8dj8c2BO2PnKvfNKc3l/W39+2sw5BNsg4QelZ4BH86bVAdzn6i4lMTNP7v/6v7UyZ5RBV1dP
-r7BiSlMxkV8B72cXv42qp7W6MIPy67GkZ4HdYA==
+aEygoY89SlyHuAS7BWHFEVIfbcXF6NOvwag+7II8MZ0QhE+LmTyZuRMnvDDEiPwNNxX7gY1BHNhh
+Sfnn4KnSLiDWe8tJZmytttQivy6L15/yT3S1J+NPonVnaBINX8OLOKrnMA8EdthuYIcIjk63CNFr
+v9cY12PaM7MLoYMwr3GeCostkhvjpl+rSzeprx8Z9OVh+GnWJhBtFz5JkVpgA4J/yIEqWxT2eR4N
+jvsYCDBLoRZHL85LKtJLN+SEw9c66wtUv8h0359MV27R9grmsL67PMj6fzAet/PZ2vC47o8EOJ84
+fVdSd4YiqKzJIKBVmUuPSDimVBLYvFtR91hnDQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>Shong Wang</ds:KeyName>
