@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
 <ts:name>
     <ts:string xml:lang="en">cBAT</ts:string>
 </ts:name>
@@ -290,6 +290,7 @@ class Token {
     constructor(tokenInstance) {
         this.props = tokenInstance;
         this.props.underlyingToken = this.props.name.replace("c", "");
+        this.props.rate = (1 / (this.props.exchangeRate / 1e28)).toFixed(2);
     }
 
     mustEnableFirstPage(APR, cTokenBalance, tokenBalance) {
@@ -301,7 +302,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can supply ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 `;
@@ -329,6 +330,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Supply ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -473,6 +475,7 @@ class Token {
     constructor(tokenInstance) {
         this.props = tokenInstance;
         this.props.underlyingToken = this.props.name.replace("c", "");
+        this.props.rate = (1 / (this.props.exchangeRate / 1e28)).toFixed(2);
     }
 
     mustEnableFirstPage(APR, cTokenBalance, tokenBalance) {
@@ -484,6 +487,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can withdraw ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -512,6 +516,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name} for ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -607,58 +612,56 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>q0jUYl0O2KweRx8Y84oavaEDMEmA7vBLza0/XzSLrK8=</ds:DigestValue>
+<ds:DigestValue>cmy4fFw7qWShNJve4Y8X/Tu8PwY4riWdg6uTUK+xJ50=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-Q4N7aAfDppl3cKeU6clXybhHjEIpfwVRxV60aPk7H7YQEo52wl+PgNP7+BCy+/bYDN9vtFEbhaZE
-bTurV1MU+iiRz1g0RNupN6GEAsOsX7jPNIlZ5YgMp8OwWaqtJVbWuzzyk+Q+OU9knYN9rcsxlydx
-wrA8meE0VjSdZMCdrxOvii4T7zK/ckqXNn8xS8u8F+KLjgFXwhiU2XlqVxkkHsS0xMCBS+QhGR9n
-pAvmzW4N+dnz6JAHELH54OOP3SwPfKIfSfdE1JNk3ishUnvaV1yJ0R6poljU+thwgjYvCPK7qz8n
-GfXjZG1+0ZAJcWC9qaf7X777vlEyqKxmEob1sg==
+fBe+/C8Ow77XvvF6MePH5Xy0F0bryrKTkXQosbUIe14EN8G1JYvxF9WgKZ/bMRyrVivlSMk/210t
+J7Gi8sMvAzTwZ8yTCK7aH+FnDgX9mygn7P3k1NzIlK2qENfpdBtmgomL1PGxqwEz68T/7E424r1k
+pEyuAGHXxVXogUEgOopjW0Nt0AXhcj6IX2Pr50BM1qgw7k8yU+2ElDnJgzH3kJFb2S/wQtyXEQ5H
+zXAsU691hgETxkAUjiH9ODknX40KSH0vzY3ocKPltFNDu3thUQEgmfPZvcYsfYx6jgM324b+4ZPC
+GD6Ik/zY1oSII6un/CtWkwktIRc+IbtZfzRF2Q==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
 <ds:KeyValue>
 <ds:RSAKeyValue>
 <ds:Modulus>
-peSpIYeayLQ28M7+PYPGD2b7sg95umoiYanY5c/NPjFWTgij8wgjT769HFeO22x1zf8ZeLQ4W9T5
-JVpIHaF8LFnJsNDnVIhrT8Y/hSj3YRoVJGHdKpAD9T3xxRsgPqcRozctUXQMDKkInxRwmycK3RZ7
-kDs36trrx4+MK8zy2Z1ZSOiIlLrt2q0PvaA+HsdLoAR51RntqL/KOjJxpLMe90gcBFzRPfZX5jxG
-QnWXzlVh7SGfDaIV+KNk36ZdL9Teh5PZjY9wxl5nzmUhG0vk0wxpPsttLpomVFIxAyLl15+6iS2H
-cpWl6XcMLkA45VaW1bAnYFGaofO9m6GSJucDMw==
+tDHBH8jKLPEjpXsy/V9/XsXBYmc64SXx6IWG9CdJzm+iSrk3Od2ZZTS3DsR5+hp9hk6UwRyb1XKG
++TMrBODfxIIWricmnhxYMqiyvwDhecm4RU4YFteekBFAsuhEGCJBtmJSrle5G3iE/9FwvTfw/cxo
+yAydv85OWc4UkxkfjzaXVqGGKCzSFhRm48HwG51/1nmC1mmPh070EMY4Km4N/ieJZ8egLjDAIZEI
+EY5Cj7ig9PPnGf2pF21/z7vm3zQViXi6XJIBn1E5CTXzDW1y1BYe0QI+dxxY0o+97mwisZu7fVfB
+/rJJm3g7Ye4/lITkZeRMP+OLYyG1pathItlrVQ==
 </ds:Modulus>
 <ds:Exponent>AQAB</ds:Exponent>
 </ds:RSAKeyValue>
 </ds:KeyValue>
 <ds:X509Data>
 <ds:X509Certificate>
-MIIFuDCCBKCgAwIBAgISA392mIEG1NiO0K8D7zDAR9CkMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
+MIIFUDCCBDigAwIBAgISAy095xt55U0Cc0++zYon7TT0MA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
 BAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1
-dGhvcml0eSBYMzAeFw0xOTA3MTMwMjUxMjJaFw0xOTEwMTEwMjUxMjJaMBExDzANBgNVBAMTBmF3
-LmFwcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKXkqSGHmsi0NvDO/j2Dxg9m+7IP
-ebpqImGp2OXPzT4xVk4Io/MII0++vRxXjttsdc3/GXi0OFvU+SVaSB2hfCxZybDQ51SIa0/GP4Uo
-92EaFSRh3SqQA/U98cUbID6nEaM3LVF0DAypCJ8UcJsnCt0We5A7N+ra68ePjCvM8tmdWUjoiJS6
-7dqtD72gPh7HS6AEedUZ7ai/yjoycaSzHvdIHARc0T32V+Y8RkJ1l85VYe0hnw2iFfijZN+mXS/U
-3oeT2Y2PcMZeZ85lIRtL5NMMaT7LbS6aJlRSMQMi5defuokth3KVpel3DC5AOOVWltWwJ2BRmqHz
-vZuhkibnAzMCAwEAAaOCAs8wggLLMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
-AQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUa3aCJ+oy5AuqTKSEX6CJRgvBcPww
-HwYDVR0jBBgwFoAUqEpqYwR93brm0Tm3pkVl7/Oo7KEwbwYIKwYBBQUHAQEEYzBhMC4GCCsGAQUF
-BzABhiJodHRwOi8vb2NzcC5pbnQteDMubGV0c2VuY3J5cHQub3JnMC8GCCsGAQUFBzAChiNodHRw
-Oi8vY2VydC5pbnQteDMubGV0c2VuY3J5cHQub3JnLzCBhAYDVR0RBH0we4IGYXcuYXBwgg5jbGFz
-c2ljLmF3LmFwcIINZ29lcmxpLmF3LmFwcIIMa292YW4uYXcuYXBwggpwb2EuYXcuYXBwggtyZXBv
-LmF3LmFwcIIOcmlua2VieS5hdy5hcHCCDnJvcHN0ZW4uYXcuYXBwggt4ZGFpLmF3LmFwcDBMBgNV
-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
+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
 </ds:X509Certificate>
 <ds:X509Certificate>
 MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQK

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
     <ts:name>
         <ts:string xml:lang="en">cDAI</ts:string>
     </ts:name>
@@ -290,6 +290,7 @@ class Token {
     constructor(tokenInstance) {
         this.props = tokenInstance;
         this.props.underlyingToken = this.props.name.replace("c", "");
+        this.props.rate = (1 / (this.props.exchangeRate / 1e28)).toFixed(2);
     }
 
     mustEnableFirstPage(APR, cTokenBalance, tokenBalance) {
@@ -301,7 +302,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can supply ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 `;
@@ -329,6 +330,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Supply ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -473,6 +475,7 @@ class Token {
     constructor(tokenInstance) {
         this.props = tokenInstance;
         this.props.underlyingToken = this.props.name.replace("c", "");
+        this.props.rate = (1 / (this.props.exchangeRate / 1e28)).toFixed(2);
     }
 
     mustEnableFirstPage(APR, cTokenBalance, tokenBalance) {
@@ -484,6 +487,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can withdraw ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -512,6 +516,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name} for ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -608,15 +613,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>ffT1/LySpOm7nalRuwkSiuWppw3yfjNJH4GJflaM0xw=</ds:DigestValue>
+<ds:DigestValue>A+O1E1szMhGbwz9Ouwmcv4QqQRMmn9Ujvbv4/SjnJzU=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-ckSfo4sMFN/aGcc0vsVaW0UtiogafMYgkldSBSJlEZEOwKznWYvz6Y6/BqfMvZA07bKLbigrC2DG
-hcwNZdC5rbZtVKq0ZDR8zGWCNrS60c+hOuomEIqB00RACD5avR17qQeKxqa5z8VqBF7h3eDq2/gs
-otoDKH7CQHgcbi07htYogW1vG5ju4JMhXmS9gjZatGLGuKo4dQJWu8collCC9HdiHMAjTftF1LY0
-fVVbWlvzWFqFvSTafgyv0+CVZmmX1hEU9piQKL/JwoV1U8g1xfpOHmEDvP76avRXk7IB04HUYCdJ
-jVTjEmidhHpwzMdN2ELThENT7xQVMW6K6CxXdQ==
+qeWF1pB4wKCgshKxKAyN5sD3gVlYN29k8AL+Qnb2YEXnadnls7jX9hvNDKvVtHCKDiO8CLeqe1e/
+vRlxSQ+jei9XZKxkD5g0VGXstu9pl1/fd1VUGTZOxKdWse3dXoKzK462slZi+WobSY4cl6f/SynD
+WMGqmEnz1fUiEMVRwF/bwERXXZ/GNhXKjfLySuU0CF5JBM0aew+VQE4ucrfkfMbJG4w/9S+EoLAs
+peN8PNEgI6OAMteIzObF8Osgbz1iC/3H5wIK4LwLOe11fVExdiZkjHbE7idlVpfApc42M2XFsrav
+YE/WfmiWamhnlnV06pT64iZNmwuWoNMoa68oWw==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
