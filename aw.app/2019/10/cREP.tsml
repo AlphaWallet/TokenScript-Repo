@@ -331,7 +331,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Supply ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -488,7 +488,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can withdraw ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -517,7 +517,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name} for ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -613,15 +613,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>2SUDyASXAR3nO91rn2k9dJQnTT3KdE914dk4mUso+EQ=</ds:DigestValue>
+<ds:DigestValue>YcHLSWHPZNkoYP0okvX7hipC0lbLkEZrNVfj2SHSvxU=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-kTk9Msg5ETsAE5JmjeuDBwkxTCOul2IW3uhQJ3OAZdcaUQvvQXKB6XQ5T46ECtFKXeYJPGqT/3Ve
-JinbKzS9jUrEyWyhA1yCJgI+XYQ5tqEnrZcbpCUtPco04XKWF1kRG9DXcuzHI39bIC950zINyIoy
-mOfDplVfH5TbbaHaxw77EljQGWA4qmiMhEzOyIUVtdhC7ff0O9SYBnlL33ljYyK1/MJQIRU1Ntdf
-0DoiZkyMFjhwihDTt1lSIWCqkRKY4xXxfy7KqxTN7WvYO9lbIbiXC+4lQa/Dkti/0MbE1GAaJsBK
-6atlJRoVbDRkeG89jgs4Vedibqaw94INDOEzGQ==
+Ni4Zm50akvlBF9EHwDvwblqBN6fOaFN6azhKgpeBY5jjPd0yfcLFbwnRl80n18VJsEX93biOJEkT
+lKw6kBm7OTGV7ag4Q9Z1/TNvTQBMFsc++SfIV37U4MxbNq8TBMbxbKOsNlfq29f+ENo+uT+nYoc8
+aZ49MfEpMESm5v1XjLAa/SzdWMGce3TsI3d/hrfJ37eUCQ9wdQaifibOHKH9yffJfR6waGup4EiF
+rk/fSARMtZC/MkghRie9t9C1Drwy0rSgM9SI1dEDUX6N+JbyXoIi669eFu8okQfzM3YvLtQVB2I8
+7I2I6nZ4zbJcFFZH/U4LxAWKBrFpcF+ddqaB3w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

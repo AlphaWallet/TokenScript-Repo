@@ -302,7 +302,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 `;
@@ -330,7 +330,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Supply ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -487,7 +487,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;You must enable compound before you can withdraw ${this.props.underlyingToken}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -516,7 +516,7 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.name} Balance: ${cTokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${this.props.underlyingToken} Balance: ${tokenBalance}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Interest Rate: ${APR}%&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;Exchange Rate: 1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.name}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
               &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.name} for ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
@@ -613,15 +613,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>A+O1E1szMhGbwz9Ouwmcv4QqQRMmn9Ujvbv4/SjnJzU=</ds:DigestValue>
+<ds:DigestValue>izeHdPWDZydLHazVs4VAJIv22HgU9aBXtiGZlBh/STU=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-qeWF1pB4wKCgshKxKAyN5sD3gVlYN29k8AL+Qnb2YEXnadnls7jX9hvNDKvVtHCKDiO8CLeqe1e/
-vRlxSQ+jei9XZKxkD5g0VGXstu9pl1/fd1VUGTZOxKdWse3dXoKzK462slZi+WobSY4cl6f/SynD
-WMGqmEnz1fUiEMVRwF/bwERXXZ/GNhXKjfLySuU0CF5JBM0aew+VQE4ucrfkfMbJG4w/9S+EoLAs
-peN8PNEgI6OAMteIzObF8Osgbz1iC/3H5wIK4LwLOe11fVExdiZkjHbE7idlVpfApc42M2XFsrav
-YE/WfmiWamhnlnV06pT64iZNmwuWoNMoa68oWw==
+b010DWamYJnM2HEoroy7A3GAvy6XrAEKyWf18OeybZ0lGOyUXkvvi+tm2Rxv+2bu4G5keEEVcP+7
+C/+6IriLGAWTweRUnIe9xYs54WLGCspLxWAzQ801FBOYaEw5qAbm6/yn0Y5c/QbVfONg5Bl/cqvX
+JF2+wMBqX1PtQSMxOwk+Nf99jUXojvOkOL5Hm/1v3OMBKWEWyv5y2wyr0PdKqUMK3surRFTgVlL0
+jIwIliasyWF7qmIL0BezgyRhXdMx4ryS2VvZhaqnwHzZ/lG7c8fLhpS8drNT8Nuhxxq5+XSD5AA3
+z3zKvt208Hc4QYOEzNE0srGndUMZS3221ZSP9Q==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
