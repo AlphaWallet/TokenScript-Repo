@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
     <ts:name>
         <ts:plurals xml:lang="en">
             <ts:string quantity="one">Ticket</ts:string>
@@ -103,7 +103,7 @@ div {
 
 .ticket_inner{
   flex-shrink: 1;
-  padding-left: 10em;
+  padding-left: 10.5em;
   padding-top: 2.5em;
 }
 </style>
@@ -222,13 +222,13 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props.countryA}-${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
               &lt;span class="tbml-date"&gt;${date} | ${time}&lt;/span&gt;
             &lt;/div&gt;
-            
+
             &lt;div class="venue_container"&gt;
                 &lt;span class="tbml-venue"&gt;${this.props.venue} | ${this.props.locality}&lt;/span&gt;
             &lt;/div&gt;
@@ -236,7 +236,7 @@ class Token {
             &lt;div class="category_container"&gt;
               &lt;span class="tbml-category"&gt;${this.props.category}, M${this.props.match}&lt;/span&gt;
             &lt;/div&gt;
- 
+
           &lt;/div&gt;
         &lt;/div&gt;
         `;
@@ -367,13 +367,13 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props.countryA}-${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
               &lt;span class="tbml-date"&gt;${date} | ${time}&lt;/span&gt;
             &lt;/div&gt;
-            
+
             &lt;div class="venue_container"&gt;
                 &lt;span class="tbml-venue"&gt;${this.props.venue} | ${this.props.locality}&lt;/span&gt;
             &lt;/div&gt;
@@ -381,7 +381,7 @@ class Token {
             &lt;div class="category_container"&gt;
               &lt;span class="tbml-category"&gt;${this.props.category}, M${this.props.match}&lt;/span&gt;
             &lt;/div&gt;
- 
+
           &lt;/div&gt;
         &lt;/div&gt;
         `;
@@ -781,18 +781,18 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>DAlhLGIffniwfpUlzxeQFg8tk+/3+p/DeOxBookwW/4=</ds:DigestValue>
+<ds:DigestValue>zEIjxUFkY6fzFa7NezekatrBX+JojWb57GpigN0BJLY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-J5mYyTQ5fZFq5KLz5EwAslRb6gnkvZbf1U+efk0iJlVwsTXw/1gHmz4IeeFW6hwoGMBJhgdlCNzl
-XvX4IfI5YQ3X6FggjWy39mF735mC2lAvy+9ubYtCaZcxxW5BISO/64tnXRWOrTyqV6IK5uxD9cPf
-5X+FyHPRt2GuQPBwABNtgiY3t1Dx8rIzEOM0Z6XuV2TlAAcJQQhCY7nhetI9aa1urpw64oX4WSiM
-7jkgvqsU0g5f7rUh+QAnZJZXiHXTC1OWuqmmP4tcf12iPo6eTkx/eUhb1sBxYDoeLY2TmBP5PQrs
-PA4Am1qlbpbRvB/mEknROCiF3xxpoq9YGhBaeA==
+JlR6Pq/TzS5xk+BIC/QVAjLyud5zckZQU+UPRd5j90EOmci6DX9pfOEmWzgX93XC95363k94lnQM
+ht+wSXbGtO9xnKzg2T4yGKsiHgcThMwAXGeG2+VqZ3/SBz8m1uT0psFe3PdNJ6H7h00C8rI4JkVO
+cg+8lc/MT/p4ADWMf/Gj1ApBpp+YwBIHgEcyBkKcwUoWPv9xL2Cv/T/1xA9mAu7bmocHO08+DM5F
+o7sdJz6DYN5gSKNN58eXpF4T5mM2nNib+lkxSDyoMJCrmNVmSnZDCIJn1pGbk4KgBGwvGxvDVqIS
+uWhKnRHZqcvtvbVhJjJ29ud8WcG25O/7smOgoA==
 </ds:SignatureValue>
 <ds:KeyInfo>
-<ds:KeyName>Shankai</ds:KeyName>
+<ds:KeyName>AlphaWallet</ds:KeyName>
 <ds:KeyValue>
 <ds:RSAKeyValue>
 <ds:Modulus>
