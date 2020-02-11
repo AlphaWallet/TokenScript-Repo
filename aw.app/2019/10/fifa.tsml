@@ -222,7 +222,7 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props._count}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
@@ -367,7 +367,7 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props._count}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
@@ -781,15 +781,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>zEIjxUFkY6fzFa7NezekatrBX+JojWb57GpigN0BJLY=</ds:DigestValue>
+<ds:DigestValue>CE1xGn9fO68NdH1nYzwrJeQHFG+49y2blV9Q82awXGc=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-JlR6Pq/TzS5xk+BIC/QVAjLyud5zckZQU+UPRd5j90EOmci6DX9pfOEmWzgX93XC95363k94lnQM
-ht+wSXbGtO9xnKzg2T4yGKsiHgcThMwAXGeG2+VqZ3/SBz8m1uT0psFe3PdNJ6H7h00C8rI4JkVO
-cg+8lc/MT/p4ADWMf/Gj1ApBpp+YwBIHgEcyBkKcwUoWPv9xL2Cv/T/1xA9mAu7bmocHO08+DM5F
-o7sdJz6DYN5gSKNN58eXpF4T5mM2nNib+lkxSDyoMJCrmNVmSnZDCIJn1pGbk4KgBGwvGxvDVqIS
-uWhKnRHZqcvtvbVhJjJ29ud8WcG25O/7smOgoA==
+Mj3jaFePIMGSA1zZq7cd2mh56563od+x0kP8ZE/L63nBZCGCieYStPqyIgKz1eWNVznGTX85AV2c
+70NX4K7nQ/4on2wCXmUYdn0zlKEBywgPnquunSpb8j/ONdshRaLLqbEIqbyQusasl7VulvwMOWEl
+3SqBsnOHJCLjWrSAf8Rj40Utpbm/XXxtcWGg1dyw/B/XCCke8D1gWiHt8J0E+LQ6MsQQsDxY8Nh4
+7XO4S/JKAR1N8cO7a/rPt1UEC1OgUEc56M91t1RIfyC9Lyd1HwgGgacVGU5iyTIwPuq4quLuMrIi
+TrHUH2b8lhhyKBUo4EDPolHufKikMjE9l/SlqA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
