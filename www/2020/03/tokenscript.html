@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd" xml:lang="en">
+	
+   <head>
+      <title>TokenScript March 2020 edition</title>
+   </head>
+	
+   <body>
+	<h1>TokenScript 2020 "March Hare" edition</h1>
+<p>TokenScript is a growing specification. We will keep improving this March edition namespace by adding new capabilities throughout the year, as we have been doing with the October 2019 schema.</p>
+
+<p>Sometimes, typically annually, we will make significant changes that require the change of namespace itself, as a result of refactoring such as the renaming of elements or shift in the order of items. This "March Hare" edition is one of such a change.</p>
+
+<p>If you have a TokenScript in 10/2019 schema, please jump to the "Migration Guide" section for a quick how-to.</p>
+
+<h2>New features (1st Aril 2020)</h2>
+
+<h3>Incorporating ASNX modules</h3>
+
+<p>A minimalist ANS.X module is introduced. ASN.X is defined by RFC 4912, which allows an ASN.X data module to be defined in XML, therefore allowing the definition extensible. We extended the ANS.X vocabulary by adding ethereum-only attributes and therefore making it useful to describe Ethereum events.</p>
+
+<p>The original intention of introducing ASN.X is to define attestations, modelled after X.509 under a sub-working group of TokenScript team. The goal is to create a generic framework for signing dataObject (ASN.1 module). Conceptually, Etheruem event is considered dataObject that doesn't need to be signed, since SmartContract generated them following business logic and SmartContracts can't sign a dataObject by design. Hence they are defined alike in TokenScript.</p>
+
+<h3>Sourcing attribute value from Ethereum's event</h3>
+
+<p>It's now possible to have an <code>&lt;event&gt;</code> as the origin of an attribute-type. Three attributes dictate which event's dataObject is used: the reference to a contract, to an event's dataObject definition, and a filter. A TokenScript engine should filter all Ethereum events under that contract which fits the definition, using the filter expression. A filter expression is borrowed from RFC 2254, which has been used to filter X.509 objects as well as other LDAP data objects.</p>
+
+<h2>Change to the old schema / Migration guide</h2>
+
+<h3>Namespace of TokenScript</h3>
+
+<p>The "March Hare" TokenScript namespace is: http://tokenscript.org/2020/03/tokenscript</p>
+
+<p>To migrate, you should replace the relative xmlns in your TokenScript, typically on the root element (beginning of the file).</p>
+
+<h3>Renamed elements</h3>
+
+<p>All <code>&lt;token-card&gt;</code> elements are renamed to <code>&lt;token&gt;</code> element.</p>
+
+<p>All <code>&lt;iconified-view&gt;</code> elements are renamed to <code>&lt;item-view&gt;</code> element.</p>
+
+<p>To migrate, you can do a search-and-replace of the element names.</p>
+
+<h3>Changed hierarchy</h3>
+
+<p>Previously, <code>&lt;view&gt;</code> is the container of a HTML block, so is <code>&lt;item-view&gt;</code>. <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> elements are on the same level of <code>&lt;view&gt;</code> and <code>&lt;item-view&gt;</code>.</p>
+
+<p>Now, both <code>&lt;view&gt;</code> and <code>&lt;item-view&gt;</code> encloses 3 elements: <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code> and <code>&lt;body&gt;</code>. The 3 elements are to be uesed in the same fashion as they would be used in HTML documents.</p>
+
+<p>To migrate:</p>
+<ol>
+ 	<li><p>Add XHTML <code>&lt;body&gt;</code> element under <code>&lt;view&gt;</code> and <code>&lt;item-view&gt;</code>, enclosing everything that was there.</p></li>
+ 	<li><p>Copy XHTML <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> elements under each <code>&lt;view&gt;</code>, before <code>&lt;body&gt;</code> element.</p></li>
+ 	<li><p>Remove XHTML <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> elements on the same level of <code>&lt;view&gt;</code> or <code>&lt;item-view&gt;</code> element.</p></li>
+</ol>
+<h3>Changed recommendation of setting XHTML namespace default</h3>
+
+<p>Previously, many of our examples included XHTML namespace as the default namespace for the entire document:</p>
+
+<pre>&lt;ts:token xmlns="http://www.w3.org/1999/xhtml"...</pre>
+
+<p>so that the XHTML elements used in a TokenScript doesn't have to have a namespace prefix, making it easier to work with existing HTML editors.</p>
+
+<p>Now, defining a default namespace breaks ASN.X (RFC 4912). Hence we recommend defining such a namespace on the <code>&lt;view&gt;</code> and <code>&lt;item-view&gt;</code> elements instead. This achieves the same effect that XHTML elements don't have to be written with namespace prefix, yet it allows insertion of dataObject definition in the future.</p>
+
+<p>To migrate, move this attribute from the root element</p>
+
+<pre> xmlns="http://www.w3.org/1999/xhtml"</pre>
+
+<p>to every occurrence of <code>&lt;view&gt;</code> and <code>&lt;item-view&gt;</code> element.</p>
+   </body>
+	
+</html>
