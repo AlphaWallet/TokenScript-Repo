@@ -4625,7 +4625,7 @@ TgqSS2NnqxkL4uM06yX593yrpf1QSnCFiDd/I0HDlt7B1T9LZuUHgc//uRwgEvmdbaMNnIczgETF
 SDm4jhFyCJLPlPrkIMzLz0hyJx5yS3qHDQniJg==
 </ds:SignatureValue>
 <ds:KeyInfo>
-<ds:KeyName/>
+<ds:KeyName>AlphaWallet</ds:KeyName>
 <ds:KeyValue>
 <ds:RSAKeyValue>
 <ds:Modulus>
