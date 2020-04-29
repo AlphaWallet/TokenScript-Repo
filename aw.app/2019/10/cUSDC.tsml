@@ -180,7 +180,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             </ts:origins>
         </ts:attribute-type>
         <ts:transaction>
-            <ts:ethereum as="uint" contract="cETH" function="mint">
+            <ts:ethereum as="uint" contract="cUSDC" function="mint">
                 <ts:data>
                     <ts:uint256 ref="mintAmount"/>
                 </ts:data>
@@ -623,15 +623,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>y+d7iSxToVeDf0o034CPPrJqGdNyhiyyo773NycLI74=</ds:DigestValue>
+<ds:DigestValue>p/+fjpMn5iZ3ntzM9zz9SMbrSDEHCnW4PYYJIWj6usk=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-SQhXVfO32LCHX+XZrAliJDi5pEERpejCqQVDVTkdfFZWLGAeOel8BfOIfVq22mc32uUYwAfZbAsN
-ehz4RGMAQGYw/wLt/k6dJPKa72WLcqQQgrYX0fOTozEzz4+MMGjrQjjnn6q5DzLc16gr8LS8ysII
-IW74+1enwi0z66sO1S0IUzS93h9i0zxMZYd5i0Q0/ubVot+ILX4gDhJlWd+clIJrSD0/Y01ZOY9H
-QCMVJHtvRVSJI8g29Xrybj6QfhACWn2hG5EOhZ1YCoD2Af8O8+ZyOy11COvsLFhEr7iKNFeBFGb+
-RCjorA34MU3Tlh8B7uxjGOBi0XC8tKvOabWUGg==
+lrjkPt9MfrKfOBzG/ES0PwRYfVI5Ng13qpFMqfB1qgc4bj6yHiqKOMcKDAuxksTm6hLByDbHKI2A
+PKylvJT6KV0ha9XAYYNtnd7ncZ4Vz3lAU0LtLGWhEm7A1UsB4vNJyl5Utqnw8PLd5wTdlgbYbrXK
+SGV79qDZaabN6b1HYR8BQsfRuaWBmvuP+5EPfcKJlIRrmP9rTH/pxXkGm1MV/+B7IWTv0oIx0mN0
+hUW8SW+BzmwkqtZHe3kzQDjOqzEpkEvCqCF33efAgfjisoJe6olU+i19kIX7dSqusTZRRtMAuOs2
+eFtGeDlyX0sn6K1Z+32tAmEqYulT3xgHf2sOFQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
