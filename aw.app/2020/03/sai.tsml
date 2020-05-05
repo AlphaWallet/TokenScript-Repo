@@ -12,8 +12,18 @@
         <ts:ethereum contract="SAI">
         </ts:ethereum>
     </ts:origins>
+    <ts:selection filter="allowance&gt;0" id="enabled">
+        <ts:name>
+            <ts:string xml:lang="en">contract already enabled</ts:string>
+        </ts:name>
+    </ts:selection>
+    <ts:selection filter="allowance=0" id="notEnabled">
+        <ts:name>
+            <ts:string xml:lang="en">contract not enabled</ts:string>
+        </ts:name>
+    </ts:selection>
     <ts:cards>
-        <ts:action>
+        <ts:action exclude="notEnabled">
             <ts:name>
                 <ts:string xml:lang="en">Convert to DAI</ts:string>
             </ts:name>
@@ -180,7 +190,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             </ts:view>
         </ts:action>
 
-        <ts:action>
+        <ts:action exclude="enabled">
             <ts:name>
                 <ts:string xml:lang="en">Enable Migration</ts:string>
             </ts:name>
@@ -676,15 +686,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>8LQ51o5Pyz4ha5zOdZDojQivRfee/ZPGKh48eygCUxs=</ds:DigestValue>
+<ds:DigestValue>XzA7jyPutmujwb6M6AgTBxJS/7g0xp/0BbkxfASfOJc=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-jgta7UE+/760e9C17wCibiQvnteH9ElTzmkwnOc8CX36FJBDAVj9hBuf308dnZl60eLdO30p3KMq
-psqTPOup7aRLG+vjg0S5YpjHQ5pZxM0JjTKfyuXIK3Un6eGqSqSlbCj5u+1RYICrVPEIYFq4ELvR
-EiNVLsUq0+kF+f+7HCvYasrNc6ThXjxoOrStRo6/v8ss53yKgvqU5cJI4uKQCuI/0THBhk3T1s2j
-SQ3cPURYEL/waZ0zdB+qiaixYUGbhkDZ+x6ZUaR07iG65m/JqJ84Ve7IFGY3u/nHZHxUaIU6jRUg
-pW2HPb1UoA9uV/34csrQLQxbPk3S99IMoOIveA==
+DwBGKSV4zejJObuEsgIuvUt5rwDFO3NFQEano6QXwSpOowAmEvvLVwmO1s6QcSvFWhnYFb5T7hiC
+qytiqO39NKqGEZgmxPB8mNBymHXV/71hOmfJwoFxTw/gvKom72OeZhyZB30t+TYCtjnfJJaGo4J1
+3cqtvdv6TphD8hAOnMFExbvjW47ALbiXISvYhQlRUI9/TO96dLC/c/qLQmTgXQmR7ce4Dx6j2RXv
+bWuMjJaGp5avZxl+D0H8u97j9ZLS/szkIqXGmR+McaIeALCMx6BTscSRVs0+ZqWE+WKU9lDefRgv
+EuC13sFzUU68ybaGJuV7CFC7tD1bShREPVPGJg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
