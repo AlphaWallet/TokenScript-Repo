@@ -1,37 +1,42 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2019/10/tokenscript" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2019/10/tokenscript http://tokenscript.org/2019/10/tokenscript/tokenscript.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/03/tokenscript" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2020/03/tokenscript http://tokenscript.org/2020/03/tokenscript.xsd">
 <ts:name>
-    <ts:string xml:lang="en">cUSDC</ts:string>
+    <ts:string xml:lang="en">cREP</ts:string>
 </ts:name>
-<ts:contract interface="erc20" name="cUSDC">
-    <ts:address network="1">0x39AA39c021dfbaE8faC545936693aC917d5E7563</ts:address>
+<ts:contract interface="erc20" name="cREP">
+    <ts:address network="1">0x158079ee67fce2f58472a96584a73c7ab9ac95c1</ts:address>
 </ts:contract>
-<ts:contract interface="erc20" name="USDC">
-    <ts:address network="1">0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48</ts:address>
+<ts:contract interface="erc20" name="REP">
+    <ts:address network="1">0xE94327D07Fc17907b4DB788E5aDf2ed424adDff6</ts:address>
 </ts:contract>
 <ts:origins>
-    <ts:ethereum contract="cUSDC"/>
+    <ts:ethereum contract="cREP"/>
 </ts:origins>
-
-<ts:cards>
-    <ts:token-card>
-        <ts:view-iconified/>
-        <ts:view>
-        </ts:view>
-    </ts:token-card>
-
-    <ts:action>
+    <ts:selection filter="allowance&gt;0" id="enabled">
+        <ts:name>
+            <ts:string xml:lang="en">contract already enabled</ts:string>
+        </ts:name>
+    </ts:selection>
+    <ts:selection filter="allowance=0" id="notEnabled">
+        <ts:name>
+            <ts:string xml:lang="en">contract not enabled</ts:string>
+        </ts:name>
+    </ts:selection>
+    <ts:cards>
+        <!-- Do not show this card if the token contract is already enabled -->
+    <ts:action exclude="enabled">
         <ts:name>
             <ts:string xml:lang="en">Enable</ts:string>
         </ts:name>
         <ts:transaction>
-            <ts:ethereum as="bool" contract="USDC" function="approve">
+            <ts:ethereum as="bool" contract="REP" function="approve">
                 <ts:data>
-                    <ts:address>0x39AA39c021dfbaE8faC545936693aC917d5E7563</ts:address>
+                    <ts:address>0x158079ee67fce2f58472a96584a73c7ab9ac95c1</ts:address>
                     <ts:uint256>115792089237316195423570985008687907853269984665640564039457584007913129639935</ts:uint256>
                 </ts:data>
             </ts:ethereum>
         </ts:transaction>
-        <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+        <ts:view xml:lang="en">
+            <xhtml:style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
 
 #inputBox {
   text-align: center;
@@ -128,8 +133,8 @@ label {
   font-size: 12px;
   font-weight: 500;
   margin-top: 6px;
-}</style>
-        <ts:view xml:lang="en"><script type="text/javascript">
+}</xhtml:style>
+            <xhtml:script type="text/javascript">//
 class Token {
 
     constructor(tokenInstance) {
@@ -155,17 +160,16 @@ class Token {
     }
 }
 
-web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
-    const currentTokenInstance = web3.tokens.data.currentInstance;
-    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
+    const currentTokenInstance = updatedTokens.currentInstance;
+    document.getElementById(tokenCardId).innerHTML = new Token(currentTokenInstance).render();
 };
-
-</script>
-<div id="root"/>
-</ts:view>
+//
+</xhtml:script>
+        </ts:view>
     </ts:action>
 
-    <ts:action>
+    <ts:action exclude="notEnabled">
         <ts:name>
             <ts:string xml:lang="en">Supply</ts:string>
         </ts:name>
@@ -180,13 +184,14 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             </ts:origins>
         </ts:attribute-type>
         <ts:transaction>
-            <ts:ethereum as="uint" contract="cUSDC" function="mint">
+            <ts:ethereum as="uint" contract="cREP" function="mint">
                 <ts:data>
                     <ts:uint256 ref="mintAmount"/>
                 </ts:data>
             </ts:ethereum>
         </ts:transaction>
-        <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+        <ts:view xml:lang="en">
+            <xhtml:style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
 
 #inputBox {
   text-align: center;
@@ -283,8 +288,8 @@ label {
   font-size: 12px;
   font-weight: 500;
   margin-top: 6px;
-}</style>
-        <ts:view xml:lang="en"><script type="text/javascript">
+}</xhtml:style>
+            <xhtml:script type="text/javascript">//
 class Token {
 
     constructor(tokenInstance) {
@@ -347,17 +352,16 @@ class Token {
     }
 }
 
-web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
-    const currentTokenInstance = web3.tokens.data.currentInstance;
-    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
+    const currentTokenInstance = updatedTokens.currentInstance;
+    document.getElementById(tokenCardId).innerHTML = new Token(currentTokenInstance).render();
 };
-
-</script>
-<div id="root"/>
-</ts:view>
+//
+</xhtml:script>
+        </ts:view>
     </ts:action>
 
-    <ts:action>
+    <ts:action exclude="notEnabled">
         <ts:name>
             <ts:string xml:lang="en">Withdraw</ts:string>
         </ts:name>
@@ -370,13 +374,14 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             </ts:origins>
         </ts:attribute-type>
         <ts:transaction>
-            <ts:ethereum as="uint" contract="cETH" function="redeem">
+            <ts:ethereum as="uint" contract="cREP" function="redeem">
                 <ts:data>
                     <ts:uint256 ref="redeemAmount"/>
                 </ts:data>
             </ts:ethereum>
         </ts:transaction>
-        <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+        <ts:view xml:lang="en">
+            <xhtml:style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
 
 #inputBox {
   text-align: center;
@@ -473,8 +478,8 @@ label {
   font-size: 12px;
   font-weight: 500;
   margin-top: 6px;
-}</style>
-        <ts:view xml:lang="en"><script type="text/javascript">
+}</xhtml:style>
+            <xhtml:script type="text/javascript">//
 class Token {
 
     constructor(tokenInstance) {
@@ -537,39 +542,37 @@ class Token {
     }
 }
 
-web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
-    const currentTokenInstance = web3.tokens.data.currentInstance;
-    document.getElementById('root').innerHTML = new Token(currentTokenInstance).render();
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
+    const currentTokenInstance = updatedTokens.currentInstance;
+    document.getElementById(tokenCardId).innerHTML = new Token(currentTokenInstance).render();
 };
-
-</script>
-<div id="root"/>
-</ts:view>
+//
+</xhtml:script>
+        </ts:view>
     </ts:action>
 
 </ts:cards>
 
-<ts:attribute-types>
 
     <ts:attribute-type id="allowance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
         <ts:origins>
-            <ts:ethereum as="uint" contract="USDC" function="allowance">
+            <ts:ethereum as="uint" contract="REP" function="allowance">
                 <ts:data>
                     <ts:address ref="ownerAddress"/>
-                    <ts:address>0x39AA39c021dfbaE8faC545936693aC917d5E7563</ts:address>
+                    <ts:address>0x158079ee67fce2f58472a96584a73c7ab9ac95c1</ts:address>
                 </ts:data>
             </ts:ethereum>
         </ts:origins>
     </ts:attribute-type>
 
-    <!-- your balance in USDC (not compound USDC) -->
+    <!-- your balance in REP (not compound REP) -->
     <ts:attribute-type id="tokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
         <ts:name>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
         </ts:name>
         <ts:origins>
-            <ts:ethereum as="uint" contract="USDC" function="balanceOf">
+            <ts:ethereum as="uint" contract="REP" function="balanceOf">
                 <ts:data>
                     <ts:address ref="ownerAddress"/>
                 </ts:data>
@@ -577,13 +580,13 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
         </ts:origins>
     </ts:attribute-type>
 
-    <!-- USDC to cUSDC exchange rate -->
+    <!-- REP to cREP exchange rate -->
     <ts:attribute-type id="exchangeRate" syntax="1.3.6.1.4.1.1466.115.121.1.36">
         <ts:name>
             <ts:string xml:lang="en">Exchange Rate</ts:string>
         </ts:name>
         <ts:origins>
-            <ts:ethereum as="uint" contract="cUSDC" function="exchangeRateCurrent">
+            <ts:ethereum as="uint" contract="cREP" function="exchangeRateCurrent">
             </ts:ethereum>
         </ts:origins>
     </ts:attribute-type>
@@ -594,7 +597,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             <ts:string xml:lang="zh">餘額</ts:string>
         </ts:name>
         <ts:origins>
-            <ts:ethereum as="uint" contract="cUSDC" function="balanceOf">
+            <ts:ethereum as="uint" contract="cREP" function="balanceOf">
                 <ts:data>
                     <ts:address ref="ownerAddress"/>
                 </ts:data>
@@ -607,12 +610,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             <ts:string xml:lang="en">Supply Interest Rate</ts:string>
         </ts:name>
         <ts:origins>
-            <ts:ethereum as="uint" contract="cUSDC" function="supplyRatePerBlock">
+            <ts:ethereum as="uint" contract="cREP" function="supplyRatePerBlock">
             </ts:ethereum>
         </ts:origins>
     </ts:attribute-type>
 
-</ts:attribute-types>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -623,15 +625,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>p/+fjpMn5iZ3ntzM9zz9SMbrSDEHCnW4PYYJIWj6usk=</ds:DigestValue>
+<ds:DigestValue>q+7NuWUNvhe78FJuhXs30Oj0UOT+M2z4JUxg6+hS5vE=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-lrjkPt9MfrKfOBzG/ES0PwRYfVI5Ng13qpFMqfB1qgc4bj6yHiqKOMcKDAuxksTm6hLByDbHKI2A
-PKylvJT6KV0ha9XAYYNtnd7ncZ4Vz3lAU0LtLGWhEm7A1UsB4vNJyl5Utqnw8PLd5wTdlgbYbrXK
-SGV79qDZaabN6b1HYR8BQsfRuaWBmvuP+5EPfcKJlIRrmP9rTH/pxXkGm1MV/+B7IWTv0oIx0mN0
-hUW8SW+BzmwkqtZHe3kzQDjOqzEpkEvCqCF33efAgfjisoJe6olU+i19kIX7dSqusTZRRtMAuOs2
-eFtGeDlyX0sn6K1Z+32tAmEqYulT3xgHf2sOFQ==
+eedvXORK+0NHS0Tizx22E9pVvnokI6aUv+HjePRpGlFHcsQxcnlwYUHyBe9hQUvcdONfZ/TFFwDy
+M5s0swYApbE9W4JGQni07izjHTVZVoLUcOz/7cvxrs1gncXAy5rR3O6w8DvOBOaiQY+/9zFpn6Cx
+0f+0RWmpsaZyZKACo3ftCqByV0Wed80fGJPySD7ThWQUKoxNDql+jC08rDrzeBHeywiBUiKVQHDv
+yQEP/S0dW+8mhL73hL6Zfo3CiNStvjVn/CKQENtBnpIusExqrJ2MZg3Vglwx4OEOYfPEJvUt5I4S
+h2+KtnC2Jf7ntP//tnK7mxhePjRKaGglHzpw1g==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
