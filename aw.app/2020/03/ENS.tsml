@@ -65,55 +65,55 @@
 }
 
 .ens-title {
-width: 264px;
-height: 25%;
-font-family: SourceSansPro, sans-serif;
-font-size: 20px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.7;
-letter-spacing: normal;
-color: #000000;
+    width: 264px;
+    height: 25%;
+    font-family: SourceSansPro, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    color: #000000;
 }
 
 .token-interface-details {
-width: 282px;
-height: 20px;
-font-family: SourceSansPro, sans-serif;
-font-size: 12px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.67;
-letter-spacing: normal;
-color: #727272;
+    width: 282px;
+    height: 20px;
+    font-family: SourceSansPro, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #727272;
 }
 
 #ensNameText {
-width: 264px;
-height: 34px;
-font-family: SourceSansPro-Regular, sans-serif;
-font-size: 20px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.7;
-letter-spacing: normal;
-color: #000000;
+    width: 264px;
+    height: 34px;
+    font-family: SourceSansPro-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    color: #000000;
 }
 
 #ensInfo {
-width: 282px;
-height: 20px;
-font-family: SourceSansPro-Regular, sans-serif;
-font-size: 12px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.67;
-letter-spacing: normal;
-color: #727272;
+    width: 282px;
+    height: 20px;
+    font-family: SourceSansPro-Regular, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #727272;
 }
 </xhtml:style>
         <xhtml:script type="text/javascript">//
@@ -162,6 +162,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 }
 
 .title-container {
+    margin-top: 10%;
     width: 100%;
     height: 200px;
     background-color: #ffffff;
@@ -9147,15 +9148,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>fiU12FQLWWimOUD2Gtet6whsmDhEAm0IH6o5L0Rv2F8=</ds:DigestValue>
+<ds:DigestValue>yg8btVQc5s44CTPFLeebTiNwucHviySzX3eQYi6SA2Q=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-gFQLIIF/3IbRMn+pRI/LC3lnsJV2yF/9OaQjpPbkfRRcZJ18k+ckviVKi9nVfKo0QW7zvjog0egb
-wtgP/fBwcOvWoKFLzX9PYJHwUicvxrgbtGmM55yNYHFJy7sVYS25mYv6L37zgGsw/Zmg6tf+1qFS
-yy+e/QR6ka2Ewlg5HlaLW7C11n1P03eMHuZNbOcjUP7veRPzeIV/iAxfAQ+UEdo2BYiyZkCxnSDb
-AlRvblPF8ZzWOYyuPthk4VPSnWKdIaE+zuHGn07codQqUMuDbzjPGIXdu64QUlCTErg30877Ap+E
-I5gxLM3pEdio19PG87uB7ldh5TXEnMIO5R8XAg==
+aR10qAEjmuS1SfUdlMQHAm/22SHdIkFOjwtUMGlSQcYjB5168zzgXKaeTZFlGwcBDO4VZ+Xm9F9v
+FnoNTQ5Z5GejoGYVlJMpMm63pPwxzWEYBmsbpr88cijkesIZzApoz9HBNC78TfkPPccndNTvGe2R
+q07lgY/pgHCYdETarIzjqk2gStwR+mteqT7xWrZ4lciq9u/5M7uWBpe0vNA+X+n1fYRh9jSl3AL8
+I834tLpXM8RvobST1AJrrOr3fJX1s8bFQLnaii6AFmSA/7YDMMW8A1g6BIXJed82BMRKxC+EF16l
+8Wj4UmVzpV7MQKPgXIH299RSFr9uf6HL/2DQQg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
