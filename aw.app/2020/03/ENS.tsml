@@ -49,18 +49,19 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    padding-top: 11%;
 }
 
 .ensInfoBox {
-float: right;
+    float: right;
 }
 
 .ENS-logo {
-width: 40px;
-height: 40px;
-object-fit: contain;
-float: left;
-padding: 2.5% 2.5% 5%;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    float: left;
+    padding: 7% 2.5% 5%;
 }
 
 .ens-title {
@@ -9145,15 +9146,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>u825XkUCYJ1YeVzkZYY5Vt77sY8Ytil4MbVl3JO9FDY=</ds:DigestValue>
+<ds:DigestValue>6c9P2qjq2XgnIfYnyTN2oQ1FdzrvoNrR36LzSmKaKQY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-AWSYbs+l7mzB9xslMexkC8Yr59PqlLK0C4jRQW1Od6geg352Cx567EfIXluVcB5Z+PG33e2XYaeN
-oMdMZZ0cZgfpn17DhaKvWqRUrxVVQND/O12FDZn7cYSzCrYknCcnRV5j2LynyuY/f+po2j0meh7g
-oqzWD5ebBM8imbaEtCPEG9xJgzuVnq15N49SzLeIOqCzAoIEKiU6tWBgrH6aqjhNd2QAmf821oUz
-Bktq1GR4qzmhIk6jM5SLfVi6S7QAWpbx4gtDhrRoBHu4ZerrtAUzkgi1oHg7vlmWXIo5m9FOj8L7
-c/w0tE0xpUZiNqk5GkXx+voeG5rx99Kv6SE3fQ==
+VNjtbyqy2m4dlswDmvhW1LzuuOgbFYVjZKahOjbCdhAIzNjDQP7D16vCDOrMVCu1NcSiTxICFQ95
+iw/imtJaz9nuQxt8zVCQwtLmmaLcOvBHF0wOMkrwfKW1lpoExYtuL4u+iVDEXKzycRznqUgqSN7t
+7z1jB9Hrj+/aB0IjHX/9rDD/KeQ6sBH7c5FCG5Bbo5zxSh9fAOl26GvYurBiLHn7hxrY4k+JgbiG
+TEuhcPQM7ZqNQWHr1H/qOkdIDXWs80q99UJk4wSa/PEJVUan8jqPiKdMEHWLgSvQNGHERQCLIdnU
+Xr8o5rIdpKgbR4+cXOkU4OeWrS27zv9jRoLetg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
