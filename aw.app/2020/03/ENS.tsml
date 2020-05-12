@@ -140,7 +140,8 @@ class Token {
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="arrow"&gt;
-                &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAIVBMVEUAAAAyMjIwMDAvLy8uLi4wMDAvLy8vLy8vLy8vLy////97NsRsAAAACXRSTlMAKUtSf4CI+Ppq55EJAAAAAWJLR0QKaND0VgAAACxJREFUGNNjYKA6YE1A4khMReIwVSJLqU8jTspiCoLN3OlAhASKpawBDDQAACvrCHWekQMTAAAAAElFTkSuQmCC"&gt;
+                &lt;!-- TODO un-hide this, at the moment it is causing issues on different devices --&gt;
+                &lt;img hidden src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAIVBMVEUAAAAyMjIwMDAvLy8uLi4wMDAvLy8vLy8vLy8vLy////97NsRsAAAACXRSTlMAKUtSf4CI+Ppq55EJAAAAAWJLR0QKaND0VgAAACxJREFUGNNjYKA6YE1A4khMReIwVSJLqU8jTspiCoLN3OlAhASKpawBDDQAACvrCHWekQMTAAAAAElFTkSuQmCC"&gt;
             &lt;/div&gt;
         &lt;/div&gt;`;
     }
@@ -9146,15 +9147,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>6c9P2qjq2XgnIfYnyTN2oQ1FdzrvoNrR36LzSmKaKQY=</ds:DigestValue>
+<ds:DigestValue>fiU12FQLWWimOUD2Gtet6whsmDhEAm0IH6o5L0Rv2F8=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-VNjtbyqy2m4dlswDmvhW1LzuuOgbFYVjZKahOjbCdhAIzNjDQP7D16vCDOrMVCu1NcSiTxICFQ95
-iw/imtJaz9nuQxt8zVCQwtLmmaLcOvBHF0wOMkrwfKW1lpoExYtuL4u+iVDEXKzycRznqUgqSN7t
-7z1jB9Hrj+/aB0IjHX/9rDD/KeQ6sBH7c5FCG5Bbo5zxSh9fAOl26GvYurBiLHn7hxrY4k+JgbiG
-TEuhcPQM7ZqNQWHr1H/qOkdIDXWs80q99UJk4wSa/PEJVUan8jqPiKdMEHWLgSvQNGHERQCLIdnU
-Xr8o5rIdpKgbR4+cXOkU4OeWrS27zv9jRoLetg==
+gFQLIIF/3IbRMn+pRI/LC3lnsJV2yF/9OaQjpPbkfRRcZJ18k+ckviVKi9nVfKo0QW7zvjog0egb
+wtgP/fBwcOvWoKFLzX9PYJHwUicvxrgbtGmM55yNYHFJy7sVYS25mYv6L37zgGsw/Zmg6tf+1qFS
+yy+e/QR6ka2Ewlg5HlaLW7C11n1P03eMHuZNbOcjUP7veRPzeIV/iAxfAQ+UEdo2BYiyZkCxnSDb
+AlRvblPF8ZzWOYyuPthk4VPSnWKdIaE+zuHGn07codQqUMuDbzjPGIXdu64QUlCTErg30877Ap+E
+I5gxLM3pEdio19PG87uB7ldh5TXEnMIO5R8XAg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
