@@ -352,6 +352,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
           element.innerText = "Set Correctly";
         } else {
           element.innerText = "Not Set - Action Required";
+          element.style.color = "#ff3b30";
         }
       }
 
@@ -4721,7 +4722,8 @@ class Token {
         this.props.fullName = this.props.ensName + this.props.baseNode;
         let namehash = require("eth-ens-namehash");
         web3.action.setProps({
-          nodeHash: namehash.hash(this.props.fullName)
+          nodeHash: namehash.hash(this.props.fullName),
+          userEnsName: this.props.fullName
         });
     }
 
@@ -8944,7 +8946,7 @@ process.umask = function() { return 0; };
         <ts:origins>
           <ts:ethereum as="uint" contract="ETHRegistrarController" function="rentPrice">
             <ts:data>
-              <ts:string ref="ensName"/>
+              <ts:string local-ref="userEnsName"/>
               <ts:uint256>31556952</ts:uint256>
             </ts:data>
           </ts:ethereum>
@@ -9148,15 +9150,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>uHYY/1C0lJMNsI/t8iAjDCWSpvnjyWK+/A3MBFxXvJw=</ds:DigestValue>
+<ds:DigestValue>0aoafdHP9UANM2XeDJ78Qs9v7qAwv6xWQk7A1q2lkhY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-iIWly0qxHvgyppKdFmiKyiGJ6ItdOPhOBNEB/jwplWTe+M5+EyWA+wmfSydPZWLpWQcqwxxakgmn
-lRR2JCHZlnhc+CHXeaYd3ERjlELgy1JDyGVcBQ3c5/2JCVRt62Wddyp2ipf1bxxL0UXXZ906ffiI
-zkTaef80xq9jMgaJH4gfxv09Gun4yxB9wVCmUbqAyZb32rnykG3lWODDuxbNw89hrSzbn+Baw7zU
-WltAUA45//G5DSGbun+OOvFGegsY+pj6wTuuDsNyWnSJ62l9FKzzf7XEaBda/L1cZ95pIzMV97uq
-kVUNEhi1wmuGGky7PB8670lvDFPjpZIZBpMTXA==
+j5hDa1dvW04cvu6MAdc293pHcbrUXsXpkmJG3GOc7SuUtZOd0Rxosqcvp3Fv/o0XG7Uob48I1UQG
+TObt56wWSaCAkwMMDLG7fgfG1+6QQ406MvZPZDHvUg6TZT6YcNSkqnaVsUefupNfp/+lgN96cCob
+mqYhs6XXXgRJBnC55WiVG4H7MowksbeMMDmwQrClUll6Ik9pYu8g+8gLbZy702+S02BpK9KqKZxo
+ItBdPbxCPlLzMKIRh2G0ntfjGnfBcU/14wEkL+UvNAe7KMuHebzsVBrnekQPIKPnJNwleZdiKIej
+ONtutecqX58zghIq6tB6JRTiJK2Ek/9tHWfTpw==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
