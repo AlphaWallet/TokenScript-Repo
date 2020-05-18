@@ -4722,8 +4722,7 @@ class Token {
         this.props.fullName = this.props.ensName + this.props.baseNode;
         let namehash = require("eth-ens-namehash");
         web3.action.setProps({
-          nodeHash: namehash.hash(this.props.fullName),
-          userEnsName: this.props.fullName
+          nodeHash: namehash.hash(this.props.fullName)
         });
     }
 
@@ -8946,7 +8945,7 @@ process.umask = function() { return 0; };
         <ts:origins>
           <ts:ethereum as="uint" contract="ETHRegistrarController" function="rentPrice">
             <ts:data>
-              <ts:string local-ref="userEnsName"/>
+              <ts:string ref="ensName"/>
               <ts:uint256>31556952</ts:uint256>
             </ts:data>
           </ts:ethereum>
@@ -9150,15 +9149,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>0aoafdHP9UANM2XeDJ78Qs9v7qAwv6xWQk7A1q2lkhY=</ds:DigestValue>
+<ds:DigestValue>dJbkobFo09+KMYgTO7m0DEKNqF4Agr8KBkJf5imiiDg=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-j5hDa1dvW04cvu6MAdc293pHcbrUXsXpkmJG3GOc7SuUtZOd0Rxosqcvp3Fv/o0XG7Uob48I1UQG
-TObt56wWSaCAkwMMDLG7fgfG1+6QQ406MvZPZDHvUg6TZT6YcNSkqnaVsUefupNfp/+lgN96cCob
-mqYhs6XXXgRJBnC55WiVG4H7MowksbeMMDmwQrClUll6Ik9pYu8g+8gLbZy702+S02BpK9KqKZxo
-ItBdPbxCPlLzMKIRh2G0ntfjGnfBcU/14wEkL+UvNAe7KMuHebzsVBrnekQPIKPnJNwleZdiKIej
-ONtutecqX58zghIq6tB6JRTiJK2Ek/9tHWfTpw==
+Et4ZTovzBt9ZCtKi9ulZYCfnOmfzA2i+qyXzamF1YR2qGuDgYnnjqosjOSckOdMYwr9uBawtfxyJ
+IhLwIZh6DDWeucnAAfPFuXgfEjM2U9Ru88jrk7mTioHRjyVx4v+u6noHvVzHRNYfNg/jWgoczQHV
+E/0kGLBuvIO6wX3LRqdoPuj5CYGTC4U1SEdvc3byDfvSjOFqw6Vwgck4VpCqkZKrhqFrWOPItSOo
+0tWehvubLJUUzOVQPdFfDxeUKSabip6fdXuJO5nkB068jlNwAN+C/AhgxVR1xdnfD0quKfn+Syad
+OE3d+DVtjFBc2oFRndfmxYyhIfneiRg7/0egeg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
