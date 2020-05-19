@@ -28,3 +28,6 @@ prepare:
 
 	@printf "setns ts=http://tokenscript.org/2020/03/tokenscript \ncat $(XPATH_ADDRESS)" | \
 	xmllint --shell $^ | grep 0x | sed 's|^\(.*\)$$|RewriteRule ^$(patsubst http://tokenscript.org/%/tokenscript,%,$(XMLNS))/\1$$ $^ [NC]|' | tee -a htaccess.tmp
+
+	@printf "setns ts=http://tokenscript.org/2020/03/tokenscript \ncat $(XPATH_ADDRESS)" | \
+    	xmllint --shell $^ | grep 0x | sed 's|^\(.*\)$$|RewriteRule ^$(patsubst http://tokenscript.org/%/tokenscript,%,$(XMLNS))/\1$$ $^ [NC]|' | tee -a htaccess.tmp
