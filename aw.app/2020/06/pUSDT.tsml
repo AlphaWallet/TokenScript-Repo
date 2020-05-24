@@ -154,12 +154,13 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
   </ts:cards>
     <!-- placeholder for future functions -->
-    <ts:attribute-type name="symbol" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+    <ts:attribute name="symbol">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.26</ts:syntax></ts:type>
       <ts:origins>
         <ethereum:call as="utf8" function="symbol">
         </ethereum:call>
       </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -170,15 +171,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>PoZAUVSuLTNbudMX2IGGKm2Jz2QbHGHWxdq/xzZS3xM=</ds:DigestValue>
+<ds:DigestValue>8JxmC0oqgjeNUd9MdPJ3krn6hLEJyrlP1uhMIbvbxf8=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-QmFhaGpR+u7/SXSpJXnCJa7ayEK0XAUum/QaopN6icpjoaaf8PaNlwAhPyYp3j5+M7dzP6QtPiJZ
-ji0mHlv2wPeTJ+ZwuEzpmjbe7IXZE+1AYTXzqK1O9bDYf44Mc+XUXSPBZ4O5S3zytVpSTyZQFqxV
-J22wQWiduJ5R4AGOmJtM4OEcfMAZ3vEyOIfh4NvnnM5nOslvwGOcUM36vnRsAThs4dZ7q50qn6hB
-Na2drJgJDiTck91TQR7BWwpwnJj2rueXkZv9aPX9GSsz7LPg/VcW4xZ6RB8ClYLjR8SAc1iLCUjr
-wywS1UMqVgbKClRTlKo3UsEVLjEwGMMYx6RUEg==
+gAP99szZXoRwI8/Nzs9AQDSUerhREsXza7lkazBJXS1HdCkBcSayqgjz5rTZEErON7S/YJprCIsd
+UYvOOfOiC7wCNGDo3A6RvStjsacV43rm6LuSEcsc+JLlqZm0aBxrFBgTuifnqdFRlz9ZcqGc1fa3
+lrtfjpKQKM+D0pfdeOq4hR+o748gzo2jiuzkHW8DySt7kWqXy0DXWYwlfl+SmdbxgFPb3FggHhFU
+HZ4dotdrhaDzGSR4p6NQOMA2/SCOAxu9fcuybQ5JVbtcrFRwwFsWN7+TNzLzlCAZUQuEG9jT2tAq
+Ay/qpFBckmkCjd17RAdRT2HRtboBpkclYhEWqw==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

@@ -17,7 +17,8 @@
             <ts:label>
                 <ts:string xml:lang="en">Supply</ts:string>
             </ts:label>
-            <ts:attribute-type name="mintAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="mintAmount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount to supply</ts:string>
                 </ts:label>
@@ -26,7 +27,7 @@
                     rationale for hardcoding: avoiding over-design  -->
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction as="uint" contract="mETH" function="mintViaEther">
                     <ethereum:value ref="mintAmount"/>
@@ -207,7 +208,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             <ts:label>
                 <ts:string xml:lang="en">Withdraw</ts:string>
             </ts:label>
-            <ts:attribute-type name="redeemAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="redeemAmount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount to withdraw</ts:string>
                 </ts:label>
@@ -215,7 +217,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                     <!--mETH has 18 decimals -->
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction as="uint" contract="mETH" function="redeem">
                     <ts:data>
@@ -389,7 +391,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 
     </ts:cards>
 
-    <ts:attribute-type name="allowance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="allowance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:origins>
             <ethereum:call as="uint" contract="ETH" function="allowance">
                 <ts:data>
@@ -398,10 +401,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
     <!-- your balance in ETH (not DMM ETH) -->
-    <ts:attribute-type name="tokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="tokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -413,10 +417,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
     <!-- ETH to mETH exchange rate -->
-    <ts:attribute-type name="exchangeRate" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="exchangeRate">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Exchange Rate</ts:string>
         </ts:label>
@@ -424,9 +429,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             <ethereum:call as="uint" contract="mETH" function="getCurrentExchangeRate">
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="tokenDecimals" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="tokenDecimals">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Token Decimals</ts:string>
         </ts:label>
@@ -434,9 +440,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
             <ethereum:call as="uint" contract="mETH" function="decimals">
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="mTokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="mTokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -448,9 +455,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="supplyInterestRate" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="supplyInterestRate">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Supply Interest Rate</ts:string>
         </ts:label>
@@ -461,7 +469,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -473,15 +481,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>Nsx7d/1dpEYVL86vtrzhQ/D/Ke2ACxHbWDMX3mitXpA=</ds:DigestValue>
+<ds:DigestValue>1y5sYfe7V0nPMmoNM8Vs2AWnrSU0ZHP8Nwj9J7lza0g=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-OCDEZXDU2Q4TsCyjP2UdvPDYwjHVmkmhaiUDsuhz8wsuX70cOfWDCIxKJS1i0d+x7ChSSQ2+68va
-4V4gJ4m7jvpwv6vjt2FIKAtOxK3nEMyzucLyTYtbZRACzivrw67Vc7/MtxXpICaUhQvcmqV3UOE2
-Y2hDxB0wYlo5RW8oVsCiRAI3JWaNA1PojwH+iP4oI6YvvtkClX9/3GaMe/fk8JJnPl/6MSlpv4XR
-25qELwH+KFRzI86ielsvkzyvGZVHW6U9rLIybgl5Sms/Id76/ihGVghxrdSaG69BM87qy+sn896c
-0+wD7cw32lPHF2JOmJsmBdwrlxolA+dDGDU5hQ==
+A3ORdgTT1Bq0usD2EdwywTBuOUW2fhIzb8ml/ucWYpr0ERCFSwXU9b3d5DovGof8CJSQE7ngojxK
+ejQzwnUILwngrezXS/b1BklaCr6u+SZS5ucFHPtIkc365Z+WpE5KEmAdusF8w+UeuJLkpn7RbtzI
+fZ1p4Y80ionJe5pBqxRsHHn8YZaynPURM9YPPX0c8DZIFGft2dH0GdkadIpyZ/syUDtss5ksfEEE
+T9oMqzWyNwpqXVBmg2MLGt44AC6Fpr17SzBd2u/4cd/fxdzhwLMcq1W/FzP1cq9qZG9C+KGHLnMb
+RHKzQ+o2C8srIs232Y3blZLBDCE7lsMSPb5kjw==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

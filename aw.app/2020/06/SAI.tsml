@@ -26,7 +26,8 @@
             <ts:label>
                 <ts:string xml:lang="en">Convert to DAI</ts:string>
             </ts:label>
-            <ts:attribute-type name="amount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="amount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount in SAI</ts:string>
                     <ts:string xml:lang="zh">代幣金額</ts:string>
@@ -36,7 +37,7 @@
                     rationale for hardcoding: avoiding over-design  -->
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction contract="MakerMigration" function="swapSaiToDai">
                     <ts:data>
@@ -653,7 +654,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         </ts:card>
 
     </ts:cards>
-        <ts:attribute-type name="allowance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        <ts:attribute name="allowance">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="uint" contract="SAI" function="allowance">
                     <ts:data>
@@ -662,8 +664,9 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="balance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        </ts:attribute>
+        <ts:attribute name="balance">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">SAI-Balance</ts:string>
             </ts:label>
@@ -674,7 +677,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -685,15 +688,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>dVp0doaSc10hJrMyq2zmmVIUGxkn+Rn0mnIkAX0FWvg=</ds:DigestValue>
+<ds:DigestValue>e2DupyymRTXi8o7vcww5BBy4uaSp4l3bubzI2ZkrnNk=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-aepbRD9ln+3udvax7Da6bRsjvRs6VAG9fFB9hYRU0oHqLG7fVUym2qjNu3NeKJifRsAnQGnQGDGE
-Fdxp/xbUCxBlcyDTl+FX5SpzHFuuU30SA3e3HMg1VmGw932lBTF5dsG8qeH9a4h97B5Yr34JJUy7
-/iBL8wuheLmr7++ZBSTk86x3aKKVv8EOlQTfzsECRT/hdC4ybLb7e7t/31lBJh8henrqCBx3JTf0
-BVLhXt9yk98D0AyNIhsRQxLRVA576JJDfjYcAzfGd0IW0FxAHeOo/Iv6bpYfVOb4JdXGS6pn6CcN
-px5sOj52BNv4ShJ0DMmCWVSikh1X1LADqY0sRQ==
+bdAddFgfoBrmzpmneEvKkOes42s0OrcNa6upHIzLc2qCBRSm+35kTHA95aUIcf/83hCBRDe7APLp
+iP8B4TgxrxtS4Po+IwP+SjMvsCJ/Hs7PrO0UdLRViIzGj400SXHYAkOivCbJGjQjE59W6MHPWjro
+X6KU4ZpdVtb8QWvq68ObjyfmvmW2yhGesCKnFSGgw8lVeFLZxAUVM4jMWNrN1ndEhlh8fXQm1CL1
+9pCM5/HhLSPa3Pq/jvIis3aD77M9TBnY7hnDdUmg4jmDpINpwbgeKvoBfwYa1RFyvBSpH1ApPn3X
+noB6O7xyPlwMSbA+BhWA7fx6gKUj5sMEEiOJBA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

@@ -174,45 +174,46 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             </ts:view>
         </ts:card>
 
-<!--        <ts:card type="action">-->
-<!--            <ts:label>-->
-<!--                <ts:string xml:lang="en">Deposit</ts:string>-->
-<!--            </ts:label>-->
-<!--            <ts:attribute-type name="mintAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">-->
-<!--                <ts:label>-->
-<!--                    <ts:string xml:lang="en">Amount to Deposit</ts:string>-->
-<!--                </ts:label>-->
-<!--                <ts:origins>-->
-<!--                    &lt;!&ndash; e18 is a hard coded multiplier.-->
-<!--                    rationale for hardcoding: avoiding over-design  &ndash;&gt;-->
-<!--                    <ts:user-entry as="e18"/>-->
-<!--                </ts:origins>-->
-<!--            </ts:attribute-type>-->
-<!--            <ts:transaction>-->
-<!--                <ethereum:call function="deposit" contract="lendingPoolAddress" as="uint">-->
-<!--                    <ts:data>-->
-<!--                        <ts:address>0x6B175474E89094C44Da98b954EedeAC495271d0F</ts:address>-->
-<!--                        <ts:uint256 ref="mintAmount"/>-->
-<!--                        <ts:uint256>1101</ts:uint256> &lt;!&ndash; placeholder referral &ndash;&gt;-->
-<!--                    </ts:data>-->
-<!--                </ethereum:call>-->
-<!--            </ts:transaction>-->
-<!--            <style type="text/css">&style;</style>-->
-<!--            <ts:view xml:lang="en">&supply.en;</ts:view>-->
-<!--        </ts:card>-->
+        <!--        <ts:card type="action">-->
+        <!--            <ts:label>-->
+        <!--                <ts:string xml:lang="en">Deposit</ts:string>-->
+        <!--            </ts:label>-->
+        <!--            <ts:attribute-type name="mintAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">-->
+        <!--                <ts:label>-->
+        <!--                    <ts:string xml:lang="en">Amount to Deposit</ts:string>-->
+        <!--                </ts:label>-->
+        <!--                <ts:origins>-->
+        <!--                    &lt;!&ndash; e18 is a hard coded multiplier.-->
+        <!--                    rationale for hardcoding: avoiding over-design  &ndash;&gt;-->
+        <!--                    <ts:user-entry as="e18"/>-->
+        <!--                </ts:origins>-->
+        <!--            </ts:attribute-type>-->
+        <!--            <ts:transaction>-->
+        <!--                <ethereum:call function="deposit" contract="lendingPoolAddress" as="uint">-->
+        <!--                    <ts:data>-->
+        <!--                        <ts:address>0x6B175474E89094C44Da98b954EedeAC495271d0F</ts:address>-->
+        <!--                        <ts:uint256 ref="mintAmount"/>-->
+        <!--                        <ts:uint256>1101</ts:uint256> &lt;!&ndash; placeholder referral &ndash;&gt;-->
+        <!--                    </ts:data>-->
+        <!--                </ethereum:call>-->
+        <!--            </ts:transaction>-->
+        <!--            <style type="text/css">&style;</style>-->
+        <!--            <ts:view xml:lang="en">&supply.en;</ts:view>-->
+        <!--        </ts:card>-->
 
         <ts:card exclude="notEnabled" type="action">
             <ts:label>
                 <ts:string xml:lang="en">Redeem</ts:string>
             </ts:label>
-            <ts:attribute-type name="redeemAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="redeemAmount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount of aTokens to redeem</ts:string>
                 </ts:label>
                 <ts:origins>
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction as="uint" contract="aDAI" function="redeem">
                     <ts:data>
@@ -391,14 +392,16 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
     </ts:cards>
 
-    <ts:attribute-type name="lendingPoolAddress" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+    <ts:attribute name="lendingPoolAddress">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
         <ts:origins>
             <ethereum:call as="address" contract="LendingPoolAddressesProvider" function="getLendingPool">
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="allowance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="allowance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:origins>
             <ethereum:call as="uint" contract="DAI" function="allowance">
                 <ts:data>
@@ -407,10 +410,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
     <!-- your balance in DAI (not Aave DAI) -->
-    <ts:attribute-type name="tokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="tokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -422,9 +426,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="aTokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="aTokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -436,9 +441,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="aTokenPrincipleBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="aTokenPrincipleBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Principal Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -450,7 +456,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -462,15 +468,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>ydu+hRUeU+NJh1CSVy0ndQmggh28iUqZBNFDFXV9bow=</ds:DigestValue>
+<ds:DigestValue>nyGnDm0wEu+4tDxTB7CPDEADYV6KX1IWooA44vn2+jo=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-diU60T+6ZVX6FJPkswkna+E4m/tXOKt2/fUYWDAgniEKa9vr3GxC1r7RaUmYIhiCoRk3pXH9mHZV
-rIgpdXZDpT4Ig1o7fPhjKFudq4wNBc3VwW7gMSppQwWVuMpIMKq9gf2JdLwAdFkPZZrbDiRQ/Qzn
-nqaEPZ9eNmouvHmykIk8uxHzxqALyfHxA+1oPFui/N+o4OI/tJgV+1V0/zg8l9g9mc2lT5e4mc//
-2e3rhaPuxsxtN/gkffiiecGaqeyKHvq2hePHH+9k8WtE+vsUxEt7wY9pEh5gCVCu63B3+q3CcVCi
-IH8WA3Fl0B63nao/s1twUoP/5VJRiNFN+FWLqQ==
+eiHHfedrcBkQCOm171HsxqIlCrACkthHJbmttoLWXXUV3IuHlLPfg6EhNi9cH2zH/7aCLI16PmnM
+UiI42TvNuVc2d8Xr2SbrfIRK6U1jlGEojQ/VkpowwQYiK8h1zeXpiaDkTSmhSE8bGWgXdEKL+ECI
+ZqD+XI2frohA1HhhG9kFNgZyT0SuCRWy7tt0oEIbYk/oTw/J6xXNlITYDgMD+dFCWwEUlL+84fy9
+27gDzYfxC00t1LnCG4zcQtBema/1mS/F0HFmFRO5Ay3993WviM6gAuYBorw/ijTZWdmB4QxGQDdL
+8C2FQHhYcuT/HWMhgyC3eJddmXujJpnGe3ok9Q==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

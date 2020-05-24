@@ -13,7 +13,8 @@
             <ts:label>
                 <ts:string xml:lang="en">Wrap</ts:string>
             </ts:label>
-            <ts:attribute-type name="amount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="amount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount in WETH</ts:string>
                 </ts:label>
@@ -22,7 +23,7 @@
                     rationale for hardcoding: avoiding over-design  -->
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction contract="weth" function="deposit">
                     <ethereum:value ref="amount"/>
@@ -160,7 +161,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ts:label>
                 <ts:string xml:lang="en">Unwrap</ts:string>
             </ts:label>
-            <ts:attribute-type name="amount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:attribute name="amount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Amount in WETH</ts:string>
                 </ts:label>
@@ -169,7 +171,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     rationale for hardcoding: avoiding over-design  -->
                     <ts:user-entry as="e18"/>
                 </ts:origins>
-            </ts:attribute-type>
+            </ts:attribute>
             <ts:transaction>
                 <ethereum:transaction contract="weth" function="withdraw">
                     <ts:data>
@@ -486,7 +488,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             </ts:view>
         </ts:card>
     </ts:cards>
-        <ts:attribute-type name="balance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        <ts:attribute name="balance">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">WETH-Balance</ts:string>
             </ts:label>
@@ -497,7 +500,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -508,15 +511,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>deeON+RZW1C2HCe7rIGRKtIBqiQO6ZK/lpIvlvEOaj8=</ds:DigestValue>
+<ds:DigestValue>1f9f6KumRwO0nfYyqByCANdv2L8AzKbV/I02AV8eBWE=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-MEdYmTHV2tjL2xeX60y10Rb7BEQkdic/97XYNJWi4RaaNq/AywccpDq3UILMt7bu7q72lgPNE2Z+
-7DgtMzR9AMeLeQQJJGdNCIfzejUDnq64aXUJT2oh2DuB//trXuzBLB+2dMhHIVxI+5JTyWdTmKxh
-b5lU2XOVtpFsxzrsYLCDN3PAFyQBb1eS0nZVIVVsQuB1ii8AA7CJFe3go7saSnz2uCIbz0jEJOPH
-ljhqrdUYPYk9A/vCwvNSBWnucjibBsFsAx4w0Ua08ZHrpWe6M6vlAq8xunMLlURoBgX0/K4wJ5iD
-gR2DK7KwiQCljywj8cbFxHjwz9psq14UCGPiHw==
+QxydKaVBnx90Jx3I/+k1Y6u9ZyJlbK8HHnH6meIO5jUmRUcS0m/ExdCPcK7qlRW3d4M3V/ypQ9MR
+j4RSjUHqqfakAoBUHVL9Cf/I/+AQeuN+dFgiFyhQJJJC0oMN+Q64AUQojQaldXD8lAW900CR5p9N
+M9qhu1yiPF3PV2HzFfxodSR4oT2koWWDTsH3EIBPMuF7YlHQhniXVNg5C1yxlewue6mKMXdhq8IV
+KicBq9tAMIyCrmVkkPbsmy8ycwbM1NdiS1vh22oPxhEyfxDMFCFqjDFl1Cb9pCTaO4fI78jJr0i9
+t6lvw40RxYdpLtlF8BfhF/TnEQvY63+fFtCc7w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

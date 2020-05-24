@@ -173,7 +173,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         <ts:label>
             <ts:string xml:lang="en">Supply</ts:string>
         </ts:label>
-        <ts:attribute-type name="mintAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        <ts:attribute name="mintAmount">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Amount to supply</ts:string>
             </ts:label>
@@ -182,7 +183,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 rationale for hardcoding: avoiding over-design  -->
                 <ts:user-entry as="e18"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
         <ts:transaction>
             <ethereum:transaction as="uint" contract="cWBTC" function="mint">
                 <ts:data>
@@ -365,14 +366,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         <ts:label>
             <ts:string xml:lang="en">Withdraw</ts:string>
         </ts:label>
-        <ts:attribute-type name="redeemAmount" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        <ts:attribute name="redeemAmount">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Amount to withdraw</ts:string>
             </ts:label>
             <ts:origins>
                 <ts:user-entry as="e8"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
         <ts:transaction>
             <ethereum:transaction as="uint" contract="cWBTC" function="redeem">
                 <ts:data>
@@ -554,7 +556,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 </ts:cards>
 
 
-    <ts:attribute-type name="allowance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="allowance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:origins>
             <ethereum:call as="uint" contract="WBTC" function="allowance">
                 <ts:data>
@@ -563,10 +566,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
     <!-- your balance in WBTC (not compound WBTC) -->
-    <ts:attribute-type name="tokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="tokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -578,10 +582,11 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
     <!-- WBTC to cWBTC exchange rate -->
-    <ts:attribute-type name="exchangeRate" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="exchangeRate">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Exchange Rate</ts:string>
         </ts:label>
@@ -589,9 +594,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ethereum:call as="uint" contract="cWBTC" function="exchangeRateCurrent">
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="cTokenBalance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="cTokenBalance">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Balance</ts:string>
             <ts:string xml:lang="zh">餘額</ts:string>
@@ -603,9 +609,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                 </ts:data>
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
-    <ts:attribute-type name="supplyInterestRate" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+    <ts:attribute name="supplyInterestRate">
+        <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
             <ts:string xml:lang="en">Supply Interest Rate</ts:string>
         </ts:label>
@@ -613,7 +620,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ethereum:call as="uint" contract="cWBTC" function="supplyRatePerBlock">
             </ethereum:call>
         </ts:origins>
-    </ts:attribute-type>
+    </ts:attribute>
 
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -625,15 +632,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>Z+uLovkywuHp/hYrtqxw4co8o31+tZ1JSzYNb80NAes=</ds:DigestValue>
+<ds:DigestValue>XoAagQ9AAIzkKU5NcQFuFgoIvrK0tNfPfTOndkB+WP8=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-F56MT6fge/NkH+TZ1pvyI2f8cjDIBjrS1519BWdjenPT3t1/JS9t0GxzSpRjhBwzimOq/PRnS9ou
-24d2LuZJaY9HZDbtMjPMXzH1M/pftTrAdP1pL9S6fId8SG101XqE1ahIw/QRLoYpiUDCCJHyHmWo
-V6UuKao/5YoxHATh0jI9G9L8tFanUew4IaaSdqMui5ANp9DoSvaFdwcjLYHIHrckZcXFZ5pVEPWC
-AZkiVv5uAQjYbTtQJDGE9k4ErDN8Ba7l1ULtqQivt0Fzmmm+lzmA06yUPGoa8cIqnvenP1QrC9sM
-KcmaH2asEC/FH9KS5OOQLDnuCElTdn/lGebkaQ==
+oZnOg40f7usY/b95ltrZ0XtB1P2C8grq0gMDzuxkv6M/Fr9cIOTAzOh4bkR6LTzOY0c2GplG1TBZ
+xm5UVDZwzkMypHZctobFNtsUGx4UAVLPSRZNd/HSWRMGAbUWT/9hdZ4NAa/tJFBBOavrbTg+hVZH
+3xeoD3J/cI+RFLkN6zECM1auLgvPpTYfZt79/iLHlWKac03Ey8/hFnFPH3yc0DQTYT5moETt5atf
+pj1QuwJXWoFQ+fVHNQUx30F4zz6MTgwNXM1fIxPjx8/RjS8MbvyAPkZfCUD0vET6qhQZ41+1kbfd
+rOk+wHOyMypZhFJuMfotX16NYyZqSLS+omizXQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

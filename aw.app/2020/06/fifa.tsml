@@ -533,7 +533,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
     1.3.6.1.4.1.1466.115.121.1.24 is GeneralisedTime
     1.3.6.1.4.1.1466.115.121.1.27 is Integer
   -->
-        <ts:attribute-type name="locality" oid="2.5.4.7" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+        <ts:attribute name="locality" oid="2.5.4.7">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">City</ts:string>
                 <ts:string xml:lang="zh">城市</ts:string>
@@ -612,9 +613,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:mapping>
                 </ts:token-id>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="venue" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+        <ts:attribute name="venue">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Venue</ts:string>
                 <ts:string xml:lang="zh">场馆</ts:string>
@@ -699,9 +701,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:mapping>
                 </ts:token-id>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="countryA" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+        <ts:attribute name="countryA">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.26</ts:syntax></ts:type>
             <!-- Intentionally avoid using countryName
          (SYNTAX 1.3.6.1.4.1.1466.115.121.1.11) per RFC 4519
              CountryName is two-characters long, not 3-characters.
@@ -714,9 +717,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ts:origins>
                 <ts:token-id as="utf8" bitmask="00000000000000000000000000000000000000000000FFFFFF00000000000000"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="countryB" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+        <ts:attribute name="countryB">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.26</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Team B</ts:string>
                 <ts:string xml:lang="zh">乙队</ts:string>
@@ -725,9 +729,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ts:origins>
                 <ts:token-id as="utf8" bitmask="00000000000000000000000000000000000000000000000000FFFFFF00000000"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="match" syntax="1.3.6.1.4.1.1466.115.121.1.27">
+        <ts:attribute name="match">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.27</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Match</ts:string>
                 <ts:string xml:lang="zh">场次</ts:string>
@@ -736,9 +741,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             <ts:origins>
                 <ts:token-id as="utf8" bitmask="00000000000000000000000000000000000000000000000000000000FF000000"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="category" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+        <ts:attribute name="category">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Cat</ts:string>
                 <ts:string xml:lang="zh">等级</ts:string>
@@ -794,8 +800,9 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:mapping>
                 </ts:token-id>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="time" syntax="1.3.6.1.4.1.1466.115.121.1.24">
+        </ts:attribute>
+        <ts:attribute name="time">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.24</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Time</ts:string>
                 <ts:string xml:lang="zh">时间</ts:string>
@@ -832,16 +839,17 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:mapping>
                 </ts:token-id>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
-        <ts:attribute-type name="numero" syntax="1.3.6.1.4.1.1466.115.121.1.27">
+        <ts:attribute name="numero">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.27</ts:syntax></ts:type>
             <ts:label>
                 <ts:string>№</ts:string>
             </ts:label>
             <ts:origins>
                 <ts:token-id as="uint" bitmask="000000000000000000000000000000000000000000000000000000000000FFFF"/>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -853,15 +861,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>NrP2WB+ehB3JkI3XZt5kB3RgPQJluflQTFWgAQrsJss=</ds:DigestValue>
+<ds:DigestValue>fOSUYBTZvCY1PkQscVt741OOPO1olp/tlx0oo0xPEUU=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-NQ8B6uvyfZgKacyCHzLgFvmoZ5d+LbiIfeZJt9So+pLyRkbPX+o8E/s5gPJIWm4azybVUqF+LtLo
-NaO8D15ruFbqXs826VG4w+z+ZuPSFpj7oFdjVFJTAcQOk211ApTLr33XkhBkbxLPOkj/+RNHAMGt
-QW3RbUNt+ufNgDVSIs0rqiLcluxn7PgEaXAySwF2WLxerzfkTksgVhezwHZoaOuNemneQEy5dLOM
-pw2+w0l/hVVNq0F6vcjJSracXm370WqkUjIhGf98zjVi0/W4Xws/C8MXMKIKIl3z1jjIwBMvx5kQ
-LF/Dj7aOwt14rIgfV9sjqrs1JOjZ0Yis/GcqCw==
+Vcp9cn2X8xTDeCVtQb79Z3dWtFd5ChwoukTV9mwdnSuE9ifdnJ6GsvJ9uLvpZpQvtq7Edy+K84U9
+v1oCeHEJEGSnZ69pBM2/HhMFM/kpHofi0+0F+MYG2UNAi+chcfNR8Naeg8ygkRGWFDoa3XPDLLTr
+HkJJRQqPUu+vcglQhHG7NGTWzxoi8f757j0ig39ygKBNCaV0HkswV4ykwwvUu5y8ymL2dfQt9lsv
+DJO3SmFdyvG5xN5YmvMKDATv/LiCBkb9A6LjLMAJudzc6D1Gzh8uSjwkqmfUC7pO4lOT2RCl6Ytt
+F0Yltbjq/jcSO0CaoLAWwhNMAhblpHwu8DhOEQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

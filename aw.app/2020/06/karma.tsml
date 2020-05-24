@@ -9980,7 +9980,8 @@ hr {
             </ts:view>
         </ts:card>
     </ts:cards>
-        <ts:attribute-type name="locality" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+        <ts:attribute name="locality">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="utf8" contract="CarToken" function="getLocality">
                     <ts:data>
@@ -9989,8 +9990,9 @@ hr {
                 </ethereum:call>
             </ts:origins>
 
-        </ts:attribute-type>
-        <ts:attribute-type name="time" syntax="1.3.6.1.4.1.1466.115.121.1.24">
+        </ts:attribute>
+        <ts:attribute name="time">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.24</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">Time</ts:string>
                 <ts:string xml:lang="zh">时间</ts:string>
@@ -9998,8 +10000,9 @@ hr {
             <ts:origins>
                 <ts:token-id as="utf8" bitmask="00000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"/>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="expired" syntax="1.3.6.1.4.1.1466.115.121.1.7"> <!-- boolean -->
+        </ts:attribute>
+        <ts:attribute name="expired"> <!-- boolean -->
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.7</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="bool" contract="CarToken" function="isExpired">
                     <ts:data>
@@ -10007,8 +10010,9 @@ hr {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="model" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+        </ts:attribute>
+        <ts:attribute name="model"> <!-- string -->
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="utf8" contract="CarToken" function="getStreet">
                     <ts:data>
@@ -10016,8 +10020,9 @@ hr {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="VIN" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+        </ts:attribute>
+        <ts:attribute name="VIN"> <!-- string -->
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="utf8" contract="CarToken" function="getBuildingName">
                     <ts:data>
@@ -10025,8 +10030,9 @@ hr {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
-        <ts:attribute-type name="state" syntax="1.3.6.1.4.1.1466.115.121.1.15"> <!-- string -->
+        </ts:attribute>
+        <ts:attribute name="state"> <!-- string -->
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
             <ts:origins>
                 <ethereum:call as="utf8" contract="CarToken" function="getState">
                     <ts:data>
@@ -10034,7 +10040,7 @@ hr {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -10045,15 +10051,15 @@ hr {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>HfvKwbOkaEefuPSVZRWpyDTOuFqUd2+bC47JSfxXOxs=</ds:DigestValue>
+<ds:DigestValue>1LyVqqe2LhkienvEQzQ/Oha3lUOfzp7iY7zrD/OlB5o=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-OHAqOFuBN26lGawP/Fm14mCR1mvtM7EtMG7pK77cQ3mTGdUoA39KSyHyBaqNUo3jfuWe7Y0nX/gR
-9l07lpx44Xb/rqnl5+LwauxzOc0+q+6VbNuCbE7SrDfKT21I0FaVWQJgbsJxx38N3iaI3BroOIaH
-QuGWGC3VKCH+ixuLXWH4YzL7bDfopU9KHh9S7Gy/4NTklBtJIlLhtkUGe7rxk6TT6GfyXV/JKc+T
-6rZg5TfM3Ja32oHoPBNEu7DW8tmEkRSl7Ayy6Xhr1HT/c9uQMAxZfihnpg2PafW66JwovMpeZtnD
-5fIgYr0Kgqky3ZoKDXZrnpD/TuilIpqJD2K5xQ==
+hbIV62FFm8M2Ihau21tYUfBvCyRku91nwhPmi2jhCXaVNidZ8OTFa2Uss6JOvdd+ikWOKnVrplzm
+xD9g6SjyxY7EhVbnhEtNS95fBbDMQwn2joHP74Lz8AyULUmWKKcFidIkgv5Is5GpFo+ivB8hlice
+dDWvUDUujw0LFrc+IrXN0mCNC5PzYn034pSHBPTiQoubnt3fuxinIx+oMlgE+HcwYfZnvYZ5bXLw
+iGLL0q68uaKSp6MfP8A5Hz5lBjB5+trZCHpg6QdCDmi0OZHTMt2+PgvVsnh0kottSwyDU5IeX2QC
+jqu9X+pMV2Cx8jLvRYh7D+fM6RBChTjwX00+3w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

@@ -190,7 +190,8 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             </ts:view>
         </ts:card>
     </ts:cards>
-        <ts:attribute-type name="balance" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+        <ts:attribute name="balance">
+            <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
             <ts:label>
                 <ts:string xml:lang="en">USDC-Balance</ts:string>
             </ts:label>
@@ -201,7 +202,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
                     </ts:data>
                 </ethereum:call>
             </ts:origins>
-        </ts:attribute-type>
+        </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -212,15 +213,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>reO9ya7UpZRBgO8a3POv5+efc59/8ZnfLTtcOwEF4dE=</ds:DigestValue>
+<ds:DigestValue>OOlm/XTZVmIcBnueWcFKKBP9H/p+KDkNHr0u0u3oHoM=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-CTlpW/YI/HX1x+wwGQJWjZk0SkZtpOFPidXb3UOomOa1UEwKjglr7OYV2bzG0beOJ7AWXlY4zBVU
-55us/ESzZ3WSspMA/cAFP5SB1MaVOSjDYkNbgq3G90O2BRyMCzzFncoKZnIyX85as42d02dUBN4F
-mODvijCQlJ0iIpVVPtuskbmMt2a6+gQJV7stHio1bEXwJfSqOhhf8Rp3Ya0kWxLOfYI2QUoIKoxw
-2ahdctWHCu8W22qlOOj0DAAV9SLq+sNTzgSl4M1rTNo+MC8wqY4FTt1kQCP/WDjp8W7Y3CrweJcc
-z4ySB+IvzbV2Z7r5xRO/mD2s4ENySzo8ZbTSzQ==
+pa+Cw3ttsg9c4dXTs1ghL6KFxWdC3ZGkMBW5onPfS/DKsQfgE2al0hAK4DpSiG+lxY++hTrCzBXF
+F/Sln645LjuYGbGD6oS/hXB78pfNaOz7OewOw0H2UWlCOayVS+NoVqP2XLGvUSfy5Emz44egp9aa
+U7MIL4T5h949/Tay1OiNuLPz2T8xvpALXnTFplptLAJrMAHLnUf06JdpI9TCnveFBciLgPL7Lo53
+N6Y6hHrrqCHXeEMH6FEKwriuZlysgAShGEl5TUZGAh00giHUbevDYvGkhgUwF1wxx1+XIdQNqfac
+A+tFja2kISCfssuajZ8r/54ByWAqmajv7bjS+w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

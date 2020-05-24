@@ -124,6 +124,13 @@ class Token {
         this.props.fullName = this.props.ensName + this.props.baseNode;
     }
 
+    displayWarningNotOnLatestRegistry() {
+        if(this.props.ensName == undefined || this.props.ensName === "") {
+            document.getElementById("ensNameText").innerText = "INVALID ENS NAME";
+            document.getElementById("ensNameText").style.color = "#ff0000";
+        }
+    }
+
     render() {
         return`
         &lt;div class="item-view-container"&gt;
@@ -148,7 +155,9 @@ class Token {
 
 web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
     const currentTokenInstance = updatedTokens.currentInstance;
-    document.getElementById(tokenCardId).innerHTML = new Token(currentTokenInstance).render();
+    let token = new Token(currentTokenInstance);
+    document.getElementById(tokenCardId).innerHTML = token.render();
+    token.displayWarningNotOnLatestRegistry();
 };
 
 //
@@ -4576,16 +4585,18 @@ process.umask = function() { return 0; };
         <ts:string xml:lang="en">Records</ts:string>
       </ts:label>
 
-      <ts:attribute-type name="newRecordValue" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+      <ts:attribute name="newRecordValue">
+          <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
         <ts:label>
           <ts:string xml:lang="en">new record value</ts:string>
         </ts:label>
         <ts:origins>
           <ts:user-entry as="utf8"/>
         </ts:origins>
-      </ts:attribute-type>
+      </ts:attribute>
 
-      <ts:attribute-type name="emailRecord" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+      <ts:attribute name="emailRecord">
+          <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
         <ts:origins>
           <ethereum:call as="utf8" contract="PublicResolver" function="text">
             <ts:data>
@@ -4594,7 +4605,7 @@ process.umask = function() { return 0; };
             </ts:data>
           </ethereum:call>
         </ts:origins>
-      </ts:attribute-type>
+      </ts:attribute>
 
       <ts:transaction>
         <ethereum:transaction as="bool" contract="PublicResolver" function="setText">
@@ -8937,7 +8948,8 @@ process.umask = function() { return 0; };
         <ts:string xml:lang="en">Renew</ts:string>
       </ts:label>
 
-      <ts:attribute-type name="renewalPricePerYear" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+      <ts:attribute name="renewalPricePerYear">
+          <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
         <ts:label>
           <ts:string xml:lang="en">renewal price per year</ts:string>
         </ts:label>
@@ -8949,7 +8961,7 @@ process.umask = function() { return 0; };
             </ts:data>
           </ethereum:call>
         </ts:origins>
-      </ts:attribute-type>
+      </ts:attribute>
 
       <ts:transaction>
         <ethereum:transaction as="uint" contract="ETHRegistrarController" function="renew">
@@ -9115,13 +9127,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
   </ts:cards>
 
-  <ts:attribute-type name="ensName" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+  <ts:attribute name="ensName">
+      <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
     <ts:origins>
       <ethereum:event filter="label=${tokenId}" module="NameRegistered" select="name"/>
     </ts:origins>
-  </ts:attribute-type>
+  </ts:attribute>
 
-  <ts:attribute-type name="nameExpires" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+  <ts:attribute name="nameExpires">
+      <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
     <ts:origins>
       <ethereum:call as="uint" contract="ENS" function="nameExpires">
         <ts:data>
@@ -9129,9 +9143,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         </ts:data>
       </ethereum:call>
     </ts:origins>
-  </ts:attribute-type>
+  </ts:attribute>
 
-  <ts:attribute-type name="resolverAddress" syntax="1.3.6.1.4.1.1466.115.121.1.15">
+  <ts:attribute name="resolverAddress">
+      <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
     <ts:origins>
       <ethereum:call as="address" contract="registry" function="resolver">
         <ts:data>
@@ -9139,7 +9154,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         </ts:data>
       </ethereum:call>
     </ts:origins>
-  </ts:attribute-type>
+  </ts:attribute>
 
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
@@ -9151,15 +9166,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>wj3PwyndnfqPuOAKPRB9CVNJaPPwiIYOGtcNCiBLvCw=</ds:DigestValue>
+<ds:DigestValue>61qtan0i4YtSZYP1AMXjY//CDjrzN1+JB7rJsI9Um14=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-UJA52gmiALlwd2Lto2FhP8ZxitQ+rBvg2m4CiuSR9ElWZKmCoc6BMdhFXEcIJxMw+qs9L8ACogb8
-Uc6TWNrNnP4BKQ44VSHPs/OB6/ZxOot50I11D42CzjUKLeCN4+igFGo8jHHmGao2kfPzTu4pnzhA
-sD6nBa8h5Cd7tLcwAdkpN79hcjbcA8AJxCY1AKGePcM9X8nSJCKyc1SR261+7Qq1wUvnx/iYmqLh
-9nDiLYZ+9sz6xxihTqO6mIdvgaVlqrWfa2tt/rGZFAGVsoEgzCkVzrNitBprWmtS2fWVClWKCONC
-0m5K/GwP76jkkU6HZRg9OMKUzeSacWfWASLqWA==
+P1blZkKvdCpcCrsDKA5KZFwN6fw9F6CCwthEqS/BXMRwCOuhPEPIkZkqgx/fwhx4ngwjxaA/y+zY
+Bkv2IwGlqrAm0cvEerjaint+0OYOkKPnQHPphTFLzoau7hiTZJDX10T1Y621+2f4mCgOkqmfkG9U
+Wj9DGBKOsSMDpz1qxnqUHtlugEJFC3QEvQr4/9i97HJlxKiASd1ha1AloYZWFhLd+7CAR4c41TT1
+LDqwvkIqfMnk2r1b/7oCStcjVd6LNFF+LyDitClEqb0MU9asUiSBx/0QGb2a+WiOH9NzlT4PHpjI
+Xq3OrtAMFl5d51OHHw6cbtK4XIaWWOM1BiK7SQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
