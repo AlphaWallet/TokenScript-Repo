@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript" xmlns:asnx="urn:ietf:params:xml:ns:asnx" xmlns:ethereum="urn:ethereum:constantinople" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd">
+    <ts:label>
+        <ts:string xml:lang="en">NEST</ts:string>
+    </ts:label>
+
+    <ts:contract interface="erc20" name="NEST">
+        <ts:address network="1">0x04abEdA201850aC0124161F037Efd70c74ddC74C</ts:address>
+    </ts:contract>
+    <ts:contract name="NESTRevenueDistribution">
+        <ts:address network="1">0xF67B829397Dc05751a98f243DbdE5Db63f86E7f6</ts:address>
+    </ts:contract>
+    <ts:contract name="NESTEarnings">
+        <ts:address network="1">0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+    </ts:contract>
+    <ts:contract name="time">
+        <ts:address network="1">0x7976F22815a7a5D29AbDc996DA2feCEE229CA661</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="NEST"/>
+    </ts:origins>
+
+    <ts:selection filter="allowance&gt;0" id="enabled">
+        <ts:label>
+            <ts:string xml:lang="en">contract already enabled</ts:string>
+        </ts:label>
+    </ts:selection>
+
+    <ts:selection filter="allowance=0" id="notEnabled">
+        <ts:label>
+            <ts:string xml:lang="en">contract not enabled</ts:string>
+        </ts:label>
+    </ts:selection>
+
+    <ts:cards>
+        <ts:card exclude="notEnabled" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Deposit</ts:string>
+            </ts:label>
+            <ts:attribute name="amount">
+                <ts:type>
+                    <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+                </ts:type>
+                <ts:label>
+                    <ts:string xml:lang="en">amount to deposit</ts:string>
+                </ts:label>
+                <ts:origins>
+                    <ts:user-entry as="e18"/>
+                </ts:origins>
+            </ts:attribute>
+            <ts:transaction>
+                <ethereum:transaction contract="NESTRevenueDistribution" function="depositIn">
+                    <ts:data>
+                        <ts:uint256 ref="amount"/>
+                    </ts:data>
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+
+#inputBox {
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: #FFFFFF;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  font-smoothing: antialiased;
+}
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.ui.segment {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 0.5rem 0em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  text-align: center;
+}
+.ui.segment:first-child {
+  margin-top: 0em;
+}
+.ui.segment:last-child {
+  margin-bottom: 0em;
+}
+input {
+  position: relative;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 9.5px 14px;
+  width: 300px;
+  border-color: #D8D8D8;
+}
+input[type=text]:focus {
+  border-color: #D8D8D8;
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+}</style>
+                <script type="text/javascript">//
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+    }
+
+    render() {
+        let message = "Deposit your NEST tokens to earn fees; your current balance is: " + (this.props.balanceOf / 1e18).toFixed(3);
+        return`
+        &lt;div class="ui container"&gt;
+          &lt;div class="ui segment"&gt;
+            &lt;img src="data:image/png;base64,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"&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${message}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;input id="amount" type="number" placeholder="deposit up to ${(this.props.balanceOf / 1e18).toFixed(3)}"&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;for more information about NEST visit &lt;strong&gt;https://nestprotocol.org/&lt;/strong&gt;&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};
+//
+</script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card exclude="notEnabled" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Withdraw</ts:string>
+            </ts:label>
+            <ts:attribute name="amount">
+                <ts:type>
+                    <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+                </ts:type>
+                <ts:label>
+                    <ts:string xml:lang="en">amount to withdraw</ts:string>
+                </ts:label>
+                <ts:origins>
+                    <ts:user-entry as="e18"/>
+                </ts:origins>
+            </ts:attribute>
+            <ts:transaction>
+                <ethereum:transaction contract="NESTRevenueDistribution" function="takeOut">
+                    <ts:data>
+                        <ts:uint256 ref="amount"/>
+                    </ts:data>
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+
+#inputBox {
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: #FFFFFF;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  font-smoothing: antialiased;
+}
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.ui.segment {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 0.5rem 0em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  text-align: center;
+}
+.ui.segment:first-child {
+  margin-top: 0em;
+}
+.ui.segment:last-child {
+  margin-bottom: 0em;
+}
+input {
+  position: relative;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 9.5px 14px;
+  width: 300px;
+  border-color: #D8D8D8;
+}
+input[type=text]:focus {
+  border-color: #D8D8D8;
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+}</style>
+                <script type="text/javascript">//
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+    }
+
+    render() {
+        let message = "";
+        if(parseInt(this.props.withdrawable) === 0) {
+            message = "You don't have any coins in the pool and therefore cannot withdraw";
+            window.onConfirm = function() {
+                window.close();
+            }
+        } else {
+            message = "Withdraw your NEST tokens from the pool; amount withdrawable: " + (this.props.withdrawable / 1e18).toFixed(3);
+        }
+        return`
+        &lt;div class="ui container"&gt;
+          &lt;div class="ui segment"&gt;
+            &lt;img src="data:image/png;base64,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"&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${message}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;input id="amount" type="number" placeholder="withdraw up to ${(this.props.withdrawable / 1e18).toFixed(3)}"&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;for more information about NEST visit &lt;strong&gt;https://nestprotocol.org/&lt;/strong&gt;&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};
+//
+</script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Dividend</ts:string>
+            </ts:label>
+            <ts:transaction>
+                <ethereum:transaction contract="NESTRevenueDistribution" function="getETH">
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+
+#inputBox {
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: #FFFFFF;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  font-smoothing: antialiased;
+}
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.ui.segment {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 0.5rem 0em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  text-align: center;
+}
+.ui.segment:first-child {
+  margin-top: 0em;
+}
+.ui.segment:last-child {
+  margin-bottom: 0em;
+}
+input {
+  position: relative;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 9.5px 14px;
+  width: 300px;
+  border-color: #D8D8D8;
+}
+input[type=text]:focus {
+  border-color: #D8D8D8;
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+}</style>
+                <script type="text/javascript">//
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+    }
+
+    render() {
+        let message = "";
+        if(parseInt(this.props.nextTime) &gt; parseInt(this.props.getNow)) {
+            message = "Your dividend is not withdrawable yet, it will be in " + (this.props.nextTime - this.props.getNow) + " blocks";
+            window.onConfirm = function() {
+                window.close();
+            };
+        } else {
+            message = "Claim your dividend from NEST"
+        }
+        return`
+        &lt;div class="ui container"&gt;
+          &lt;div class="ui segment"&gt;
+            &lt;img src="data:image/png;base64,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"&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${message}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;for more information about NEST visit &lt;strong&gt;https://nestprotocol.org/&lt;/strong&gt;&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};
+//
+</script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card exclude="enabled" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Enable</ts:string>
+            </ts:label>
+            <ts:transaction>
+                <ethereum:transaction as="uint" contract="NEST" function="approve">
+                    <ts:data>
+                        <ts:address>0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+                        <ts:uint256>115792089237316195423570985008687907853269984665640564039457584007913129639935</ts:uint256>
+                    </ts:data>
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
+
+#inputBox {
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: #FFFFFF;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  font-smoothing: antialiased;
+}
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ui.container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.ui.segment {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 0.5rem 0em;
+  padding: 0.5em 0.5em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  text-align: center;
+}
+.ui.segment:first-child {
+  margin-top: 0em;
+}
+.ui.segment:last-child {
+  margin-bottom: 0em;
+}
+input {
+  position: relative;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 9.5px 14px;
+  width: 300px;
+  border-color: #D8D8D8;
+}
+input[type=text]:focus {
+  border-color: #D8D8D8;
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+}</style>
+                <script type="text/javascript">//
+class Token {
+
+    constructor(tokenInstance) {
+        this.props = tokenInstance;
+    }
+
+    render() {
+        let message = "Enable NEST token for deposits";
+        return`
+        &lt;div class="ui container"&gt;
+          &lt;div class="ui segment"&gt;
+            &lt;img src="data:image/png;base64,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"&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;${message}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;span&gt;&lt;bold&gt;&lt;h3&gt;for more information about NEST visit &lt;strong&gt;https://nestprotocol.org/&lt;/strong&gt;&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+`;
+    }
+}
+
+web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
+    const currentTokenInstance = web3.tokens.data.currentInstance;
+    document.getElementById(tokenIdCard).innerHTML = new Token(currentTokenInstance).render();
+};
+//
+</script>
+            </ts:view>
+        </ts:card>
+
+    </ts:cards>
+
+    <ts:attribute name="balanceOf">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">balanceOf</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="NEST" function="balanceOf">
+                <ts:data>
+                    <ts:address ref="ownerAddress"/>
+                </ts:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:attribute name="allowance">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">allowance</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="NEST" function="allowance">
+                <ts:data>
+                    <ts:address ref="ownerAddress"/>
+                    <ts:address>0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+                </ts:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:attribute name="nextTime">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the next time dividends are available</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="NESTRevenueDistribution" function="getNextTime">
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:attribute name="getNow">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the current block</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="time" function="getNow">
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:attribute name="withdrawable">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the amount a user can withdraw</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="NESTEarnings" function="checkAmount">
+                <ts:data>
+                    <ts:address ref="ownerAddress"/>
+                </ts:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>LwMPT4FgUhy07vNBfNL65FTGgX4gBzbHwRo126aFI5s=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+a59Oi7qHVgp2xMshgWqH55P0Rx+uDmPDaTbxsykJWDFOrBV7qtnJzloxRZiMAwjMu6w/wJJ174BU
+941Ik51ijVMnjp6FUo+rm7nrr+ZVQIYhaUlo3GXShMNo8EcfEknVEQt9zDgQfuqeVuuJBvXB5BcI
+iS/GqaIjloxlQmtZALZVGXqt33tzBIS4CPHJyIpO+qoKneou9sD2tGETLmW3QPIVOUbq2iy54f9z
+L3e9kdT6o8+0wUn6DFEStqziUiXrZjevsbbDbKiaSkBv3TGfhub60YPkgrenP+t6e2v5S2fsJ4h6
+7spOmugq+aPT7Op/2NhLPlWpIpRU1l2L/Iw3dA==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyName>AlphaWallet</ds:KeyName>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+tDHBH8jKLPEjpXsy/V9/XsXBYmc64SXx6IWG9CdJzm+iSrk3Od2ZZTS3DsR5+hp9hk6UwRyb1XKG
++TMrBODfxIIWricmnhxYMqiyvwDhecm4RU4YFteekBFAsuhEGCJBtmJSrle5G3iE/9FwvTfw/cxo
+yAydv85OWc4UkxkfjzaXVqGGKCzSFhRm48HwG51/1nmC1mmPh070EMY4Km4N/ieJZ8egLjDAIZEI
+EY5Cj7ig9PPnGf2pF21/z7vm3zQViXi6XJIBn1E5CTXzDW1y1BYe0QI+dxxY0o+97mwisZu7fVfB
+/rJJm3g7Ye4/lITkZeRMP+OLYyG1pathItlrVQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFUDCCBDigAwIBAgISAy095xt55U0Cc0++zYon7TT0MA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNV
+BAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQDExpMZXQncyBFbmNyeXB0IEF1
+dGhvcml0eSBYMzAeFw0xOTA5MjQxMTA1MTdaFw0xOTEyMjMxMTA1MTdaMBMxETAPBgNVBAMMCCou
+YXcuYXBwMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtDHBH8jKLPEjpXsy/V9/XsXB
+Ymc64SXx6IWG9CdJzm+iSrk3Od2ZZTS3DsR5+hp9hk6UwRyb1XKG+TMrBODfxIIWricmnhxYMqiy
+vwDhecm4RU4YFteekBFAsuhEGCJBtmJSrle5G3iE/9FwvTfw/cxoyAydv85OWc4UkxkfjzaXVqGG
+KCzSFhRm48HwG51/1nmC1mmPh070EMY4Km4N/ieJZ8egLjDAIZEIEY5Cj7ig9PPnGf2pF21/z7vm
+3zQViXi6XJIBn1E5CTXzDW1y1BYe0QI+dxxY0o+97mwisZu7fVfB/rJJm3g7Ye4/lITkZeRMP+OL
+YyG1pathItlrVQIDAQABo4ICZTCCAmEwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUF
+BwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRaKDKFkPztPgQee3418kofZddy
+MTAfBgNVHSMEGDAWgBSoSmpjBH3duubRObemRWXv86jsoTBvBggrBgEFBQcBAQRjMGEwLgYIKwYB
+BQUHMAGGImh0dHA6Ly9vY3NwLmludC14My5sZXRzZW5jcnlwdC5vcmcwLwYIKwYBBQUHMAKGI2h0
+dHA6Ly9jZXJ0LmludC14My5sZXRzZW5jcnlwdC5vcmcvMBsGA1UdEQQUMBKCCCouYXcuYXBwggZh
+dy5hcHAwTAYDVR0gBEUwQzAIBgZngQwBAgEwNwYLKwYBBAGC3xMBAQEwKDAmBggrBgEFBQcCARYa
+aHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcwggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdwB0ftqD
+Ma0zEJEhnM4lT0Jwwr/9XkIgCMY3NXnmEHvMVgAAAW1jKVxwAAAEAwBIMEYCIQCHuWOuAiqXC7Bn
+nYLS4BDrOrVeObYC7zcQvru7Aqx5DAIhAP9ukUp9nnQBWgAgTdfK+GdhHxboIaxJz7456ws6myft
+AHUAY/Lbzeg7zCzPC3KEJ1drM6SNYXePvXWmOLHHaFRL2I0AAAFtYyladwAABAMARjBEAiBaxydV
+JMY5/hQyrjaMMonJgQBhEKBHvv4FbthX+lZfpAIga4sB0hDaoT4knZfVhVP/u/Uv47t6z1+TEWnL
+/TresTwwDQYJKoZIhvcNAQELBQADggEBAGSPK0ivDprmvO72TVLZsuk/JDhCmXQcYe6cRGPiX7WL
+c0B6wfLaxb0rrQdmGpTiTEHS6wEa6tOMEsfxutPWeOxlqFPU97QHhLrdBlf4IDfk8i1Em3rpPPQu
+3M2u5nfeRXvsIxyB5vLQvuR/NwCQqA2bwkCrlLz7dr1iGem35DGI0ikIkdODTPI+RpwHK8b2iApA
+w6XaVGA99eCJS2dHqeyHPAc1Yf+Klv+z0FyM38ZUfazRRIQ17LtolM1U/9Ynld20SXtCrIFbcmbo
+w3piXuHLlDRcRxWqdL33yPoTEbPuLtS6vqDXefYP0RiYpQHHwJz4E6q5VCbK6LgILnIyX+M=
+</ds:X509Certificate>
+<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQK
+ExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4X
+DTE2MDMxNzE2NDA0NloXDTIxMDMxNzE2NDA0NlowSjELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUxl
+dCdzIEVuY3J5cHQxIzAhBgNVBAMTGkxldCdzIEVuY3J5cHQgQXV0aG9yaXR5IFgzMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNMM8FrlLke3cl03g7NoYzDq1zUmGSXhvb418XCSL7e4
+S0EFq6meNQhY7LEqxGiHC6PjdeTm86dicbp5gWAf15Gan/PQeGdxyGkOlZHP/uaZ6WA8SMx+yk13
+EiSdRxta67nsHjcAHJyse6cF6s5K671B5TaYucv9bTyWaN8jKkKQDIZ0Z8h/pZq4UmEUEz9l6YKH
+y9v6Dlb2honzhT+Xhq+w3Brvaw2VFn3EK6BlspkENnWAa6xK8xuQSXgvopZPKiAlKQTGdMDQMc2P
+MTiVFrqoM7hD8bEfwzB/onkxEz0tNvjj/PIzark5McWvxI0NHWQWM6r6hCm21AvA2H3DkwIDAQAB
+o4IBfTCCAXkwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAYYwfwYIKwYBBQUHAQEE
+czBxMDIGCCsGAQUFBzABhiZodHRwOi8vaXNyZy50cnVzdGlkLm9jc3AuaWRlbnRydXN0LmNvbTA7
+BggrBgEFBQcwAoYvaHR0cDovL2FwcHMuaWRlbnRydXN0LmNvbS9yb290cy9kc3Ryb290Y2F4My5w
+N2MwHwYDVR0jBBgwFoAUxKexpHsscfrb4UuQdf/EFWCFiRAwVAYDVR0gBE0wSzAIBgZngQwBAgEw
+PwYLKwYBBAGC3xMBAQEwMDAuBggrBgEFBQcCARYiaHR0cDovL2Nwcy5yb290LXgxLmxldHNlbmNy
+eXB0Lm9yZzA8BgNVHR8ENTAzMDGgL6AthitodHRwOi8vY3JsLmlkZW50cnVzdC5jb20vRFNUUk9P
+VENBWDNDUkwuY3JsMB0GA1UdDgQWBBSoSmpjBH3duubRObemRWXv86jsoTANBgkqhkiG9w0BAQsF
+AAOCAQEA3TPXEfNjWDjdGBX7CVW+dla5cEilaUcne8IkCJLxWh9KEik3JHRRHGJouM2VcGfl96S8
+TihRzZvoroed6ti6WqEBmtzw3Wodatg+VyOeph4EYpr/1wXKtx8/wApIvJSwtmVi4MFU5aMqrSDE
+6ea73Mj2tcMyo5jMd6jmeWUHK8so/joWUoHOUgwuX4Po1QYz+3dszkDqMp4fklxBwXRsW10KXzPM
+TZ+sOPAveyxindmjkW8lGy+QsRlGPfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iwBi8saCbGS5jN2p8M
++X+Q7UNKEkROb3N6KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature></ts:token>
