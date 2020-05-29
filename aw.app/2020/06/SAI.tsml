@@ -593,7 +593,7 @@ class Token {
 
     getBestRate() {
         let url = 'https://public.defipulse.com/api/GetRates?token=' +
-            this.props.name + '&amp;amount=' + this.props.balance / 1e+18;
+            this.props.label + '&amp;amount=' + this.props.balance / 1e+18;
         fetch(url).then((response) =&gt; {
             return response.json();
         })
@@ -688,15 +688,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>e2DupyymRTXi8o7vcww5BBy4uaSp4l3bubzI2ZkrnNk=</ds:DigestValue>
+<ds:DigestValue>/2FXn/Qnz9Gib5J5AeIvCin9pCWA9AmqWfXqjHpaHvc=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-bdAddFgfoBrmzpmneEvKkOes42s0OrcNa6upHIzLc2qCBRSm+35kTHA95aUIcf/83hCBRDe7APLp
-iP8B4TgxrxtS4Po+IwP+SjMvsCJ/Hs7PrO0UdLRViIzGj400SXHYAkOivCbJGjQjE59W6MHPWjro
-X6KU4ZpdVtb8QWvq68ObjyfmvmW2yhGesCKnFSGgw8lVeFLZxAUVM4jMWNrN1ndEhlh8fXQm1CL1
-9pCM5/HhLSPa3Pq/jvIis3aD77M9TBnY7hnDdUmg4jmDpINpwbgeKvoBfwYa1RFyvBSpH1ApPn3X
-noB6O7xyPlwMSbA+BhWA7fx6gKUj5sMEEiOJBA==
+U28zPxhgPa7bzsExdDtrwOpwAbATMZhHNa6EXQZiarj0dcqZW/itjhyy/vVLdVgPlxIVJ+BKqctM
+iAB9W8amEm7kCdKneg6Hbi6WvDtsb2fhr/gnoBJLRlhxNX+TDWwGDPXQEKcIb/OjrvsWFCa6iVn8
+VC0VG8u6sOGaGZz5cbi7feNz048hZt/TTSRdWjRD3pH2wKMSu+p/mXdSL0BOLSb73js0Ct7RUGXc
+Wwxlxr2WfnFFIrESVYfOM1sQpa4qG6UraZxdx49afPTatKwyfLq1ihkVgjrWnAWBTn880Hy8rZmF
+JH7PxeiQUqD9jzB9aetIVBXG5SJz26yANPqNVA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

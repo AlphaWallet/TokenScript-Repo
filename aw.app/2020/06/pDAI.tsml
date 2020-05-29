@@ -130,7 +130,7 @@ class Token {
     }
 
     render() {
-        let message = this.props.name + " allows you to earn interest and trade. Please visit the website below in the dapp browser.";
+        let message = this.props.label + " allows you to earn interest and trade. Please visit the website below in the dapp browser.";
         return`
         &lt;div class="ui container"&gt;
           &lt;div class="ui segment"&gt;
@@ -171,15 +171,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>KgylKQeWvN9a+m82yt1ibaGtFuE1mH5D+yvtg2On0Tg=</ds:DigestValue>
+<ds:DigestValue>yA/bews7leB/zVBkDEZtAaf9yQan2AF3r4idMcNNxWM=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-b+aDB8pySSbUuxQrH5DAKQyaDoCInnjtAl37EkDJ4QuMPcv1Ux0KWNKIMWIBQ3nJXQG4jHwIDF4+
-lI3VTB0iYrD8yPB+ho+cfb9laagV2Dt87l/5149E243gfZRUNRMrQ9IB/oQ3zZ+5KxHWUZ9tzu4z
-gKUHkEERX5UvsrWD+Iitj9/RlIhSrHCKheVp/CJHijSX2Id1ibdCW+Vr8ZqtrpPJmQigbX0joG5d
-ht7pSYdKcUTndiG3I5AJnPgeHYYofbsPkDBKq8Ob0qH4X3OAwQ04lUyAA3bZ5L8PlxD8WWStPWO9
-8MKRt4DS90FW2hNC1NeATOZIP4N1HloGDFRbiQ==
+Ie8ylqthrVPN/bA9ahFziUyiZtVimlPArmupwBt2e/GqeXVHoXO7jsBDedu/C4M0iv3AXh3lZY7C
+19hb7AAJ9ok/dtDiSSD4TJAeYldm71YcC24Lbr23tIB0UOjtl6N4uRKt+BqIzpc/6zAEQCkpR7Gr
+CsPgu20EUVFGBpJQano1lUyL592hGFebSOpTGa7tmvrdK9ZMQ5/gZlvmqCvDODjo3KYHYjfamNxV
+EUPqfxXzZ9nlEFlWcrkTTE0rKlY7MIpiBM76D22tWvrODB6k8Tv99QUhn1k/J0X6Tz5vtlxA2HiE
+kFzRSwNJ/bXFBsEPe7UDC+XuV0Mhi6tHtd1PcA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

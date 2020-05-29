@@ -130,8 +130,8 @@ class Token {
     }
 
     render() {
-        let message = this.props.name + " is a token which represents your share of the liquidity pool inside uniswap and" +
-            " entitles you to a proportional percentage of the 0.3% fee for each trade of " + this.props.name.replace("Uniswap", "").replace("V1", "") + " &amp; ETH";
+        let message = this.props.label + " is a token which represents your share of the liquidity pool inside uniswap and" +
+            " entitles you to a proportional percentage of the 0.3% fee for each trade of " + this.props.label.replace("Uniswap", "").replace("V1", "") + " &amp; ETH";
         return`
         &lt;div class="ui container"&gt;
           &lt;div class="ui segment"&gt;
@@ -173,15 +173,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>0gpZLmTQ9SXmT4NWBjEooDdTcdHtYTIq3go6v4HK5Dk=</ds:DigestValue>
+<ds:DigestValue>b3PFvB7T8FLagRSFs19ZME2rCMm0nUKM1ElTkegJAh0=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-rct5uohW4BtUrfiZM8k8XRujIooJJbGhGErTkvFaTVp17VhrPFgq5BaoPbgngiE7idDT9fjpXn4g
-bDHF/k3ae7BEHyS//QXaX8xNRbXD5McBsvmBs764iXe/O8lZk7zvasqxWMkhdfj6yelJSm9CJhsc
-VeW5ymv3L7Eb5yWRtcnl5DKQvnRq3K3eyz843YLmgUPkOnLSDkgUnbQSj0pjZslp3wtTq76Sbqkz
-S026hccV/VAtuPphgAyiZdaCqKUVBH7+eM6zJXgVz2GaAMZ5gPU7rCzPVmQ1ZX3ljWkPC/kIvpQM
-I1s2aw0AGJZWAFnEVxOOSr+p7eHjbBVPcHeRMQ==
+ZWTyxYhGOWrMNPObElZP8Y/X3ArC4hd+/ls+zkDRmfgt4qInsxl+T1EJYqrLKVEUdpodtsGEeVxW
+9kaGHCQUD3U4nlpDj0QwCbM7d9XqILmT2ZiESPy79TNKcjAHJ4244jvxkAKwnTNyJ30yqK9h0aRS
+pyN97aNht/pP/fW/XukZqDC6M5Z5W0hUfmVesHeg9fIj7tyFwas38Zu71iK+XKCUo76hFjfNekrG
+U434D3rWK5eOTih0sW6nfYqcx/jX8mTsuFgoLjuzFF9qYYCDk1zlD9wtS82U1SN0CE7F/W2zzm9L
+52gykTtHnQwXnvETk1bWytang9pZMEG+P1xk4w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

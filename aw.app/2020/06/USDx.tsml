@@ -130,7 +130,7 @@ class Token {
     }
 
     render() {
-        let message = this.props.name + " allows you to earn interest and trade. To use this service, please visit the website below in the dapp browser.";
+        let message = this.props.label + " allows you to earn interest and trade. To use this service, please visit the website below in the dapp browser.";
         return`
         &lt;div class="ui container"&gt;
           &lt;div class="ui segment"&gt;
@@ -271,7 +271,7 @@ class Token {
     }
 
     render() {
-        let message = this.props.name + " allows you to earn interest and trade. Please visit the website below in the dapp browser.";
+        let message = this.props.label + " allows you to earn interest and trade. Please visit the website below in the dapp browser.";
         return`
         &lt;div class="ui container"&gt;
           &lt;div class="ui segment"&gt;
@@ -312,15 +312,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>XaNXB1yslMUhfBjOAVF9wJz5aQn1kbwQzWf9KTpm4bc=</ds:DigestValue>
+<ds:DigestValue>W5OHnWJMDLrg3uFAO1ZXx2kSlsrIXC4HCHGki8m6RSY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-IYlWHWiHAQLc6yGyPBNREHN1aErMp40xwN8caaoD5Aw+G7LJNW3ao/GexbpvDbbvmk9e29o+IdHx
-cyJ73jaBQem3ysGZr6Kd8qG85WWkCA475ji45kn1auti63YPjSvBEpcc3mH0FvwvwKJjNv0zaANd
-bDtHoeqobqzcN5wSLjyJdS11gWqSFUE6LlHl3qMUHW3D5UcatkbiZCA8cWfOvIOyCpYnNejFSEIM
-UfcAFRgHcl08gNlCUPZEa+NXrmuHRNWlWrXboo8jrWn4N71cHqTXGS7TIb7q4/8pk5QdwCd2QB/z
-VqBeoGI/y+YCVOYcibJFUbCnBpMrmBH0w1cnZQ==
+NEdTD5GsbV8AQEZn1DGYZoAOBPx1WizJgSIh0adp/fGC3tJ5LpxJ9p1/Kqfg5b1WTERYgXfOhkoE
+27ARLVKouvTMccr8FBlM7nfz65wnGisa74Nt8QZRZVFhFIajpG0QDeHOzs7wxhsVwsTt0baTxr4h
+p7GAFH+Moz1Rq1s45qPamdPCSp8xtvR6K5mAhu36v4ExSmwJ8pRpJYEAmQS0h/6ym+rBpXbEMaQx
+cs0bEDj/khBt0vi1rjBJi6G3vnGMKsAZ9E0LOlShkosBjXHeFMTF9rAzRoFW5RR6a7404zrK12L+
+gneqQPvg6gV+CzPDgxyV/Uk7gsCiWCvWJwCJrg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

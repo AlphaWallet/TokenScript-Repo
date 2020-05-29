@@ -261,7 +261,7 @@ class Token {
         }
         return `&lt;div&gt;
             &lt;div&gt;
-                &lt;span class="ts-count"&gt;x${this.props._count}&lt;/span&gt;  &lt;span class="ts-category"&gt;${this.props.name}&lt;/span&gt;
+                &lt;span class="ts-count"&gt;x${this.props._count}&lt;/span&gt;  &lt;span class="ts-category"&gt;${this.props.label}&lt;/span&gt;
             &lt;/div&gt;
             &lt;div&gt;
                 &lt;span class="ts-venue"&gt;${this.props.building}&lt;/span&gt;
@@ -495,15 +495,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>K5o5h3qSxmHXy9LdBBsdUJUJmoIUsN7DKRXeGu9ZnY4=</ds:DigestValue>
+<ds:DigestValue>DhwHQbhwz9Zs4KkeRwOKbVWg+3oUrA0j7zYNvRfURIU=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-TFjZ/sW4YdJB+1JYOPpqe+yjOI3LhGdCTDrrtm5OO0EwlfDPG4sLn7L57fODzj9Q02eajTd2uCGG
-kvD+8afetY2kDQCWQlzXgkBh1K6e9iYDwrmz9AOFkX4isMkESwr+taq1fqylWI4QP3tkeNqfWQn8
-A2uFtpkWcx6IUxDS6hSmrwpjVAo5sa/FrK6n1OZq3UkUiykz8ixiS6bf7faBp1FKwnYaMgDb88Bz
-Bay9EcfxTJkFDrduh9JC218gfiK04kO4oVlOn20opClJm4mCOiXfHOXNe1UTEqiwPbEXhm189WLj
-4YXg2psyHcjEK+OI7Ha+Tnqb9rRUfWNtJ6ddog==
+ZL/B0WmPNf4hSrmvDf44N+DxFnuOiFhjuDlLxk9waFZxthi4a9H19vx7NOPfSTMH5SX0/N4fdhXx
+009qqK8Ywxry4DlEDvxFBMjlLhBDjYK1L5Vt3idEYsY0rkHYMT4LUGJkgNe9jJRTWkoq0kpBJiZY
+zNAnp7eTGWJ2lknJB9JmIk6jrdSQ1NZFIUoo5MO0x41+shP2H1RW+XauYB35US8MkChVSTF7L+5u
+fj87dxBUpMaymFeGSWM/PUJO4lNG4qrawLjzpQ/B4rnKxOK4Dvh/pICewAm6Q7sffJmZLTHxgSge
+X+Y8WtDsS4NGGbjf+rCKjH8CNj2D4zviMtG09w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
