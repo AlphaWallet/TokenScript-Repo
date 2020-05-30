@@ -397,7 +397,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('status').innerHTML = 'Verifying credentials ...'
             // 3. open door
             let contractAddress = document.getElementById("contractAddress").textContent;
-            fetch(`http://stormbird.duckdns.org:8080/api/checkSignature?contract=${contractAddress}&amp;amp;challenge=${challenge}&amp;amp;sig=${value}`)
+            fetch(`http://stormbird.duckdns.org:8080/api/checkSignature?contract=${contractAddress}&amp;challenge=${challenge}&amp;sig=${value}`)
                 .then(function (response) {
                     return response.text()
                 })
@@ -495,15 +495,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>DhwHQbhwz9Zs4KkeRwOKbVWg+3oUrA0j7zYNvRfURIU=</ds:DigestValue>
+<ds:DigestValue>frMPshXQew8HTbEcTJh8TZrMBjvtxzXaqbmTS3KgvK4=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-ZL/B0WmPNf4hSrmvDf44N+DxFnuOiFhjuDlLxk9waFZxthi4a9H19vx7NOPfSTMH5SX0/N4fdhXx
-009qqK8Ywxry4DlEDvxFBMjlLhBDjYK1L5Vt3idEYsY0rkHYMT4LUGJkgNe9jJRTWkoq0kpBJiZY
-zNAnp7eTGWJ2lknJB9JmIk6jrdSQ1NZFIUoo5MO0x41+shP2H1RW+XauYB35US8MkChVSTF7L+5u
-fj87dxBUpMaymFeGSWM/PUJO4lNG4qrawLjzpQ/B4rnKxOK4Dvh/pICewAm6Q7sffJmZLTHxgSge
-X+Y8WtDsS4NGGbjf+rCKjH8CNj2D4zviMtG09w==
+SfEZPvzLT+UTvRxCQgV+0yAtzvBxy0CvdKmXhRR+iVdTD5+pFAdl4hmadV3GjMUK89Ihmd32SmNB
+08nkOsjfjNJ6PwZ3iKt2Kyf7EEch8Fx1s2nhB1528qc+uCAmdhOcPos9mhPzElJJjN7r7JGIDBmP
+3xZKIQDGATNudaIifW9Qe4BMkG6pp8nGNJeE8VdWkt9qaFZuM45f8MVnrlqCfL5ciVb2gCiSilsS
+Lx9H8juNb4br1eZguE9Fz6nAexxTdragsUubtINz8v0ox+cW76dU/7GmZAAGsz0rGT28vvkBSwhM
+OgiaoWUBOinNJ5kqLxmdLyWew48BA4ahf1wV/w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

@@ -125,23 +125,23 @@ div {
 
     GeneralizedTime.prototype.getDay = function () {
         return parseInt(this.rawData.substring(6, 8), 10)
-    },
+    }
 
     GeneralizedTime.prototype.getHours = function () {
         return parseInt(this.rawData.substring(8, 10), 10)
-    },
+    }
 
     GeneralizedTime.prototype.getMinutes = function () {
         var minutes = parseInt(this.rawData.substring(10, 12), 10)
         if (minutes) return minutes
         return 0
-    },
+    }
 
     GeneralizedTime.prototype.getSeconds = function () {
         var seconds = parseInt(this.rawData.substring(12, 14), 10)
         if (seconds) return seconds
         return 0
-    },
+    }
 
     GeneralizedTime.prototype.getMilliseconds = function () {
         var startIdx
@@ -157,7 +157,7 @@ div {
         var fraction = '0' + '.' + time.substring(startIdx, stopIdx)
         var ms = parseFloat(fraction) * 1000
         return ms
-    },
+    }
 
     GeneralizedTime.prototype.getTimeZone = function () {
         let time = this.rawData;
@@ -184,7 +184,7 @@ div {
 
     if (typeof exports === 'object') {
         module.exports = GeneralizedTime
-    } else if (typeof define === 'function' &amp;amp;&amp;amp; define.amd) {
+    } else if (typeof define === 'function' &amp;&amp; define.amd) {
         define(GeneralizedTime)
     } else {
         window.GeneralizedTime = GeneralizedTime
@@ -348,23 +348,23 @@ div {
 
     GeneralizedTime.prototype.getDay = function () {
         return parseInt(this.rawData.substring(6, 8), 10)
-    },
+    }
 
     GeneralizedTime.prototype.getHours = function () {
         return parseInt(this.rawData.substring(8, 10), 10)
-    },
+    }
 
     GeneralizedTime.prototype.getMinutes = function () {
         var minutes = parseInt(this.rawData.substring(10, 12), 10)
         if (minutes) return minutes
         return 0
-    },
+    }
 
     GeneralizedTime.prototype.getSeconds = function () {
         var seconds = parseInt(this.rawData.substring(12, 14), 10)
         if (seconds) return seconds
         return 0
-    },
+    }
 
     GeneralizedTime.prototype.getMilliseconds = function () {
         var startIdx
@@ -380,7 +380,7 @@ div {
         var fraction = '0' + '.' + time.substring(startIdx, stopIdx)
         var ms = parseFloat(fraction) * 1000
         return ms
-    },
+    }
 
     GeneralizedTime.prototype.getTimeZone = function () {
         let time = this.rawData;
@@ -407,7 +407,7 @@ div {
 
     if (typeof exports === 'object') {
         module.exports = GeneralizedTime
-    } else if (typeof define === 'function' &amp;amp;&amp;amp; define.amd) {
+    } else if (typeof define === 'function' &amp;&amp; define.amd) {
         define(GeneralizedTime)
     } else {
         window.GeneralizedTime = GeneralizedTime
@@ -861,15 +861,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>fOSUYBTZvCY1PkQscVt741OOPO1olp/tlx0oo0xPEUU=</ds:DigestValue>
+<ds:DigestValue>k4IPRyhiuQsYtmneKHZMFTUOuVEdca4cpGKndmwQatg=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-Vcp9cn2X8xTDeCVtQb79Z3dWtFd5ChwoukTV9mwdnSuE9ifdnJ6GsvJ9uLvpZpQvtq7Edy+K84U9
-v1oCeHEJEGSnZ69pBM2/HhMFM/kpHofi0+0F+MYG2UNAi+chcfNR8Naeg8ygkRGWFDoa3XPDLLTr
-HkJJRQqPUu+vcglQhHG7NGTWzxoi8f757j0ig39ygKBNCaV0HkswV4ykwwvUu5y8ymL2dfQt9lsv
-DJO3SmFdyvG5xN5YmvMKDATv/LiCBkb9A6LjLMAJudzc6D1Gzh8uSjwkqmfUC7pO4lOT2RCl6Ytt
-F0Yltbjq/jcSO0CaoLAWwhNMAhblpHwu8DhOEQ==
+FOmDZDS6i8KoPF/wtqcXxfukfY8ZnOwqnpEsY2TWoS4sAtJDtfG53HOO38dtuqAUl3ZPwKvJSc5X
+RwfJ015DuiSwuj88E+UemygeO3WqPSglBLv9uSZLqfKALSl9/JEsLjTkWJ6fiQk7v6hMks+vJyKz
+2fon1OCkcwHbGsqqAoFVZmc/Wm60/qkhiHcD0PL3SOjGgUJhZdUtu4yGl+Up6PYqEBvvRQ5bQEuU
+tfSteYjSPMxlQG4FRehymiJdBY1FJJWztehIvCkzQtMzewDzKd12E3rY2NMtaGp0+0V/0t877AkT
+hgck0pxavOsE7pJlnF88HSipaiJrJJ5Gzvny+Q==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

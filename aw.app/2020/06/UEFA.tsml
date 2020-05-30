@@ -228,7 +228,7 @@
 
     if (typeof exports === 'object') {
         module.exports = GeneralizedTime
-    } else if (typeof define === 'function' &amp;amp;&amp;amp; define.amd) {
+    } else if (typeof define === 'function' &amp;&amp; define.amd) {
         define(GeneralizedTime)
     } else {
         window.GeneralizedTime = GeneralizedTime
@@ -811,7 +811,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
     if (typeof exports === 'object') {
         module.exports = GeneralizedTime
-    } else if (typeof define === 'function' &amp;amp;&amp;amp; define.amd) {
+    } else if (typeof define === 'function' &amp;&amp; define.amd) {
         define(GeneralizedTime)
     } else {
         window.GeneralizedTime = GeneralizedTime
@@ -1430,15 +1430,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>Kp8HOw+tU3E9AtpjNDIFTgBmcLoeazs5QYl4I4gPPws=</ds:DigestValue>
+<ds:DigestValue>tk20m421m23upkVoSBLiHDx42sWz7firdffmUwgSygA=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-Gb+ILrIPlY36z8NQM6AkjC99PPvcVt7vllreHtuVnMccJQNjtoL5cdA3lyiH+coYnR8+LePErH2w
-aYldCvb+RJtuNtI/I09oYSxlxnYMeKO7A9n12EXqjBpV+aC7ZgbHQmACjztwi5yrRJox5p5LHIvD
-9Fl9s3cphMFcwahYQc0in7IhVGCPfVQRPGs2ViCpFF/s0gBCwRR/VoPddPVc9nPdlUGg7LLl//D9
-0G+jjjt0NmVY+A1u+9RcudPyKmc0RPNUmHo08ZbVszvEF9Gtf/dHci45gNqsV0BfzNBXGIoWCwWy
-kLsOmxRDHAedosxMryUgrlRitpUO4zDC1/oFWA==
+L6qjB61+fX3pwwwBAQufCZaET7HAnw0r71XlvdHax9jKWfJUzdjOcIYeE+KBW6ysWAC/+xvzHPpq
+eDMrK89MhfdmshgaFG/Miqlt14BSzplT/5juNJuNwZ9yKGzjN/gBtGV+IRTL1y7GYS9RDtGT9Gcr
+TkYBayp/FgklM8KZMVtLNFd3QbbFa+JCdkcaVVHDaAjzbh+91XtlcHFz/sCORugbNKobQPcncvSB
+PVzt7AZ/0rDf7+CPmJzO8x91TyAl1wVOwaZ/LG4iueS9i9xtDCao4HMZ3rleINWCWC1T+qWy7aqa
+5tj+GfuhIWLsE4SzjEjsWSAeJvHWlTA3XrVRQA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
