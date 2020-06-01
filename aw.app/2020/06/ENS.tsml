@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript" xmlns:asnx="urn:ietf:params:xml:ns:asnx" xmlns:ethereum="urn:ethereum:constantinople" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd">
+  <asnx:module name="ENS-Events">
+    <namedType name="NameRegistered">
+      <sequence>
+        <element ethereum:type="string" name="name"/>
+        <element ethereum:indexed="true" ethereum:type="bytes32" name="label"/>
+        <element ethereum:indexed="true" ethereum:type="address" name="owner"/>
+        <element ethereum:type="uint" name="cost"/>
+        <element ethereum:type="uint" name="expires"/>
+      </sequence>
+    </namedType>
+  </asnx:module>
   <ts:label>
     <ts:plurals xml:lang="en">
       <ts:string quantity="one">ENS</ts:string>
@@ -17,15 +28,6 @@
   <!-- emitted via: function registerWithConfig(string memory name, address owner, uint duration, bytes32 secret, address resolver, address addr) public payable -->
   <ts:contract name="ETHRegistrarController">
     <ts:address network="1">0x283af0b28c62c092c9727f1ee09c02ca627eb7f5</ts:address>
-    <asnx:module name="NameRegistered">
-      <sequence>
-        <element ethereum:type="string" name="name"/>
-        <element ethereum:indexed="true" ethereum:type="bytes32" name="label"/>
-        <element ethereum:indexed="true" ethereum:type="address" name="owner"/>
-        <element ethereum:type="uint" name="cost"/>
-        <element ethereum:type="uint" name="expires"/>
-      </sequence>
-    </asnx:module>
   </ts:contract>
   <ts:origins>
     <!-- Define the contract which holds the token that the user will use -->
@@ -9130,7 +9132,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
   <ts:attribute name="ensName">
       <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax></ts:type>
     <ts:origins>
-      <ethereum:event filter="label=${tokenId}" module="NameRegistered" select="name"/>
+      <ethereum:event contract="ETHRegistrarController" filter="label=${tokenId}" select="name" type="NameRegistered"/>
     </ts:origins>
   </ts:attribute>
 
@@ -9166,15 +9168,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>61qtan0i4YtSZYP1AMXjY//CDjrzN1+JB7rJsI9Um14=</ds:DigestValue>
+<ds:DigestValue>ulRegyJ0MDVuNuRjw3Ny0aF5DGtQHhPqNavesrgkf6c=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-P1blZkKvdCpcCrsDKA5KZFwN6fw9F6CCwthEqS/BXMRwCOuhPEPIkZkqgx/fwhx4ngwjxaA/y+zY
-Bkv2IwGlqrAm0cvEerjaint+0OYOkKPnQHPphTFLzoau7hiTZJDX10T1Y621+2f4mCgOkqmfkG9U
-Wj9DGBKOsSMDpz1qxnqUHtlugEJFC3QEvQr4/9i97HJlxKiASd1ha1AloYZWFhLd+7CAR4c41TT1
-LDqwvkIqfMnk2r1b/7oCStcjVd6LNFF+LyDitClEqb0MU9asUiSBx/0QGb2a+WiOH9NzlT4PHpjI
-Xq3OrtAMFl5d51OHHw6cbtK4XIaWWOM1BiK7SQ==
+AsTXMSJHVa2izLIOuMCFmBA8Ychu6sUcNAFJ0oN/CK9Kc5Sn01QC/74mrgLo1ewcZ5R/LGp0ZiAa
+DZDwrmYfiooXQelJ1cV5IJ2Z1dR+5hatayKKFm4V1Es2ospDJpWMEcOFnduC/Y44D9tiB/65Y5VJ
+SJBuxQcJZtz2q3Psc1+m3d34IIFKdK8r0etdlmfq0nPxQavgsaXk6oaSfETxejPm8Cr743/fs21m
+exJRB+DlgvK42wA8x2zqR04Pf+ndrAksG6DnneqFKjOS8pdL/UNY2sg1YzbOH8KzThYDM6XeXLFD
+rgL+W8C/qTNPFKOy9vw8f7N6OuNy4KvLdrkj6g==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

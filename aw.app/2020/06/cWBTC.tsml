@@ -11,12 +11,12 @@
 <ts:origins>
     <ts:ethereum contract="cWBTC"/>
 </ts:origins>
-    <ts:selection filter="allowance&gt;0" id="enabled">
+    <ts:selection filter="allowance&gt;0" name="enabled">
         <ts:label>
             <ts:string xml:lang="en">contract already enabled</ts:string>
         </ts:label>
     </ts:selection>
-    <ts:selection filter="allowance=0" id="notEnabled">
+    <ts:selection filter="allowance=0" name="notEnabled">
         <ts:label>
             <ts:string xml:lang="en">contract not enabled</ts:string>
         </ts:label>
@@ -581,15 +581,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>lAVICQmpez1Lkz4vLlZZSbG+KXRmW8OTAD5cVBUmbKo=</ds:DigestValue>
+<ds:DigestValue>0jvZ+O4qnhbyQhDf+yugBIKi/NvhfOqqO/F+mVTyhJ4=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-ZPAo9f2rYl/S08FKkVPhxOkgsK6LBtxdNxW02rfU1vZfOfZdf80lhsjkyT8tVHfFgW1KVK2MgPJ0
-MFEgvPdf9SLkEC51OirFDB0yJhpav2Dk81+dqZ8MX/goGoPHZDfP6T2KK5Kqqo+3I9Aw3gdfTsre
-Bue3+eof3tjZYNbbxufWM/499ngq7tcoorB61j+4J7EdsPzaQzq7x3eiBwNDYXYZNnwKd6XCad/B
-ON3jIp/g62Drl2PrtiY/tLA2XHVGWQOzAU4f0F1oi/sZ046+Ni5qtxgjb5+n0QYpIVJ9ryWUMaPG
-uJ04lmXvg6CNLPwJSpQJ7IzT3GC7jWJ65yPH5g==
+gQVLSyN6nL4fwLQ5JSNnNhnfSqrgQTJehOmaEYg+Ga4ARLp0QFpuhibock8b/pz/2SHHaMxRMSRq
+oLoTpOVnE5W85SgMU+Mk4pAeogQ+v2cjaUM/6PkJLj+DjFLxmH2St6ZUyGIWsW2OcPgI+PgDLOzu
+eWdvE4JMn1donOqQUasYadtiUPrr5p4i4FzDUJyfWOdGhHSTyEMKh+IKK4CVNUIPq5/Af0WCXmDR
+U3Lyh3rtsRYfXcglHfgMgaKkbi2MkPdKj4BYL5Q1brUaNBvU1QmN2NSyMY8WmaIbwG/8LRDVd7tY
+hsff2UYK++559k1p18JLRxYNzl4RD5jgzkQl9w==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

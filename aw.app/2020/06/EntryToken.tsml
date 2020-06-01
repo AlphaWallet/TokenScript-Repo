@@ -22,7 +22,7 @@
     <!-- Define the contract which holds the token that the user will use -->
     <ts:ethereum contract="EntryToken"/>
   </ts:origins>
-    <ts:selection filter="expired=TRUE" id="expired">
+    <ts:selection filter="expired=TRUE" name="expired">
       <ts:label>
         <ts:plurals xml:lang="en">
           <ts:string quantity="one">Expired Ticket</ts:string>
@@ -495,15 +495,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>frMPshXQew8HTbEcTJh8TZrMBjvtxzXaqbmTS3KgvK4=</ds:DigestValue>
+<ds:DigestValue>4ktwl6/KJIbYNHUbplbZy0FlCkdLTxO3k4FNgv2f3Rw=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-SfEZPvzLT+UTvRxCQgV+0yAtzvBxy0CvdKmXhRR+iVdTD5+pFAdl4hmadV3GjMUK89Ihmd32SmNB
-08nkOsjfjNJ6PwZ3iKt2Kyf7EEch8Fx1s2nhB1528qc+uCAmdhOcPos9mhPzElJJjN7r7JGIDBmP
-3xZKIQDGATNudaIifW9Qe4BMkG6pp8nGNJeE8VdWkt9qaFZuM45f8MVnrlqCfL5ciVb2gCiSilsS
-Lx9H8juNb4br1eZguE9Fz6nAexxTdragsUubtINz8v0ox+cW76dU/7GmZAAGsz0rGT28vvkBSwhM
-OgiaoWUBOinNJ5kqLxmdLyWew48BA4ahf1wV/w==
+Vt+qYXU11O0dd4AvuVnmTJ2s8IZaA3BU3kdEBkAIdZpgCbSUtZBK/ix1wxakQJqtBApF0S/LrQRR
+g23vzzzDA8MIhuy0rp5A8P+C7apPP9G8Wkn5vuthEYLrF9peHcl9WXSp2KWCt+AfayzH9v1T3x4B
+DyqPoXiZiUramu13MmC6ovVLSWnBFcEmueIZYv0NcuJxb6F0N6tHF6EfPM1wjCB03xRKt56l1Y6A
+aAu48zU+SGjxOwwsr3TVbEcwA0m5VInu+HFRtAdhiOgLoNmlq32Jow4MONf84/BPCglwiMDWgwzw
+D9u03ykQ0lhJLJsFJ3sNUCCh11LmRdJMQxUfvA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
