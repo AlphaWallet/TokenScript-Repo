@@ -22,7 +22,7 @@
     <ts:address network="1">0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e</ts:address>
   </ts:contract>
   <ts:contract name="PublicResolver">
-    <ts:address network="1">0xDaaF96c344f63131acadD0Ea35170E7892d3dfBA</ts:address>
+    <ts:address network="1">0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41</ts:address>
   </ts:contract>
 
   <!-- emitted via: function registerWithConfig(string memory name, address owner, uint duration, bytes32 secret, address resolver, address addr) public payable -->
@@ -9197,15 +9197,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>2ZUKQNhcTdZFSduM7r8rZ9M4Ow2pHqTiG8TfAFWIyWg=</ds:DigestValue>
+<ds:DigestValue>UuCdLBhDUbDQ8BmAJePV9zfxEKFNCb9kBgmWIbHUSJ4=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-Y01xue4PNAZOlzrDG/jhz/yDryLY2k5z3u5ZQnufJl+uZ7kBDBki8R2I2YfMRIDnBsJLHZ29nLGh
-8PQ4MZrnIxMEaavR5A7WzcD0n9hILvxey6CXIdiytYfFag8JY+eIibuJIVqoKaDMQkzlWB8hgN9+
-pTlAkRXO/zH7J2R6sFbdNt5sgCk32kGvguH1GHiOfrL59r1Mv7uucirJEFGZQgY3lRYt+PGWvoEt
-+IZQ6OlcHVfxi/6AfRKQeCDjdpKREeigSowHqY4kMCfRtatXG7a1wUDzCprmolCDfNcPTHXTmv82
-n4DcYjfKLQ8chbeqfxxAnab8upRPkcsMz2gw6g==
+JLpB1wAisXhMYVFUqGlnAAKyogD4RnD5dTVRBnQhkVVu1o7mhrIFTHIy9gd2p1zZINPio/xAKo4H
+VQ8xYTf63DZlM9Klhs6YppHUIsV5epFedvdS/FZQ0Gap7GfFmzlvwDAk8bfdXL/hoxmUktqRfgSS
+1zVHGtZkA7nXbrev3oTAGwbYsoPJYBhU9wQSRZFiE23W7NBjBt+0xlJl099cKuDcWAxQEoaGqkoH
+9FK/iZE3hjoDlU3aYmA8JtFGRY/tx7Hl3q6W5KljxjwqolJfdd1T0EZU8mLxDBZUy0VgWFsIARbZ
+bEllWzg2m9FHp/8NRCdWp3FmNo6pO0QB64uJsg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
