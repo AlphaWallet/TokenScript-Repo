@@ -124,10 +124,14 @@ class Token {
         this.props = tokenInstance;
         this.props.baseNode = ".eth";
         this.props.fullName = this.props.ensName + this.props.baseNode;
+        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
+            // if ENS name cannot be retrieved by events because it is legacy, use the opensea format
+            this.props.fullName = this.props.name;
+        }
     }
 
     displayWarningNotOnLatestRegistry() {
-        if(this.props.ensName == undefined || this.props.ensName === "") {
+        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
             document.getElementById("ensNameText").innerText = "INVALID ENS NAME";
             document.getElementById("ensNameText").style.color = "#ff0000";
         }
@@ -326,6 +330,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
         this.props.baseNode = ".eth";
         this.props.fullName = this.props.ensName + this.props.baseNode;
         let namehash = require("eth-ens-namehash");
+        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
+          // if ENS name cannot be retrieved by events because it is legacy, use the opensea format
+          this.props.fullName = this.props.name;
+        }
         web3.action.setProps({
           nodeHash: namehash.hash(this.props.fullName)
         });
@@ -349,7 +357,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
       resolvedImage() {
         let element = document.getElementById("resolvedImage");
-        if(this.props.resolverAddress !== "") {
+        if(parseInt(this.props.resolverAddress, 16) !== 0) {
           element.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAABCFBMVEUAAAB5tklwuEd2ukVxvUJ2tkByuUZ3u0R4t0BzuUJ1uUN0uUJ2ukF2uUN1uUR2uUN1ukN2uEJ1uUR0uUN1ukN2uUN1uUN1uUN1uEN2uUN0ukR0ukR1uUR1uUR2uUN1uUN0uEN1uUJ1uUN2uEN0uUR1uUN1uUN0uUN1uUN1uUN1uUN1uUN1uUN3ukV3ukZ4u0d6u0p6vEp+vU9+vlB/vlCEwFeFwViJw16MxWOOxmWSyGqSyGuVyW6VyW+WynCeznqfznyq1Iu53KDG4rHI47TK5LfS6MHT6cPU6cTa7M3f79Pn897o8+Du9ujw9+rw+Ov0+fD1+vH2+vL3+/X4+/X5/Pf9/vz///91iZ+mAAAALHRSTlMAFRkaGxwdHiBJTE1OUGlqa2xtbm+RmJmbnJ6iqrW2t7jX2Nnb8fLz9Pv8/R/3l70AAAABYktHRFd9CtkfAAAA7UlEQVQYGW3Bh0KCUAAF0JuJNrBU2kUqBU95t7237WllZe///yTGi0A7B1qxWneaTadeKSAtP+tTk0sjSJQEUzwT2pRkhrQQKUn2kSYChuAAbxjAAv8xBxR9Zlx+XZD0DVjMaH+rNgNl1Jh20lNXDNlYZcrBu7phxIFg6Pp2g+ReRz2sMSIgGOqo+3VuP6unTcZcrDB01FV3W4/qZZdaAzVGjj/Vm3rd5y8bFcZOe+rjkIkJFHzGzrrnTLQMYJ7aDv/MAMh7HODmEBj12UeOI2JJZsgqNNNjijuGxNB0i5pczCHNKC83hGjYkwZiP8OEUpHyjBkvAAAAAElFTkSuQmCC";
         } else {
           element.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAzFBMVEUAAAD/OS//Ny7/Piz/PDP/ODD/Pi7/OS//PDL/OzH/PC//PC7/OjD/PTD/PDD/PDD/Oy//OjH/OjH/OzH/OjD/PDD/OzD/Oi//PDD/OzD/OzD/Oy//OzD/OzD/OjD/OzD/OzD/PDD/OzD/OzD/OzD/OzD/OzD/OzD/OzD/OzD/PDH/PTL/S0H/TEL/TUP/TkT/WVD/a2P/bGT/bmb/eHH/fHT/k43/pJ7/qaT/rqr/tK//y8n/3Nr/3dv/4N//9PT/9fT/9/b/9/f////fda20AAAAKXRSTlMAGxwdHiAhR0hJTE1PUGprbG1umJmam6K0tba32Nna29zw8fLz9Pv8/dNkKy8AAAABYktHRENn0A1iAAAA+UlEQVQoz3VS6VrCQAwMtIgISosiUO6WxUbuG4GqkPd/J3Y3LYe18yfzTXa/TA4AhmnX20K0HMuAW6Tf+hiiX3m46rku3sB7jnTbxzv4NuuPH/gHfl7phocxuGmZeMd/UJY+tZ9lMNPCaL9lbyaUNFnTca70gPb8xYK6jp9fdFrg8EDfY07UoMNksKPjKqBgFBZpgQiZ/EOX94g96EV0/EO0urYP7ZDJur/sQKMJDhNVd6IdMKpgRe9lXeWA+8EXMHSDG/YjMwduUK6lrMh0M2TX66WOr2pJbnxU3ZQabzY+9qeERVkJqy0kHEPm7k7MotMUolErRudzBmGRTFZJf51RAAAAAElFTkSuQmCC";
@@ -358,7 +366,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
       resolvedText() {
         let element = document.getElementById("resolvedText");
-        if(this.props.resolverAddress !== "") {
+        if(parseInt(this.props.resolverAddress, 16) !== 0) {
           element.innerText = "Set Correctly";
         } else {
           element.innerText = "Not Set - Action Required";
@@ -4728,23 +4736,37 @@ label {
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&amp;&amp;require;if(!f&amp;&amp;c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&amp;&amp;require,i=0;i&lt;t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 class Token {
 
-    constructor(tokenInstance) {
-        this.props = tokenInstance;
-        this.props.baseNode = ".eth";
-        this.props.fullName = this.props.ensName + this.props.baseNode;
-        let namehash = require("eth-ens-namehash");
-        web3.action.setProps({
-          nodeHash: namehash.hash(this.props.fullName)
-        });
+  constructor(tokenInstance) {
+    this.props = tokenInstance;
+    this.props.baseNode = ".eth";
+    this.props.fullName = this.props.ensName + this.props.baseNode;
+    if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
+      // if ENS name cannot be retrieved by events because it is legacy, use the opensea format
+      this.props.fullName = this.props.name;
+      this.setNodeHash();
+    } else {
+      // use the event set name
+      this.setNodeHash();
     }
+  }
 
-    setup() {
-      if(this.props.emailRecord === "" || this.props.emailRecord === undefined) {
-        document.getElementById("info").innerText = "No email record set";
-      } else {
-        document.getElementById("info").innerText = `Email record is currently set to ${this.props.emailRecord}`;
-      }
+  setNodeHash() {
+    let namehash = require("eth-ens-namehash");
+    web3.action.setProps({
+      nodeHash: namehash.hash(this.props.fullName)
+    });
+  }
+
+  setup() {
+    if(this.props.emailRecord === "" || this.props.emailRecord === undefined)
+    {
+      document.getElementById("info").innerText = "No email record set";
     }
+    else
+    {
+      document.getElementById("info").innerText = `Email record is currently set to ${this.props.emailRecord}`;
+    }
+  }
 
     render() {
         return`
@@ -8968,7 +8990,7 @@ process.umask = function() { return 0; };
       <ts:transaction>
         <ethereum:transaction as="uint" contract="ETHRegistrarController" function="renew">
           <ts:data>
-            <ts:string ref="ensName"/>
+            <ts:string local-ref="userEnsName"/>
             <ts:uint256>31556952</ts:uint256>
           </ts:data>
           <ethereum:value local-ref="renewalPricePerYear"/>
@@ -9087,8 +9109,14 @@ class Token {
         this.props = tokenInstance;
         this.props.baseNode = ".eth";
         this.props.fullName = this.props.ensName + this.props.baseNode;
+        if(this.props.fullName === ".eth" || this.props.fullName === "undefined.eth") {
+            // if ENS name cannot be retrieved by events because it is legacy, use the opensea format
+            this.props.fullName = this.props.name;
+            //remove .eth
+            this.props.ensName = this.props.name.replace(this.props.baseNode, "");
+        }
         web3.action.setProps({
-            userEnsName: this.props.fullName
+            userEnsName: this.props.ensName
         });
     }
 
@@ -9119,7 +9147,8 @@ class Token {
 
 web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
     const currentTokenInstance = updatedTokens.currentInstance;
-    document.getElementById(tokenCardId).innerHTML = new Token(currentTokenInstance).render();
+	let token = new Token(currentTokenInstance);
+    document.getElementById(tokenCardId).innerHTML = token.render();
 };
 
 //
@@ -9168,15 +9197,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>ulRegyJ0MDVuNuRjw3Ny0aF5DGtQHhPqNavesrgkf6c=</ds:DigestValue>
+<ds:DigestValue>2ZUKQNhcTdZFSduM7r8rZ9M4Ow2pHqTiG8TfAFWIyWg=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-AsTXMSJHVa2izLIOuMCFmBA8Ychu6sUcNAFJ0oN/CK9Kc5Sn01QC/74mrgLo1ewcZ5R/LGp0ZiAa
-DZDwrmYfiooXQelJ1cV5IJ2Z1dR+5hatayKKFm4V1Es2ospDJpWMEcOFnduC/Y44D9tiB/65Y5VJ
-SJBuxQcJZtz2q3Psc1+m3d34IIFKdK8r0etdlmfq0nPxQavgsaXk6oaSfETxejPm8Cr743/fs21m
-exJRB+DlgvK42wA8x2zqR04Pf+ndrAksG6DnneqFKjOS8pdL/UNY2sg1YzbOH8KzThYDM6XeXLFD
-rgL+W8C/qTNPFKOy9vw8f7N6OuNy4KvLdrkj6g==
+Y01xue4PNAZOlzrDG/jhz/yDryLY2k5z3u5ZQnufJl+uZ7kBDBki8R2I2YfMRIDnBsJLHZ29nLGh
+8PQ4MZrnIxMEaavR5A7WzcD0n9hILvxey6CXIdiytYfFag8JY+eIibuJIVqoKaDMQkzlWB8hgN9+
+pTlAkRXO/zH7J2R6sFbdNt5sgCk32kGvguH1GHiOfrL59r1Mv7uucirJEFGZQgY3lRYt+PGWvoEt
++IZQ6OlcHVfxi/6AfRKQeCDjdpKREeigSowHqY4kMCfRtatXG7a1wUDzCprmolCDfNcPTHXTmv82
+n4DcYjfKLQ8chbeqfxxAnab8upRPkcsMz2gw6g==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
