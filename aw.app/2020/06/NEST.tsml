@@ -468,16 +468,18 @@ class Token {
         let date = a.getDate();
         return date + ' ' + month + ' ' + year;
     }
-
+    //require(nowTime &gt;= nextTime.sub(timeLimit) &amp;&amp; nowTime &lt;= nextTime.sub(timeLimit).add(getAbonusTimeLimit));
     render() {
-        let message = "Your NEST dividend is claimable on " + this.formatTimeStamp(parseInt(this.props.nextTime));
-        if(parseInt(this.props.nextTime) &gt; (Date.now() / 1000)) {
-            window.onConfirm = function () {
-                window.close();
-            }
+        let message = "";
+        let now = Date.now() / 1000;
+        let claimPeriod = parseInt(this.props.nextTime) - parseInt(this.props.timeLimit);
+        let bonusTimePeriod = parseInt(this.props.nextTime) - parseInt(this.props.timeLimit) + parseInt(this.props.checkGetAbonusTimeLimit);
+        if(now &gt;= claimPeriod &amp;&amp; now &lt;= bonusTimePeriod) {
+            message = "Your NEST dividend is claimable now until " + this.formatTimeStamp(bonusTimePeriod);
+            window.onConfirm = null;
         } else {
-            message = "Your NEST dividend is claimable now until " +
-                this.formatTimeStamp(parseInt(this.props.nextTime) + parseInt(this.props.timeLimit));
+            message = "Your NEST dividend is claimable on " + this.formatTimeStamp(parseInt(this.props.nextTime)) + " please come back later";
+            window.onConfirm = function() { window.close() };
         }
         return`
         &lt;div class="ui container"&gt;
@@ -701,6 +703,19 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             <ts:string xml:lang="en">gets the next time dividends are available</ts:string>
         </ts:label>
         <ts:origins>
+            <ethereum:call as="uint" contract="NESTRevenueDistribution" function="checkTimeLimit">
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:attribute name="checkGetAbonusTimeLimit">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the next time dividends are available</ts:string>
+        </ts:label>
+        <ts:origins>
             <ethereum:call as="uint" contract="NESTRevenueDistribution" function="checkGetAbonusTimeLimit">
             </ethereum:call>
         </ts:origins>
@@ -732,15 +747,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>ZwbcBQQaAVfZkXstF+dGjbL/DfoBq9xGWto1QXXfODI=</ds:DigestValue>
+<ds:DigestValue>7HusaJr6maEIHAE5EF+qkCJpJ/Nl1z3HOMu+OQISh+8=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-HNZOKIeoIBKkm1PJUIQeFEAp6qhMyMVLS311E4k7c/Zo0aXwxPzAsOh/N3Gfkwj0nCtrDptlP+w5
-rxa7j0E1ECZ9a2nU+SKXWGIo3utTR39uGXOHMW7D0fZ25/N7JAoWTouBh0CAFNTMcoazhBJuaHwM
-vq0x8+ccP1mWwTO818z2yGuXhjwMTiuPaGfU5qR6EFf/Gt1KM3gWIeoPXSjkIr/+SanCNiuHnWSk
-5FpStOatncufUkzNaE2y5MzdbzwloEtuJW2KEe8x4lC3oxgkBWp0e/A557ccNGy8noSKfPSd2RrU
-P31G73RUQWm1fUvewLv/ld2u08ydq9Q9Ie36vw==
+VmXVndTN4tSWoh/WzVMm3SUjnB+ab2L7Bc42ETClk8vmXqfqIh+ZyiTux3axpwypDDJ6gBg4y5nS
+omsVW/Dd1azFS6R9fFH9L0fSKJ98G3a926ZBqSluVX/IJ0pKUQmLRqGZbbghq/07RK1rV6IrZ2YH
+k8xt6rDiS4G1I7RXfPCYrpva5qCXJsYRgJZBlxKT9ssWUKq17uZC+zNp/wFuuq5YCGE2c20wURrM
+a7OZqqv/+2kNpERSVW5alux58BEgF/knj1pz/+XXbSYE0gjTEi/z8Y3DfOfn59bloEb8CCrCllCL
+ohkoiORtqIBZdSSNuI1rmIDkymQoA+9/neEtcg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
