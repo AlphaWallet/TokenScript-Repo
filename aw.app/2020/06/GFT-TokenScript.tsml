@@ -11,8 +11,7 @@
         <ts:ethereum contract="GFT"/>
         <!-- as above ts:contract name -->
     </ts:origins>
-    <!-- TODO change to admin attribute -->
-    <ts:selection filter="!(ownerAddress=0xD40EBAaA4Cb7fC3a5D7B373309F68B2ABCe5F1C5)" name="notAdmin">
+    <ts:selection filter="!(ownerAddress=${admin})" name="notAdmin">
         <ts:label>
             <ts:string xml:lang="en">Must be the admin</ts:string>
         </ts:label>
@@ -998,15 +997,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>hB/HAwj/DO94bw1x2XeLpJXiA6mYHN4+ng0xZwrUIMM=</ds:DigestValue>
+<ds:DigestValue>kE7QuNOMc6/jVVRFRyRVuFbD1ytKyk2FFqeVhiK2Ldw=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-hZS/d+mKcR64mE8f2BkDhVYujdlMyH/CoK1VVXDnTAUmYUcUsr17pImrlgdn2my0isV+Ju1eHY3H
-mziSkR5GZvBQrhcveifPkypbtXY0LQmSPh/5QTBrOlZwhumWpwJz8NxioJwcTdIYJpSiU3ftPOdk
-OmOORUiHoQxABjSnrgzFBLChNLM/J76Vs6um5Bod3KICro4nvyQ3WUrR13KhDuJ/5zfi8+0Jpg8O
-bvffrMVtfeswwWjVwK1W1S1EC0wS9dAjMGETqBZMMe8ufBTvfRl+I9u8e3HLt2GX7vKcbr96Noj2
-jmgcAmQ+JQuKKzGJQnOSVI6a2TWZ0aNdnMYbgA==
+ec+Gd/dwA16dw7MIa9K4gmc9AX+dnuO+kj1ROzxNqxHUKw66m25hWAVD4xr1fgKh1yMNxdtu9HUu
+YyVA8t5VHE+Ew9pfviO3JbjFILZW8nMLpVOPcqvL/IAnnGmBAler8Q7wgUcVMiHcdhviTXg85LMP
+BSSvjg+j3QOLdbdC+QRA0xctwnUp+y2oTQ/ce9VBOkviFOcAC4f653b6lnPiVa+hxRsF6kTJC8aU
+O+nRZwd4mDk9xK/ExperDUXJiZXEjoiBwlnzZnItTmMklRIRCsjDEuNqgo5aaVlQYyCYEQh0YtLD
+kpJtPFeOThvg3oG3kOP3hA7U4WTu2jbjLDZu1g==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
