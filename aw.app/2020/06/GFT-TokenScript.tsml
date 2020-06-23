@@ -3,7 +3,7 @@
         <ts:string xml:lang="en">GFT</ts:string>
     </ts:label>
     <ts:contract interface="erc20" name="GFT">
-        <ts:address network="4">0x5E85d1Abb651d53040c083D726EBcEf8497A9157</ts:address>
+        <ts:address network="4">0x03E4aBa23fC92F517d051dd3216C5645644fAD85</ts:address>
         <!--mainnet-->
     </ts:contract>
     <ts:origins>
@@ -184,7 +184,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 
         <ts:card exclude="notAdmin" type="action">
             <ts:label>
-                <ts:string xml:lang="en">Move</ts:string>
+                <ts:string xml:lang="en">Move tokens</ts:string>
             </ts:label>
 
             <ts:attribute name="from">
@@ -388,7 +388,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 
         <ts:card exclude="notAdmin" type="action">
             <ts:label>
-                <ts:string xml:lang="en">Add</ts:string>
+                <ts:string xml:lang="en">Add to whitelist</ts:string>
             </ts:label>
 
             <ts:attribute name="addAddress">
@@ -562,7 +562,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 
         <ts:card exclude="notAdmin" type="action">
             <ts:label>
-                <ts:string xml:lang="en">Remove</ts:string>
+                <ts:string xml:lang="en">Remove from whitelist</ts:string>
             </ts:label>
 
             <ts:attribute name="removalAddress">
@@ -736,7 +736,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 
         <ts:card exclude="notAdmin" type="action">
             <ts:label>
-                <ts:string xml:lang="en">View</ts:string>
+                <ts:string xml:lang="en">View holders</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <style type="text/css">h3 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 300; line-height: 32px; }
@@ -930,7 +930,6 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 </script>
             </ts:view>
         </ts:card>
-
     </ts:cards>
     <ts:attribute name="admin">
         <ts:type>
@@ -997,15 +996,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>kE7QuNOMc6/jVVRFRyRVuFbD1ytKyk2FFqeVhiK2Ldw=</ds:DigestValue>
+<ds:DigestValue>7UmBR7oRl43B1/TYlrMY5VSVRT0eZ1oAG+99RcRD65I=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-ec+Gd/dwA16dw7MIa9K4gmc9AX+dnuO+kj1ROzxNqxHUKw66m25hWAVD4xr1fgKh1yMNxdtu9HUu
-YyVA8t5VHE+Ew9pfviO3JbjFILZW8nMLpVOPcqvL/IAnnGmBAler8Q7wgUcVMiHcdhviTXg85LMP
-BSSvjg+j3QOLdbdC+QRA0xctwnUp+y2oTQ/ce9VBOkviFOcAC4f653b6lnPiVa+hxRsF6kTJC8aU
-O+nRZwd4mDk9xK/ExperDUXJiZXEjoiBwlnzZnItTmMklRIRCsjDEuNqgo5aaVlQYyCYEQh0YtLD
-kpJtPFeOThvg3oG3kOP3hA7U4WTu2jbjLDZu1g==
+g9ArTZI5hy/oV76bgblur8RWET8IaAUO+zHM5HJTjncAx9qcmgaWCn393cI5b7XsTigNeotuzc5R
+jk/gcILAULd5w2fVGL6j613yFZpTJDohNsGAkDQRqz1RzxmccXqhOSR5Q8j29VH/18JMINrG1n0w
+iG2Bi7TTmi+CExaOSxvTEzRAh4chvBK9bjotCF4eyoiPdHFvd3d1wRxBR3Wn0DlSw6aAAtY1uhfr
+kSmlJ9c9Xy4LffnzOLwiRsLRoeXZCgqFH9RPtwE5mpQ/Xxcg292YgEvwRB2UIQjWmKovI0WR5tmt
+2zQBHcJOFWf7gCgR0UJbhTG75YD9xFaVXVB38A==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
