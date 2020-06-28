@@ -5,12 +5,12 @@
             <ts:string quantity="other">MagazineTokens #CAC</ts:string>
         </ts:plurals>
         <ts:plurals xml:lang="es">
-            <ts:string quantity="one">Boleto de admisión</ts:string>
-            <ts:string quantity="other">Boleto de admisiónes</ts:string>
+            <ts:string quantity="one">MagazineTokens #CAC</ts:string>
+            <ts:string quantity="other">MagazineTokens #CAC</ts:string>
         </ts:plurals>
         <ts:plurals xml:lang="zh">
-            <ts:string quantity="one">入場券</ts:string>
-            <ts:string quantity="other">入場券</ts:string>
+            <ts:string quantity="one">MagazineTokens #CAC</ts:string>
+            <ts:string quantity="other">MagazineTokens #CAC</ts:string>
         </ts:plurals>
     </ts:label>
 
@@ -437,15 +437,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>pOgELZ9cJvf63AessdPcw6+2VuSZJjKmigVQzlrj9uA=</ds:DigestValue>
+<ds:DigestValue>QRbQym9aSaOA+/P3yW0eQHvSCwG0f5NhSzSp7f0ecqM=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-paDAtmbfj8NTnY2NFz4p3KmHs8dZZCZvXAdRXTvyQ+x2kd9aMziSo+QCo7/aK/QzjSkZ3ujRA4k8
-/uIwKYYZlU+vV1x8ENYmnFY5IJ21tluQ7dYsH0Kl3k76SSf/t4/E1Lge87mN+XvN2lw/JAds2je7
-nZoy5RCdNaaI2iiev441A5HPehZ0e761p5hdW3ECDeGV3JIfwHEiAbyL+6m/s4a2I9C3z25o33+4
-xynPY3RyJKrPiO6DMH/yMDI9qCcZtnEd11u/4GgxCGs6BhiwScP8yFL3fAFOQXuGh5KprAcP0+ik
-0+BtVH6Lk58kdeCCYu0YO+uD79U3NDunMB6Atg==
+H8MAe80NL0gDUNz8S4mRyRruM13XB2lf8+mrNuQDcwwQxKAWmmV6vaPnLKfdNBqGoEqfoED+PfaS
+Vwi90ekp235dx71e2i3QAHyw9mh9qIW8X7/WZMYlHPNtQyEfdb5IYKqEbvj4p99AA4WOY90FHGK3
+RpTaMJPoQWaWxBKwgzEo2zZnD3WyrPTz7/qJ/wo2NooXMdGBMND7c2s5wd4LhgoCwodw7es47gJH
+fVPHVMQNKPMzIpLWd+zDDWYUiFE4ZbKNFwVAQ2xSTuOf/Sw0k4m/Dkfwcl7efEXMLhakSwLdWwUP
+eveIVYU764zDMW7dNwnZ9EMPMSBOU704pVB2zQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
