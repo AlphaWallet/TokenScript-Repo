@@ -159,7 +159,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             </ts:label>
             <ts:attribute name="delegatee">
                 <ts:type>
-                    <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+                    <ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax>
                 </ts:type>
                 <ts:label>
                     <ts:string xml:lang="en">Delegate to Address</ts:string>
@@ -325,15 +325,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>6QaQabBrdRonJ9+4BoGLMhBQ4oFQ6qeGk46zDzfglik=</ds:DigestValue>
+<ds:DigestValue>54vTPS+BIfjBTbuD9kQDBDKhcUSOTUv4yiQQEdO4RlY=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-U9RMCr8woi4ltrquv6UdGa4GikrlY1DdFw/uiiJfGQdvb9mNDDnZiycjOt/empbtZMMzLHtf6BNp
-HpwnIsQetYWywMefr7z8s36phe+izrsb3m8vXzQNEojw1HBl0+vw2/mrCmuyQPcKOdn9/RjeV0s8
-IpYE/6z+xxfY2Q9HMe+BVgcKHVWRhxciQze4ubEBn05qfz/6YS9aGzUru7tMysgUCN0LpLY6mMOz
-2Y1e5rrB1WPV5TBjpX3hzOn67piqYUphNtzSOEYMaaP1bZFzXIM2lcW10/NBFxBbgc9nLMaiMCyt
-wM2+5FfDPbtDMoHdGV1/unpkXUUpOQuolTvsYQ==
+Q0jlZIjI6w88hcfxhLruLOn+JD3HBkQqnQmfUL1+jrMjqA62ycejh/o+XyjN0y8fHPiaMgCE7+Iv
+5/EpwDNdVNAhZah3dzfLf8CHUQCZfrm2+pYof+YEpF7uskHcvYNUXy/lwlcMEA1jg8vN99/ubk9N
+wV6ngrvocu7WiS7rEUpwvpCrVrcY+hRsnIsuxAEuoGKGyI7isuepK0yYdTuEmcrN4vOLgfCIuV/Z
+uioM5HZZJQgcF6oIKHmc2xMs4IMCPgEoN2SgGKHstZz48kBPLyX55KAQFhtaNJotQD7czlMpAjzp
+Rw/ms2CtAy6SRY4r7OBi5TZLYo4lmmDOQ+cHRQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
