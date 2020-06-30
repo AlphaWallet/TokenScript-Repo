@@ -3,7 +3,7 @@
         <ts:string xml:lang="en">GFO</ts:string>
     </ts:label>
     <ts:contract interface="erc20" name="GFO">
-        <ts:address network="1">0x1702f4210C4a7fE0b02c91Eb4Ad183B192c9099A</ts:address>
+        <ts:address network="1">0x45690554247e89eeD3bbc36887082FB2774b92C8</ts:address>
         <ts:address network="4">0x9925A9B35d99aE89Cd5B0985c2E1dBADDdef98FE</ts:address>
     </ts:contract>
     <ts:origins>
@@ -781,15 +781,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>/Rp3lF94XDJyvi49nYRJ/w9Wr8z5ywEZMw11C9mOsoE=</ds:DigestValue>
+<ds:DigestValue>YX6n74D+JjAAsGJXf3A1YrKraZUGOOybPVTlo/tc7Es=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-ABwQltdiWIags53mGrfz7ZcRgixYjED55yZBGRiLpnRjLqMDTvraCuvu9iHNPPjL5APPj12R+Qsa
-m69A/aUGW3aNhBkscSR5B12xKEtSddRqjDrAtRhBsFAL3xknWoMMGFLCyh7b4wI6rvnXq2vR61AT
-sSP9jTVxdg6cVjL+kaO8SiuSxxzaASOXjWWVh56lKuU5BlkFzcCDx9wvFM6J6BIQEiVv+qA22G0T
-gGj77MkMuX/+ligBUkB6niho/4dbhw/ThCxL139sQF/qkqMGkeBCHQqFyPYzfd6U7VGRLzRVQah1
-fNrUoeuGuj2lVKrjgFi/nvStNz4uUTvh2WRxlA==
+FRZvqh+VX+inrZ1my+85yr9oeYUlFMNKPnrdLATDB9Z2cj0wHYQl48s41G43pZczYMmk17tSoEoA
+dW3l47piwvlefV5aIxLghYx8+8VoDn279aw7PUBQ/hz4sX4heXrYhjHz7OPq5fPgerDUpQVRx+za
+4ZVk3/+Y8M/wiQh1V35EUVbSFg+75CKbSo0xBVyxk5JzElTvSzpYFeMMbMKJKqF7hmspdfMNdr6S
+vrKGcNDbiQqW9t3AjPKkvvtZvKsgNowmpgsdxhTYZrb+2qwKEoV6nEpbicaZ35vnK4qW47M5BiT5
+0/yqkF7uTDfrxkokZoynJ1NViOQoBZ+Of0gFSw==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
