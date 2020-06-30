@@ -3,8 +3,8 @@
         <ts:string xml:lang="en">GFT</ts:string>
     </ts:label>
     <ts:contract interface="erc20" name="GFT">
+        <ts:address network="1">0xFf06Cc9F65bc35876CAb2bfAd4BBd23030D3856e</ts:address>
         <ts:address network="4">0x03E4aBa23fC92F517d051dd3216C5645644fAD85</ts:address>
-        <!--mainnet-->
     </ts:contract>
     <ts:origins>
         <!-- Define the contract which holds the token that the user will use -->
@@ -876,9 +876,9 @@ class Token {
     populateTokenHolderTable() {
         let contractAddress = "";
         if(this.props.label === "GFO") {
-            contractAddress = "0x6b175474e89094c44da98b954eedeac495271d0f";
+            contractAddress = "0x1702f4210C4a7fE0b02c91Eb4Ad183B192c9099A";
         } else {
-            contractAddress = "0x6b175474e89094c44da98b954eedeac495271d0f";
+            contractAddress = "0xFf06Cc9F65bc35876CAb2bfAd4BBd23030D3856e";
         }
         let query = `https://api.bloxy.info/token/token_holders_list?token=${contractAddress}&amp;key=ACCfS4FPxR0o2&amp;format=table`;
         let xmlHttp = new XMLHttpRequest();
@@ -996,15 +996,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>7UmBR7oRl43B1/TYlrMY5VSVRT0eZ1oAG+99RcRD65I=</ds:DigestValue>
+<ds:DigestValue>paUxvnu9BDcUC92iP/c1XTA4CKB9hBuZq2d1f1Lkmr0=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-g9ArTZI5hy/oV76bgblur8RWET8IaAUO+zHM5HJTjncAx9qcmgaWCn393cI5b7XsTigNeotuzc5R
-jk/gcILAULd5w2fVGL6j613yFZpTJDohNsGAkDQRqz1RzxmccXqhOSR5Q8j29VH/18JMINrG1n0w
-iG2Bi7TTmi+CExaOSxvTEzRAh4chvBK9bjotCF4eyoiPdHFvd3d1wRxBR3Wn0DlSw6aAAtY1uhfr
-kSmlJ9c9Xy4LffnzOLwiRsLRoeXZCgqFH9RPtwE5mpQ/Xxcg292YgEvwRB2UIQjWmKovI0WR5tmt
-2zQBHcJOFWf7gCgR0UJbhTG75YD9xFaVXVB38A==
+YPWIRqzNOfWlEjHlWJgdB+ZO3XfVm+LQ1jMb4S85pvbjMdsVEfyspm47OjPigwRXV//dC6t1hmoV
+jowVP+lbQf99MJkuHt9R4KcGI9dOIQYNIFsLygqi5E4Yx1/+pkxFCmF8izketai5ESl3W6gdWQx9
+JjBqaNoHMpadjubTGkTKEFbu6ML8GiVATKUHB5qhK3PRelJGos0U53sl18epGr7a82jG4Sw2DFyd
+qlmViSqz5EGcKDktzQA68B9MAWAS7Ho9aCRbNUR5LWSirSfOEJ5sNCkgr0oJecK91gXh7DOGrNiD
+tjbNM+wB4DyIG2lZGCGPlGZ5rqYbmeBT1DAI1A==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
