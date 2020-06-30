@@ -654,9 +654,9 @@ class Token {
     populateTokenHolderTable() {
         let contractAddress = "";
         if(this.props.label === "GFO") {
-            contractAddress = "0x1702f4210C4a7fE0b02c91Eb4Ad183B192c9099A";
+            contractAddress = "0x45690554247e89eeD3bbc36887082FB2774b92C8";
         } else {
-            contractAddress = "0xFf06Cc9F65bc35876CAb2bfAd4BBd23030D3856e";
+            contractAddress = "0xE9f38Ea1743125d972643b9c3000F77b8F9D7864";
         }
         let query = `https://api.bloxy.info/token/token_holders_list?token=${contractAddress}&amp;key=ACCfS4FPxR0o2&amp;format=table`;
         let xmlHttp = new XMLHttpRequest();
@@ -781,15 +781,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>YX6n74D+JjAAsGJXf3A1YrKraZUGOOybPVTlo/tc7Es=</ds:DigestValue>
+<ds:DigestValue>ZOCurPpIcEoJIi6abpR014QRPCwEl7nWgGDpZmyMU0A=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-FRZvqh+VX+inrZ1my+85yr9oeYUlFMNKPnrdLATDB9Z2cj0wHYQl48s41G43pZczYMmk17tSoEoA
-dW3l47piwvlefV5aIxLghYx8+8VoDn279aw7PUBQ/hz4sX4heXrYhjHz7OPq5fPgerDUpQVRx+za
-4ZVk3/+Y8M/wiQh1V35EUVbSFg+75CKbSo0xBVyxk5JzElTvSzpYFeMMbMKJKqF7hmspdfMNdr6S
-vrKGcNDbiQqW9t3AjPKkvvtZvKsgNowmpgsdxhTYZrb+2qwKEoV6nEpbicaZ35vnK4qW47M5BiT5
-0/yqkF7uTDfrxkokZoynJ1NViOQoBZ+Of0gFSw==
+mJRRK1hew1zq+vmFV2JXvOsD/ecEZl8P+J52pTus4l/N/+g+znBKpE7Gh2BC1k+ermO/Gk3QMNaf
+nVg75twT/74biLhOgcT/wwQZtgq/VNJRCGkB3GrWajf1cIPqzdwWgHmz+Z/6dbrObRYt/mbFKMgF
+cw0Yh7COV5mmWHwjHU2qH+q+znmWh8LysJTiBSrr2MxJLtwNY229yWXdSANxA7CDNxMJ5PD/DY+Y
+JaYQ+dhxD//rIrfvQvQagmXlsCTpF1+amDkU+u/dZvsv+pchwTKujOYjtJpWH9vQ9aDZkyLrpGhS
+TQ0E++oxE3+9Q8ke6gttZK+gYf+ZhymyfwNBiQ==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
