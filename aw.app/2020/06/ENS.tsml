@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript" xmlns:asnx="urn:ietf:params:xml:ns:asnx" xmlns:ethereum="urn:ethereum:constantinople" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd">
   <asnx:module name="ENS-Events">
     <namedType name="NameRegistered">
-      <sequence>
-        <element ethereum:type="string" name="name"/>
-        <element ethereum:indexed="true" ethereum:type="bytes32" name="label"/>
-        <element ethereum:indexed="true" ethereum:type="address" name="owner"/>
-        <element ethereum:type="uint" name="cost"/>
-        <element ethereum:type="uint" name="expires"/>
-      </sequence>
+      <type>
+        <sequence>
+          <element ethereum:type="string" name="name"/>
+          <element ethereum:indexed="true" ethereum:type="bytes32" name="label"/>
+          <element ethereum:indexed="true" ethereum:type="address" name="owner"/>
+          <element ethereum:type="uint" name="cost"/>
+          <element ethereum:type="uint" name="expires"/>
+        </sequence>
+      </type>
     </namedType>
   </asnx:module>
   <ts:label>
@@ -285,10 +287,10 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
 .resolverAddressBox {
     width: 100%;
-    height: 94px;
+    /*height: 94px;*/
 }
 
-.resolverAddressTitle {
+.subtitle {
     width: 100%;
     height: 2px;
     font-family: SourceSansPro, sans-serif;
@@ -301,9 +303,9 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
     color: #727272;
 }
 
-.resolverAddressText {
+.viewText {
     width: 100%;
-    height: 58px;
+    /*height: 58px;*/
     font-family: SourceSansPro, sans-serif;
     font-size: 17px;
     font-weight: normal;
@@ -396,9 +398,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
             &lt;/div&gt;
             
             &lt;div id="resolverAddressBox"&gt;
-                &lt;p class="resolverAddressTitle"&gt;Resolver Address&lt;/p&gt;
-                &lt;p class="resolverAddressText"&gt;${this.props.resolverAddress}&lt;/p&gt;
+                &lt;p class="subtitle"&gt;Resolver Address&lt;/p&gt;
+                &lt;p class="viewText"&gt;${this.props.resolverAddress}&lt;/p&gt;
             &lt;/div&gt;
+            
+            &lt;div id="description"&gt;
+                &lt;p class="subtitle"&gt;Description&lt;/p&gt;
+                &lt;p class="viewText"&gt;${this.props.description}&lt;/p&gt;
+            &lt;/div&gt;
+            
         &lt;/div&gt;
         `;
       }
@@ -9197,15 +9205,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>UuCdLBhDUbDQ8BmAJePV9zfxEKFNCb9kBgmWIbHUSJ4=</ds:DigestValue>
+<ds:DigestValue>tOEPBpMBAE3+gq3dpbO0HSYOucG8OSLpYOgBkmnhmOk=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-JLpB1wAisXhMYVFUqGlnAAKyogD4RnD5dTVRBnQhkVVu1o7mhrIFTHIy9gd2p1zZINPio/xAKo4H
-VQ8xYTf63DZlM9Klhs6YppHUIsV5epFedvdS/FZQ0Gap7GfFmzlvwDAk8bfdXL/hoxmUktqRfgSS
-1zVHGtZkA7nXbrev3oTAGwbYsoPJYBhU9wQSRZFiE23W7NBjBt+0xlJl099cKuDcWAxQEoaGqkoH
-9FK/iZE3hjoDlU3aYmA8JtFGRY/tx7Hl3q6W5KljxjwqolJfdd1T0EZU8mLxDBZUy0VgWFsIARbZ
-bEllWzg2m9FHp/8NRCdWp3FmNo6pO0QB64uJsg==
+SY1jYFr9Bl30k27elzm2VSxF7k2C6N8WJtuhy29rprOk5xyTbkgTpZzkiAmqpXeyvjzxTNCn9Km4
+a2Ns3CkRy5KbQ0m3FxUkUFUXBgc7dx9MhUfIG/ycFuxjjXwKbirOoj2IQATZnFwoXvEDh8vMAepj
+CDl9jsKBuEwLmSbUHFqJ72sHxLz5fF8n+sKxoDC6u7CFAss+QHdJTAFvi3h4gIykbo+L13KhQBH3
+h4mSeVM/ddqKXF8a2Rh3rB4sXoqm/Zy8kYUAvuCAsFhGBynUnbIuaibhUeWj0k8mJamWapdqsEcO
+5yi0TcJMEQNNUbsyWhTNGfG8umDRX72lCm32eg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

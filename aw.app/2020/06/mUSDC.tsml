@@ -173,7 +173,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 
         <ts:card exclude="notEnabled" type="action">
             <ts:label>
-                <ts:string xml:lang="en">Supply</ts:string>
+                <ts:string xml:lang="en">Deposit</ts:string>
             </ts:label>
             <ts:attribute name="mintAmount">
                 <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
@@ -590,15 +590,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>RF5a7vzeTZjWaVLDSDw92tzOqrKQelBLvDVeXh+sOMo=</ds:DigestValue>
+<ds:DigestValue>dCMSZAWCMMMCmWPBKeuitQkb0TnuPCjl3YBSOfF0gsQ=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-XoTFHz2fU61l+SKqOK4xKECKGuO6WrorgtF5Ncf9DBrk8P+RrdGcFbhwXwHmIllSuO767NdY17/8
-CCiyrB2O96ogiUZdP0rL9fBKA57RaX8FMatD4BZHGDeCo9hdWUAdxCZBKBA9+XsjwqzLeXQUDB5F
-tlKaiLXtFbOoUXVAZ2NPXCcdI5FN5GgA4ZYCZwG/PmuZOuRBcn0dNLzRDonpL3f4zGMHp1fmvM5Z
-qLQ2NPPUV2Ue+uWRr609KuFkhYQ0lcNzQ5fej+JJN1CSqTj8IT9CZ18Av/afRL5gwdfkLhOu4jct
-S6Iwcfns8S3A6l777vp0Z1rNA6TXcFzohUvOUA==
+f6puybhaT0Yxg3s1kfyQ9/pnqLNEGIazG8CvLh7Xh+wda1tow3wb+zy7AArI0WXroYmTVogwdmtP
+7NWuZ68GVxwSBI9QejgQksnFsWVrDDH6p6D0I6jBSRqUunyNvrvOmR5Cjc3KKW9qCx54WGQOhpT2
+fZYbYw6VR4H98IWE40bce2U47W8Jrw6tF3XnSgxx+bKu1NpwfoUREeO93TXYQsQ53y/B9xGbHrFH
+99oU9hMXV72+LX/33DenBUaLZIQsw0Ch1koZW6XPcXrgan0pq0NSlPg824i6xDIrIx0hoivhTB7b
+2JcUFA9bhCCZihQTuEgjiyJjvjL6T38uJ/C8zA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

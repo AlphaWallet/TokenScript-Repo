@@ -165,7 +165,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 
         <ts:card exclude="notEnabled" type="action">
             <ts:label>
-                <ts:string xml:lang="en">Supply</ts:string>
+                <ts:string xml:lang="en">Deposit</ts:string>
             </ts:label>
             <ts:attribute name="mintAmount">
                 <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax></ts:type>
@@ -302,8 +302,8 @@ class Token {
     render() {
         const decimals18 = 1e+18;
         const decimals8 = 1e+8; //cToken decimals
-        let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
-        let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
+        let cTokenBalance = Math.floor((this.props.cTokenBalance / decimals8) * 100) / 100;
+        let tokenBalance = Math.floor((this.props.tokenBalance / decimals18) * 100) / 100;
         let interestRatePerBlock = this.props.supplyInterestRate;
         const averageBlocksPerYear = 2102400;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
@@ -317,8 +317,8 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.label}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
-              &lt;bold&gt;&lt;h3&gt;Supply ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
-              &lt;span&gt;&lt;input id="mintAmount" type="number"&gt;&lt;/span&gt;
+              &lt;bold&gt;&lt;h3&gt;Deposit ${this.props.underlyingToken} to Compound&lt;/h3&gt;&lt;/bold&gt;
+              &lt;span&gt;&lt;input id="mintAmount" type="number" placeholder="deposit up to ${tokenBalance} ${this.props.underlyingToken}"&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;
 `;
@@ -471,10 +471,11 @@ class Token {
     render() {
         const decimals18 = 1e+18;
         const decimals8 = 1e+8; //cToken decimals
-        let cTokenBalance = (this.props.cTokenBalance / decimals8).toFixed(2);
-        let tokenBalance = (this.props.tokenBalance / decimals18).toFixed(2);
+        let cTokenBalance = Math.floor((this.props.cTokenBalance / decimals8) * 100) / 100;
+        let tokenBalance = Math.floor((this.props.tokenBalance / decimals18 * 100)) / 100;
         let interestRatePerBlock = this.props.supplyInterestRate;
         const averageBlocksPerYear = 2102400;
+        const withdrawable = Math.floor((cTokenBalance / this.props.rate) * 100) / 100;
         let APR = (((interestRatePerBlock * averageBlocksPerYear) / decimals18) * 100).toFixed(2);
         return`
         &lt;div class="ui container"&gt;
@@ -486,8 +487,8 @@ class Token {
             &lt;span&gt;&lt;bold&gt;&lt;h3&gt;1 ${this.props.underlyingToken} = ${this.props.rate} ${this.props.label}&lt;/h3&gt;&lt;/bold&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;div id="inputBox"&gt;
-              &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.label} for ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
-              &lt;span&gt;&lt;input id="redeemAmount" type="number"&gt;&lt;/span&gt;
+              &lt;bold&gt;&lt;h3&gt;Withdraw ${this.props.underlyingToken} from Compound&lt;/h3&gt;&lt;/bold&gt;
+              &lt;span&gt;&lt;input id="redeemAmount" type="number" placeholder="withdraw up to ${withdrawable} ${this.props.underlyingToken}"&gt;&lt;/span&gt;
           &lt;/div&gt;
         &lt;/div&gt;`;
     }
@@ -582,15 +583,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>X2CLKlNp2wqGGmfhfOu37yp4QV91Rfp9LOEtvE90dnk=</ds:DigestValue>
+<ds:DigestValue>++elwNsAbGI/uVWja3RE5SfPfduPTlgpKNLVNVwSC0A=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-miMNPI8F0ql2spGMDyjVnPP68dxL/JGcpg65L/i7j/uqZ3NIWFe2Gzk3PxZLHrHa9pyUKcHA7Jie
-CefcFncUrEUMlyKsk04KVlE+Q/Mj2v0uDx5XTf77osKCXUbRVr+S/DsF1Saw631h4kyAqfBOB8qq
-WotOSUaEWsgnyNtvFYizAS4ksxEhK985SCOKDo7MvEqPzuvRKt/yZaWg96XEhTNCaS25zgQp++lr
-ECODfmmNg8fAgS3ZayLe7m5RgkkqML0ue8IRutBSVPDHN73ncwW94heHEOLb7vXkHUsTRLnf7S1w
-IqC8QSrdANP8QqcWpfnEUVAFxqdTnMgK55y1WQ==
+rJruCI37Qt57315i8rux2AFvNm9zXtAH3rhsp0ZYGX53cnzj7Hao1rkjntjZYj8fhBbX0gJtrGuw
+g/wg4xeho18wBwl68ZxA7ftSTRNLrptEDuWhVCPjbYsxFgME3nPhZOZTw6334h5PvWtvEvc36S3o
+5OxFEGmzYvrkIOMrbxEi9ykJoF80wbNRuyqVVPR+tnwGApJR8rrzuoWqsxPdGC1Tqfjr/hXZ7FgY
+RsdpVUWNTl1FWUBSAUxJE6xiZpRcKxXB8gR08SXyb7sV/QrHcVjVVcSwxrNBS5Zw6fFAx4auymeQ
+3aXOCg/mhvSoUbl6recQkOG/EmjAv+LscW92Sg==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>

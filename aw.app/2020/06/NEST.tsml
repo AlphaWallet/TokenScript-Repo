@@ -700,7 +700,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
         </ts:type>
         <ts:label>
-            <ts:string xml:lang="en">gets the next time dividends are available</ts:string>
+            <ts:string xml:lang="en">gets the time limit for dividend claims</ts:string>
         </ts:label>
         <ts:origins>
             <ethereum:call as="uint" contract="NESTRevenueDistribution" function="checkTimeLimit">
@@ -713,7 +713,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
         </ts:type>
         <ts:label>
-            <ts:string xml:lang="en">gets the next time dividends are available</ts:string>
+            <ts:string xml:lang="en">gets the time limit for bonus</ts:string>
         </ts:label>
         <ts:origins>
             <ethereum:call as="uint" contract="NESTRevenueDistribution" function="checkGetAbonusTimeLimit">
@@ -747,15 +747,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>7HusaJr6maEIHAE5EF+qkCJpJ/Nl1z3HOMu+OQISh+8=</ds:DigestValue>
+<ds:DigestValue>StQlg4iRtBMEk8EeFwfHIo65tudN5S36Zyyy0E+c4Fk=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-VmXVndTN4tSWoh/WzVMm3SUjnB+ab2L7Bc42ETClk8vmXqfqIh+ZyiTux3axpwypDDJ6gBg4y5nS
-omsVW/Dd1azFS6R9fFH9L0fSKJ98G3a926ZBqSluVX/IJ0pKUQmLRqGZbbghq/07RK1rV6IrZ2YH
-k8xt6rDiS4G1I7RXfPCYrpva5qCXJsYRgJZBlxKT9ssWUKq17uZC+zNp/wFuuq5YCGE2c20wURrM
-a7OZqqv/+2kNpERSVW5alux58BEgF/knj1pz/+XXbSYE0gjTEi/z8Y3DfOfn59bloEb8CCrCllCL
-ohkoiORtqIBZdSSNuI1rmIDkymQoA+9/neEtcg==
+mQmL608VYPJLJfr+e2/iqdJ7FJpLdFNLY+9/k6m3q1SD48ai+umFk8m03nMmA7beTMmrzpZbDJ8h
+2e6ulcNgmzjYJfJAZUH9gBPLSz0LddjP3lSy5Pofagt20P50mg2+q1QxKB/N3KXtsxhqVyMSHICZ
+ZUi3Cm2oYm/kjP8ikSvu8FU9yvPsfUPPNlz6fU8Pz6bf/6eoO3AjVBBBgF7OrlqphDrwi0F4gFw1
+bqSHxL1iP0D7hsT3csG8EM0FnsqXdaA50uR46i6gOEPCRXL8Z2m3lC9Bfvg3Ecde0CF6sWryFbBg
+JZ7LXUIYVqjb52DBv1KKWgRzi4594FcVp/MKow==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
