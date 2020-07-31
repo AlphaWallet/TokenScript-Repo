@@ -7,12 +7,16 @@
         <ts:address network="1">0x04abEdA201850aC0124161F037Efd70c74ddC74C</ts:address>
     </ts:contract>
     <ts:contract name="NESTRevenueDistribution">
-        <ts:address network="1">0xF67B829397Dc05751a98f243DbdE5Db63f86E7f6</ts:address>
+        <ts:address network="1">0x19E1d193A448bD13097EFC2aea867468726e67c5</ts:address>
     </ts:contract>
     <ts:contract name="NESTEarnings">
-        <ts:address network="1">0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+        <ts:address network="1">0x03904F4B9Fb54c61AAf96d0aCDD2e42a46c99102</ts:address>
     </ts:contract>
-
+ <ts:contract name="nest.v3.abonus">
+        <ts:address network="1">0x43121397631551357EA511E62163B76e39D44852</ts:address>
+    </ts:contract>
+        
+        
     <ts:origins>
         <ts:ethereum contract="NEST"/>
     </ts:origins>
@@ -30,7 +34,7 @@
     </ts:selection>
 
     <ts:cards>
-        <ts:card exclude="notEnabled" type="action">
+        <ts:card exclude="notEnabled" name="deposit" type="action">
             <ts:label>
                 <ts:string xml:lang="en">Deposit</ts:string>
             </ts:label>
@@ -49,6 +53,7 @@
                 <ethereum:transaction contract="NESTRevenueDistribution" function="depositIn">
                     <ts:data>
                         <ts:uint256 ref="amount"/>
+                        <ts:address>0x04abeda201850ac0124161f037efd70c74ddc74c</ts:address>
                     </ts:data>
                 </ethereum:transaction>
             </ts:transaction>
@@ -184,7 +189,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             </ts:view>
         </ts:card>
 
-        <ts:card exclude="notEnabled" type="action">
+        <ts:card exclude="notEnabled" name="withdraw" type="action">
             <ts:label>
                 <ts:string xml:lang="en">Withdraw</ts:string>
             </ts:label>
@@ -203,6 +208,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
                 <ethereum:transaction contract="NESTRevenueDistribution" function="takeOut">
                     <ts:data>
                         <ts:uint256 ref="amount"/>
+                        <ts:address>0x04abeda201850ac0124161f037efd70c74ddc74c</ts:address>  
                     </ts:data>
                 </ethereum:transaction>
             </ts:transaction>
@@ -346,12 +352,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             </ts:view>
         </ts:card>
 
-        <ts:card type="action">
+        <ts:card name="dividend" type="action">
             <ts:label>
                 <ts:string xml:lang="en">Dividend</ts:string>
             </ts:label>
             <ts:transaction>
-                <ethereum:transaction contract="NESTRevenueDistribution" function="getETH">
+                <ethereum:transaction contract="NESTRevenueDistribution" function="getAbonus">
+                    <ts:data>
+                        <ts:address>0x04abeda201850ac0124161f037efd70c74ddc74c</ts:address>
+                    </ts:data>
                 </ethereum:transaction>
             </ts:transaction>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -474,11 +483,12 @@ class Token {
         let now = Date.now() / 1000;
         let claimPeriod = parseInt(this.props.nextTime) - parseInt(this.props.timeLimit);
         let bonusTimePeriod = parseInt(this.props.nextTime) - parseInt(this.props.timeLimit) + parseInt(this.props.checkGetAbonusTimeLimit);
+        let NESTTotalCirculation = 10000000000000000000000000000 - this.props.NESTLockedForMining
         if(now &gt;= claimPeriod &amp;&amp; now &lt;= bonusTimePeriod) {
-            message = "Your NEST dividend is claimable now until " + this.formatTimeStamp(bonusTimePeriod);
+            message = "This week's total dividend is " + (this.props.TotalDividend / 1e18).toFixed(2) + " ETH." + " Your estimate income is " + ((this.props.TotalDividend / 1e18) * (this.props.withdrawable / NESTTotalCirculation)).toFixed(2) + " Your NEST dividend is claimable now until " + this.formatTimeStamp(bonusTimePeriod);
             window.onConfirm = null;
         } else {
-            message = "Your NEST dividend is claimable on " + this.formatTimeStamp(parseInt(this.props.nextTime)) + " please come back later";
+            message = "This week's total dividend is " + (this.props.TotalDividend / 1e18).toFixed(2) + " ETH." + " Your estimate income is " + ((this.props.TotalDividend / 1e18) * (this.props.withdrawable / NESTTotalCirculation)).toFixed(2) + " ETH." + " Your NEST dividend is claimable on " + this.formatTimeStamp(parseInt(this.props.nextTime)) + " please come back later";
             window.onConfirm = function() { window.close() };
         }
         return`
@@ -504,14 +514,14 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             </ts:view>
         </ts:card>
 
-        <ts:card exclude="enabled" type="action">
+        <ts:card exclude="enabled" name="enable" type="action">
             <ts:label>
                 <ts:string xml:lang="en">Enable</ts:string>
             </ts:label>
             <ts:transaction>
                 <ethereum:transaction as="uint" contract="NEST" function="approve">
                     <ts:data>
-                        <ts:address>0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+                        <ts:address>0x03904F4B9Fb54c61AAf96d0aCDD2e42a46c99102</ts:address>
                         <ts:uint256>115792089237316195423570985008687907853269984665640564039457584007913129639935</ts:uint256>
                     </ts:data>
                 </ethereum:transaction>
@@ -676,7 +686,7 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             <ethereum:call as="uint" contract="NEST" function="allowance">
                 <ts:data>
                     <ts:address ref="ownerAddress"/>
-                    <ts:address>0x561d0d6c498a379574eAaA4a5F2532b223fFaeBF</ts:address>
+                    <ts:address>0x03904F4B9Fb54c61AAf96d0aCDD2e42a46c99102</ts:address>
                 </ts:data>
             </ethereum:call>
         </ts:origins>
@@ -732,11 +742,43 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
             <ethereum:call as="uint" contract="NESTEarnings" function="checkAmount">
                 <ts:data>
                     <ts:address ref="ownerAddress"/>
+                    <ts:address>0x04abeda201850ac0124161f037efd70c74ddc74c</ts:address>
                 </ts:data>
             </ethereum:call>
         </ts:origins>
     </ts:attribute>
-
+        
+    <ts:attribute name="TotalDividend">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the amount total dividend for this week</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="nest.v3.abonus" function="getETHNum">
+                <ts:data>
+                    <ts:address>0x04abeda201850ac0124161f037efd70c74ddc74c</ts:address>
+                </ts:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+        
+    <ts:attribute name="NESTLockedForMining">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">gets the amount total NEST locked for mining</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call as="uint" contract="NEST" function="balanceOf">
+                <ts:data>
+                    <ts:address>0x2f979C933AEF4fCDdD27C0Fa5C54d8a780555b0a</ts:address>
+                </ts:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
@@ -747,15 +789,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenIdCard) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>StQlg4iRtBMEk8EeFwfHIo65tudN5S36Zyyy0E+c4Fk=</ds:DigestValue>
+<ds:DigestValue>fwIStjZ+OvObQyebegwubzHzsK9lK3In1CumkBfuMjc=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-mQmL608VYPJLJfr+e2/iqdJ7FJpLdFNLY+9/k6m3q1SD48ai+umFk8m03nMmA7beTMmrzpZbDJ8h
-2e6ulcNgmzjYJfJAZUH9gBPLSz0LddjP3lSy5Pofagt20P50mg2+q1QxKB/N3KXtsxhqVyMSHICZ
-ZUi3Cm2oYm/kjP8ikSvu8FU9yvPsfUPPNlz6fU8Pz6bf/6eoO3AjVBBBgF7OrlqphDrwi0F4gFw1
-bqSHxL1iP0D7hsT3csG8EM0FnsqXdaA50uR46i6gOEPCRXL8Z2m3lC9Bfvg3Ecde0CF6sWryFbBg
-JZ7LXUIYVqjb52DBv1KKWgRzi4594FcVp/MKow==
+KYTsdOGn0u5X0zNwf7LItyZnn6CqJX50F9YIYRXEQO0QiiV6f3Cpkde8pbW1Ai1wTVDoEPDS538Y
+cCTECL8MVFciSmgP40Q3q8L9qYFQWAiBIKYZ5f+XVveNovVE0KhXcaNCNcYTuTJhHymayngJa6Kl
+/I2wMsJQMU6zOmrDbX5Yr8Bv5xIUNtfCz/uEWHVad2rP78hvkv6M5iW47TfXUgJ6hVaPJMjhIYE6
+C0FGhuP5d4AdtU/3e91p0Z7Ggo2wXnPjOkS15/uRNUfoEt0lPrLkQaFI3cbpSDwLbJ8YOqNknnbS
+xV+2y11ZneGZoPsHlV1TBXNH1NfTVK6jSBeQ1A==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
