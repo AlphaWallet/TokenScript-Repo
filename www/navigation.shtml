@@ -2,8 +2,8 @@
     <li><a href="../smart-token/" class="red">The Trouble With Tokens</a></li>
     <li><a href="../tech/" class="select-orange">TokenScript Technology</a></li>
     <li><a href="../community/" class="blue">TokenScript Community</a></li>
-    <li><a href="../paper/" class="purple">Design Paper</a></li>
-    <li><a href="http://www.alphawallet.com" class="green">Reference Implementation <sup>&#x2197</sup></a></li>
+    <li><a href="http://docs.tokenscript.org" class="purple">Documents</a></li>
+    <li><a href="http://www.alphawallet.com" class="green">Implementations<sup>&#x2197</sup></a></li>
 </ul>
 
 <div class="pulldown styled-select" style="background-color: #fff491;">
