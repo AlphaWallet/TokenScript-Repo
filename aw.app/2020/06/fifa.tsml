@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript" xmlns:ethereum="urn:ethereum:constantinople" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" custodian="false" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ts:token xmlns:ts="http://tokenscript.org/2020/06/tokenscript" xmlns:ethereum="urn:ethereum:constantinople" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FIFA-Ticket" xsi:schemaLocation="http://tokenscript.org/2020/06/tokenscript http://tokenscript.org/2020/06/tokenscript.xsd">
     <ts:label>
         <ts:plurals xml:lang="en">
             <ts:string quantity="one">Ticket</ts:string>
@@ -24,7 +24,7 @@
     </ts:origins>
 
     <ts:cards>
-        <ts:card type="token">
+        <ts:card name="main" type="token">
             <ts:item-view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <xhtml:style type="text/css">.tbml-count {
   font-family: "SourceSansPro";
@@ -220,7 +220,7 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props._count}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
@@ -443,7 +443,7 @@ class Token {
           &lt;div class="ticket_inner"&gt;
 
             &lt;div class="country_container"&gt;
-              &lt;span class="tbml-country"&gt;${this.props._count}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
+              &lt;span class="tbml-country"&gt;${this.props.numero}x ${this.props.countryA} vs ${this.props.countryB}&lt;/span&gt;
             &lt;/div&gt;
 
             &lt;div class="datetime_container"&gt;
@@ -861,15 +861,15 @@ web3.tokens.dataChanged = (oldTokens, updatedTokens, tokenCardId) =&gt; {
 <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-<ds:DigestValue>k4IPRyhiuQsYtmneKHZMFTUOuVEdca4cpGKndmwQatg=</ds:DigestValue>
+<ds:DigestValue>48/C6OQic4le5MdR5YMMRqQYN4LIg7n6vwimbtbuvtQ=</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
 <ds:SignatureValue>
-FOmDZDS6i8KoPF/wtqcXxfukfY8ZnOwqnpEsY2TWoS4sAtJDtfG53HOO38dtuqAUl3ZPwKvJSc5X
-RwfJ015DuiSwuj88E+UemygeO3WqPSglBLv9uSZLqfKALSl9/JEsLjTkWJ6fiQk7v6hMks+vJyKz
-2fon1OCkcwHbGsqqAoFVZmc/Wm60/qkhiHcD0PL3SOjGgUJhZdUtu4yGl+Up6PYqEBvvRQ5bQEuU
-tfSteYjSPMxlQG4FRehymiJdBY1FJJWztehIvCkzQtMzewDzKd12E3rY2NMtaGp0+0V/0t877AkT
-hgck0pxavOsE7pJlnF88HSipaiJrJJ5Gzvny+Q==
+H8nhWNBu8CkGU1PiyrwYQ8Msx46OvekDZRBq+W+jr4cT5W7AMs1GeHm39xXt5i8noOjso0aIs+lt
+Ae31eAPswdLPFP8tkS/+Nx8GJZnU6IrMtTQxVcFVoty6QnVyVwwiw/yZv5iWziLmbCPSPNZEwPxT
+MT12J5zkefxoE7WAk6u4WvJDZa6jP4RTxmlXKw8l9Ew5CB5Ub6qoZvNknHCH/ZS9SdEUGEKS8tk7
+bhy+9dg1l7mYwYmtTXU/Pf4uV7RgC5sTobi1BZMngfZDrKSFghvWS7EZD/XBJpK/Kj1i2Jr0vxR6
+AbJwiP/oP9DFZLvpya4H4MPIgydK4HXFkn0ECA==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:KeyName>AlphaWallet</ds:KeyName>
