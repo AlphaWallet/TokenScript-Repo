@@ -33,3 +33,7 @@ prepare:
 
 	@printf "setns ts=http://tokenscript.org/2020/06/tokenscript \ncat $(XPATH_ADDRESS)" | \
     	xmllint --shell $^ | grep 0x | sed 's|^\(.*\)$$|RewriteRule ^$(patsubst http://tokenscript.org/%/tokenscript,%,$(XMLNS))/\1$$ $^ $(FLAGS)|' | tee -a htaccess.tmp
+
+
+upload:
+	scp -r ./ s01cd.syd6.hostingplatform.net.au:repo.tokenscript.org/
