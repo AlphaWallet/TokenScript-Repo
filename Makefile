@@ -36,4 +36,4 @@ prepare:
 
 
 upload:
-	scp -r ./ s01cd.syd6.hostingplatform.net.au:repo.tokenscript.org/
+	scp -P 2683 -r ./ net@s01cd.syd6.hostingplatform.net.au:repo.tokenscript.org/
