@@ -4,13 +4,9 @@
 
 A user obtains a TokenScript in two ways.
 
-1. If the user purchases or obtained a token through a website, the TokenScript for that new token is shipped from that website[^1.
+1. If the user accesses a token use-case through a website, the TokenScript for that use-case is offered through that web page[^1].
 
-2. If the user needs a TokenScriptn without going through a dapp website,  (e.g. he receives a token from a friend), the user-agent (wallet) tries to find the TokenScript for that token by accessing a repo server, sourcing data from this repo.
-
-This repo can be decentralised with the rise of reliable decentralised storage.
-
-[^1]: By original design, which was deprioritised, tokenscript should be accessible from the web services that use the token and the repo server should be a fall back. The website should be able to provide tokenscripts needed for transactions so that you don't need to "install" the tokenscript for DAI if all you do is to swap your ETH for DAI in order to immediately spend them to get kitties.
+2. If the user needs a TokenScriptn without going through a dapp website, (e.g. he receives a token from an exchange withdraw or restoring a wallet backup), the user-agent (wallet) tries to find the TokenScript for that token by accessing the `scriptURI()` repo server. Using this repo as a backup source if that function doesn't exist on the token contract.
 
 ## Submit a TokenScript to this repo
 
