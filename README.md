@@ -1,5 +1,21 @@
 # TokenScript repo
 
+## Update instruction for sysop
+
+If the TokenScript files in the repo is updated, the sysop should recreate the `.htaccess` file by:
+
+    $ make .htaccess
+
+This would generate a new .htaccess file based on the contract addresses mentioned in the TokenScript files.
+
+Then, run this to upload the files. This will only work if you already configured SSH access:
+
+    $ make upload
+
+## How it works
+
+The Makfile generates a list of rewrite rules for accessing TokenScript files based on their token contract addresses. See more in [how_it_works.md](how_it_works.md)
+
 ## When will it be used
 
 A user obtains a TokenScript in two ways.
