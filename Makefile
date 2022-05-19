@@ -17,6 +17,7 @@ prepare:
 	@test "" != "$(TSMLFILES)"
 	@echo AddType application/tokenscript+xml .tstml > htaccess.tmp
 	@echo Header set Content-type application/tokenscript+xml env=tsml >> htaccess.tmp
+	@echo Header set Access-Control-Allow-Origin: "*" env=tsml >> htaccess.tmp
 	@echo Options +FollowSymLinks             >> htaccess.tmp
 	@echo RewriteEngine on                    >> htaccess.tmp
 
